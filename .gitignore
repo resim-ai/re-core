@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# Bazel directories
+bazel-bin
+bazel-out
+bazel-src
+bazel-testlogs
+
+# Ignore editor specific directories
+.vscode
