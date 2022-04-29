@@ -3,7 +3,7 @@ FROM ubuntu:jammy
 LABEL description="Core development container"
 
 # Install base dependencies
-RUN apt-get update && apt-get upgrade && apt-get install -y g++ openssh-server
+RUN apt-get update && apt-get -y upgrade && apt-get install -y g++ openssh-server
 RUN apt-get install -y clang
 
 # configure SSH for communication with Visual Studio 
