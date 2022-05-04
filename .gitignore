@@ -33,9 +33,13 @@
 
 # Bazel directories
 bazel-bin
+bazel-core
 bazel-out
 bazel-src
 bazel-testlogs
 
 # Ignore editor specific directories
 .vscode
+
+# lcov coverage report
+genhtml
