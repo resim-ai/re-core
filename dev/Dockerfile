@@ -4,7 +4,7 @@ LABEL description="Core development container"
 
 # Install base dependencies
 RUN apt-get update && apt-get -y upgrade
-RUN apt-get install -y g++ clang
+RUN apt-get install -y g++ clang lcov
 RUN apt-get install -y openssh-server unzip groff
 
 # configure SSH for communication with Visual Studio 
