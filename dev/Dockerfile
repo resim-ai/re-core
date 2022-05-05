@@ -37,6 +37,9 @@ RUN mv bazel.gpg /etc/apt/trusted.gpg.d/
 RUN echo "deb [arch=amd64] https://storage.googleapis.com/bazel-apt stable jdk1.8" | tee /etc/apt/sources.list.d/bazel.list
 RUN apt-get update && apt-get -y install bazel
 
+# Install Buildifier
+RUN wget -O /usr/local/bin/buildifier https://github.com/bazelbuild/buildtools/releases/download/5.1.0/buildifier-linux-amd64 && chmod a+x /usr/local/bin/buildifier
+
 # Install AWS CLI v2.6.1
 # TODO: Verify signature of zip file.  This requires having a local gpg key and signing
 # the AWS CLI key.
