@@ -32,6 +32,11 @@ RUN unzip awscliv2.zip && aws/install && rm -rf aws awscliv2.zip
 # Install Amazon ECR Credential Helper
 RUN apt install -y amazon-ecr-credential-helper
 
+# Install Pip and Python Dependencies 
+RUN apt install -y python3-pip 
+COPY requirements.txt /tmp/
+RUN pip install --requirement /tmp/requirements.txt
+
 # expose port 22 
 EXPOSE 22
 
