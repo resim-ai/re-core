@@ -4,13 +4,27 @@ LABEL description="Core development container"
 
 # Install base dependencies
 RUN apt-get update && apt-get -y upgrade
+RUN apt-get install -y ca-certificates curl gnupg lsb-release
 RUN apt-get install -y g++ clang lcov
 RUN apt-get install -y openssh-server unzip groff
+
+# Install Docker
+RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu \
+  $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
+RUN apt-get update
+RUN apt-get install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+# Install Github CLI
+RUN curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+RUN apt-get update
+RUN apt-get install -y gh
 
 # configure SSH for communication with Visual Studio 
 RUN mkdir -p /var/run/sshd
 RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config && \ 
-   ssh-keygen -A 
+  ssh-keygen -A 
 
 # Install bash completion
 RUN apt-get install -y bash-completion
@@ -37,9 +51,8 @@ RUN apt install -y python3-pip
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
 
+# Unminimize to get docs
+RUN yes | unminimize
+
 # expose port 22 
 EXPOSE 22
-
-# mount point for code
-VOLUME /src
-WORKDIR /src
