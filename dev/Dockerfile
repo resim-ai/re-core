@@ -7,6 +7,7 @@ RUN apt-get update && apt-get -y upgrade
 RUN apt-get install -y ca-certificates curl gnupg lsb-release
 RUN apt-get install -y g++ clang lcov
 RUN apt-get install -y openssh-server unzip groff
+RUN apt-get install -y emacs vim zsh
 
 # Install Docker
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
