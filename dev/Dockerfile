@@ -4,7 +4,7 @@ LABEL description="Core development container"
 
 # Install base dependencies
 RUN apt-get update && apt-get -y upgrade
-RUN apt-get install -y ca-certificates curl gnupg lsb-release
+RUN apt-get install -y ca-certificates curl gnupg lsb-release software-properties-common
 RUN apt-get install -y g++ clang lcov
 RUN apt-get install -y openssh-server unzip groff
 RUN apt-get install -y emacs vim zsh
@@ -54,6 +54,11 @@ RUN apt install -y amazon-ecr-credential-helper
 RUN apt install -y python3-pip 
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
+
+# Install Terraform
+RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
+RUN apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+RUN apt-get update && apt-get install terraform
 
 # Unminimize to get docs
 RUN yes | unminimize
