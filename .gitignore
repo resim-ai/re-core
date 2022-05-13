@@ -43,3 +43,7 @@ bazel-testlogs
 
 # lcov coverage report
 genhtml
+
+# Terraform
+terraform.tfstate*
+.terraform*
