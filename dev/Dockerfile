@@ -6,7 +6,7 @@ LABEL description="Core development container"
 RUN apt-get update && apt-get -y upgrade
 RUN apt-get install -y ca-certificates curl gnupg lsb-release software-properties-common
 RUN apt-get install -y g++ clang lcov
-RUN apt-get install -y openssh-server unzip groff
+RUN apt-get install -y openssh-server unzip groff man
 RUN apt-get install -y emacs vim zsh
 
 # Install Docker
