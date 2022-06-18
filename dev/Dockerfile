@@ -32,11 +32,13 @@ RUN apt-get install -y bash-completion
 RUN echo "source /etc/bash_completion" >> /root/.bashrc
 
 # Install Bazel
-RUN apt-get -y install apt-transport-https curl gnupg
-RUN curl -fsSL https://bazel.build/bazel-release.pub.gpg | gpg --dearmor > bazel.gpg
-RUN mv bazel.gpg /etc/apt/trusted.gpg.d/
-RUN echo "deb [arch=amd64] https://storage.googleapis.com/bazel-apt stable jdk1.8" | tee /etc/apt/sources.list.d/bazel.list
+RUN apt install -y apt-transport-https curl gnupg
+RUN curl -fsSL https://bazel.build/bazel-release.pub.gpg | gpg --dearmor >bazel-archive-keyring.gpg
+RUN mv bazel-archive-keyring.gpg /usr/share/keyrings
+RUN echo "deb [arch=amd64 signed-by=/usr/share/keyrings/bazel-archive-keyring.gpg] https://storage.googleapis.com/bazel-apt stable jdk1.8" | tee /etc/apt/sources.list.d/bazel.list
 RUN apt-get update && apt-get -y install bazel=5.1.1
+# Prevent automatically upgrading bazel version
+RUN apt-mark hold bazel  
 
 # Install Buildifier
 RUN wget -O /usr/local/bin/buildifier https://github.com/bazelbuild/buildtools/releases/download/5.1.0/buildifier-linux-amd64 && chmod a+x /usr/local/bin/buildifier
