@@ -10,6 +10,7 @@ RUN apt-get install -y openssh-server unzip groff man
 RUN apt-get install -y emacs vim zsh
 RUN apt-get install -y uuid-dev
 RUN apt-get install -y libgoogle-glog-dev
+RUN apt-get install -y cgdb
 
 # Install Docker
 RUN curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
