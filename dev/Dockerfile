@@ -65,6 +65,20 @@ RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
 RUN apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 RUN apt-get update && apt-get install terraform
 
+# Install USD
+# Install dependencies.
+RUN apt -y install build-essential cmake python3-dev libglu1-mesa-dev freeglut3-dev mesa-common-dev
+RUN pip3 install PyOpenGL
+RUN pip3 install PySide6
+
+# Build USD
+COPY ./build_usd.sh ./build_usd.sh
+RUN ./build_usd.sh
+
+# Install usdview dependencies
+RUN pip3 install numpy
+RUN apt -y install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
+
 # Unminimize to get docs
 RUN yes | unminimize
 
