@@ -4,12 +4,12 @@
 
 #include <random>
 
-#include "re_core/common/random_vector.hh"
 #include "re_core/curves/two_jet.hh"
 #include "re_core/transforms/framed_group.hh"
 #include "re_core/transforms/framed_group_concept.hh"
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
+#include "re_core/utils/random_vector.hh"
 
 namespace resim::curves {
 

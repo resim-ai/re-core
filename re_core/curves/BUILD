@@ -41,13 +41,13 @@ cc_library(
     deps = [
         ":quintic_poly_coeffs",
         ":two_jet",
-        "//re_core/common:inout",
         "//re_core/transforms:frame",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:framed_group_concept",
         "//re_core/transforms:liegroup_concepts",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
+        "//re_core/utils:inout",
     ],
 )
 
@@ -57,11 +57,11 @@ cc_test(
     deps = [
         ":t_curve_segment",
         ":two_jet",
-        "//re_core/common:random_vector",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:framed_group_concept",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
+        "//re_core/utils:random_vector",
         "@com_google_googletest//:gtest_main",
     ],
 )

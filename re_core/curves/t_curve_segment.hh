@@ -1,10 +1,10 @@
 #pragma once
 
-#include "re_core/common/inout.hh"
 #include "re_core/curves/quintic_poly_coeffs.hh"
 #include "re_core/curves/two_jet.hh"
 #include "re_core/transforms/frame.hh"
 #include "re_core/transforms/liegroup_concepts.hh"
+#include "re_core/utils/inout.hh"
 
 namespace resim::curves {
 

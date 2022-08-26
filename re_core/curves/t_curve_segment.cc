@@ -5,7 +5,6 @@
 #include <utility>
 #include <vector>
 
-#include "re_core/common/inout.hh"
 #include "re_core/curves/quintic_poly_coeffs.hh"
 #include "re_core/curves/two_jet.hh"
 #include "re_core/transforms/framed_group.hh"
@@ -13,6 +12,7 @@
 #include "re_core/transforms/liegroup_concepts.hh"
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
+#include "re_core/utils/inout.hh"
 
 namespace resim::curves {
 
