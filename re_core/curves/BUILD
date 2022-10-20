@@ -35,6 +35,38 @@ cc_test(
 )
 
 cc_library(
+    name = "t_curve",
+    srcs = ["t_curve.cc"],
+    hdrs = ["t_curve.hh"],
+    deps = [
+        ":t_curve_segment",
+        ":two_jet",
+        "//re_core/transforms:frame",
+        "//re_core/transforms:framed_group",
+        "//re_core/transforms:framed_group_concept",
+        "//re_core/transforms:liegroup_concepts",
+        "//re_core/transforms:se3",
+        "//re_core/transforms:so3",
+        "//re_core/utils:inout",
+    ],
+)
+
+cc_test(
+    name = "t_curve_test",
+    srcs = ["t_curve_test.cc"],
+    deps = [
+        ":t_curve",
+        ":two_jet",
+        "//re_core/transforms:framed_group",
+        "//re_core/transforms:framed_group_concept",
+        "//re_core/transforms:se3",
+        "//re_core/transforms:so3",
+        "//re_core/utils:random_vector",
+        "@com_google_googletest//:gtest_main",
+    ],
+)
+
+cc_library(
     name = "t_curve_segment",
     srcs = ["t_curve_segment.cc"],
     hdrs = ["t_curve_segment.hh"],
