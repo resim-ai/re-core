@@ -84,3 +84,5 @@ RUN yes | unminimize
 
 # expose port 22 
 EXPOSE 22
+# expose port 8080 for local rendering of docs when testing.
+EXPOSE 8080
