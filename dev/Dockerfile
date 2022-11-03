@@ -79,6 +79,9 @@ RUN ./build_usd.sh
 RUN pip3 install numpy
 RUN apt -y install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
 
+# Install Valgrind
+RUN apt -y install valgrind
+
 # Unminimize to get docs
 RUN yes | unminimize
 
