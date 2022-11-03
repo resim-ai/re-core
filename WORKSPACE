@@ -17,6 +17,20 @@ http_archive(
     urls = ["https://gitlab.com/libeigen/eigen/-/archive/3.3.9/eigen-3.3.9.zip"],
 )
 
+# Rules foreign CC
+http_archive(
+    name = "rules_foreign_cc",
+    sha256 = "5303e3363fe22cbd265c91fce228f84cf698ab0f98358ccf1d95fba227b308f6",
+    strip_prefix = "rules_foreign_cc-0.9.0",
+    urls = ["https://github.com/bazelbuild/rules_foreign_cc/archive/refs/tags/0.9.0.zip"],
+)
+
+load("@rules_foreign_cc//foreign_cc:repositories.bzl", "rules_foreign_cc_dependencies")
+
+rules_foreign_cc_dependencies()
+
+# lz4, which is a dependency for mcap
+# zstd, which is a dependency for mcap
 http_archive(
     name = "rules_python",
     sha256 = "cdf6b84084aad8f10bf20b46b77cb48d83c319ebe6458a18e9d2cebf57807cdd",
