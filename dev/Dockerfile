@@ -63,7 +63,7 @@ RUN pip install --requirement /tmp/requirements.txt
 # Install Terraform
 RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
 RUN apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-RUN apt-get update && apt-get install terraform
+RUN apt-get update && apt-get -y install terraform
 
 # Install USD
 # Install dependencies.
@@ -79,6 +79,10 @@ RUN ./build_usd.sh
 RUN pip3 install numpy
 RUN apt -y install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
 
+# Add live-server (https://github.com/tapio/live-server)
+RUN apt -y install npm
+RUN npm install -g live-server
+
 # Install pymdown extensions
 RUN pip install pymdown-extensions
 
@@ -90,5 +94,9 @@ RUN yes | unminimize
 
 # expose port 22 
 EXPOSE 22
+
 # expose port 8080 for local rendering of docs when testing.
 EXPOSE 8080
+
+# expose 443 for WebSockets for auto-update of local rendering
+EXPOSE 443
