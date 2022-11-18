@@ -31,6 +31,7 @@ rules_foreign_cc_dependencies()
 
 # lz4, which is a dependency for mcap
 # zstd, which is a dependency for mcap
+# Protobuf schemas for communications with foxglove
 http_archive(
     name = "rules_python",
     sha256 = "cdf6b84084aad8f10bf20b46b77cb48d83c319ebe6458a18e9d2cebf57807cdd",
