@@ -5,6 +5,8 @@ site_url: http://resim-docs-prod.s3-website-us-west-1.amazonaws.com
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+  - admonition
+  - pymdownx.details
 
 extra_javascript:
   - javascripts/mathjax.js
