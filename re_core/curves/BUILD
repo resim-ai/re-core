@@ -61,7 +61,7 @@ cc_test(
         "//re_core/transforms:framed_group_concept",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
-        "//re_core/utils:random_vector",
+        "//re_core/utils:random_matrix",
         "@com_google_googletest//:gtest_main",
     ],
 )
@@ -93,7 +93,7 @@ cc_test(
         "//re_core/transforms:framed_group_concept",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
-        "//re_core/utils:random_vector",
+        "//re_core/utils:random_matrix",
         "@com_google_googletest//:gtest_main",
     ],
 )
@@ -117,7 +117,7 @@ cc_test(
         "//re_core/transforms:framed_group",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
-        "//re_core/utils:random_vector",
+        "//re_core/utils:random_matrix",
         "@com_google_googletest//:gtest_main",
     ],
 )

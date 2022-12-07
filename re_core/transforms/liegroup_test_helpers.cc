@@ -7,7 +7,7 @@
 
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
-#include "re_core/utils/random_vector.hh"
+#include "re_core/utils/random_matrix.hh"
 #include "re_core/utils/type.hh"
 
 namespace resim::transforms {

@@ -7,7 +7,7 @@
 #include <vector>
 
 #include "re_core/transforms/liegroup_test_helpers.hh"
-#include "re_core/utils/random_vector.hh"
+#include "re_core/utils/random_matrix.hh"
 
 namespace resim::transforms {
 

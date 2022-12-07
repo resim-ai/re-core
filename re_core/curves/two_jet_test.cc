@@ -7,7 +7,7 @@
 #include "re_core/transforms/framed_group.hh"
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
-#include "re_core/utils/random_vector.hh"
+#include "re_core/utils/random_matrix.hh"
 
 namespace resim::curves {
 
