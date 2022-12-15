@@ -1,0 +1,29 @@
+version: 0.1
+cli:
+  version: 1.1.0
+plugins:
+  sources:
+    - id: trunk
+      ref: v0.0.6
+      uri: https://github.com/trunk-io/plugins
+lint:
+  enabled:
+    - buildifier@5.1.0
+    - clang-tidy@14.0.0
+    - clang-format@14.0.0
+runtimes:
+# These runtimes do not influence anything running in our development
+# docker container, or our bazel environment. These runtimes set the 
+# version of a language which will be used by trunk while they execute
+# their tools. The defaults recommended by Trunk are used for this reason.
+  enabled:
+    - go@1.18.3
+    - node@16.14.2
+    - python@3.10.3
+    - ruby@3.1.0
+actions:
+  enabled:
+    - trunk-announce
+    - trunk-check-pre-push
+    - trunk-fmt-pre-commit
+    - trunk-upgrade-available
