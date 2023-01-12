@@ -26,3 +26,37 @@ cc_test(
         "@com_google_googletest//:gtest_main",
     ],
 )
+
+cc_library(
+    name = "trajectory",
+    srcs = ["trajectory.cc"],
+    hdrs = ["trajectory.hh"],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":rigid_body_state",
+        "//re_core/curves:t_curve",
+        "//re_core/curves:two_jet",
+        "//re_core/time:timestamp",
+        "//re_core/transforms:frame",
+        "//re_core/transforms:framed_group",
+        "//re_core/transforms:se3",
+        "@libeigen//:eigen",
+    ],
+)
+
+cc_test(
+    name = "trajectory_test",
+    srcs = ["trajectory_test.cc"],
+    deps = [
+        ":rigid_body_state",
+        ":trajectory",
+        "//re_core/curves:t_curve",
+        "//re_core/curves:two_jet",
+        "//re_core/time:timestamp",
+        "//re_core/transforms:frame",
+        "//re_core/transforms:framed_group",
+        "//re_core/transforms:se3",
+        "//re_core/utils:random_matrix",
+        "@com_google_googletest//:gtest_main",
+    ],
+)

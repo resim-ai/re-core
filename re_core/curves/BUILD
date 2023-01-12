@@ -4,6 +4,7 @@ cc_library(
     name = "d_curve",
     srcs = ["d_curve.cc"],
     hdrs = ["d_curve.hh"],
+    visibility = ["//visibility:public"],
     deps = [
         "//re_core/transforms:framed_group",
         "//re_core/transforms:se3",
