@@ -104,7 +104,7 @@ cc_library(
     deps = [
         ":se3",
         ":so3",
-        "//re_core/utils:random_matrix",
+        "//re_core/testing:random_matrix",
         "//re_core/utils:type",
         "@libeigen//:eigen",
     ],
@@ -179,7 +179,7 @@ cc_test(
     deps = [
         ":liegroup_test_helpers",
         ":so3",
-        "//re_core/utils:random_matrix",
+        "//re_core/testing:random_matrix",
         "@com_google_googletest//:gtest_main",
         "@libeigen//:eigen",
     ],

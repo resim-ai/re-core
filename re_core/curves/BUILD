@@ -59,11 +59,11 @@ cc_test(
     deps = [
         ":t_curve",
         ":two_jet",
+        "//re_core/testing:random_matrix",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:framed_group_concept",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
-        "//re_core/utils:random_matrix",
         "@com_google_googletest//:gtest_main",
     ],
 )
@@ -91,11 +91,11 @@ cc_test(
     deps = [
         ":t_curve_segment",
         ":two_jet",
+        "//re_core/testing:random_matrix",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:framed_group_concept",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
-        "//re_core/utils:random_matrix",
         "@com_google_googletest//:gtest_main",
     ],
 )
@@ -119,11 +119,11 @@ cc_test(
     deps = [
         ":two_jet",
         ":two_jet_concepts",
+        "//re_core/testing:random_matrix",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:liegroup_concepts",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
-        "//re_core/utils:random_matrix",
         "@com_google_googletest//:gtest_main",
     ],
 )

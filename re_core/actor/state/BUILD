@@ -19,10 +19,10 @@ cc_test(
     deps = [
         ":rigid_body_state",
         "//re_core/curves:two_jet",
+        "//re_core/testing:random_matrix",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:liegroup_concepts",
         "//re_core/transforms:se3",
-        "//re_core/utils:random_matrix",
         "@com_google_googletest//:gtest_main",
     ],
 )
@@ -52,11 +52,11 @@ cc_test(
         ":trajectory",
         "//re_core/curves:t_curve",
         "//re_core/curves:two_jet",
+        "//re_core/testing:random_matrix",
         "//re_core/time:timestamp",
         "//re_core/transforms:frame",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:se3",
-        "//re_core/utils:random_matrix",
         "@com_google_googletest//:gtest_main",
     ],
 )

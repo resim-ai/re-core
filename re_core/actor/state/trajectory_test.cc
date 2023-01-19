@@ -9,11 +9,11 @@
 #include "re_core/actor/state/rigid_body_state.hh"
 #include "re_core/curves/t_curve.hh"
 #include "re_core/curves/two_jet.hh"
+#include "re_core/testing/random_matrix.hh"
 #include "re_core/time/timestamp.hh"
 #include "re_core/transforms/frame.hh"
 #include "re_core/transforms/framed_group.hh"
 #include "re_core/transforms/se3.hh"
-#include "re_core/utils/random_matrix.hh"
 
 namespace resim::actor::state {
 

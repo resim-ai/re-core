@@ -5,11 +5,11 @@
 #include <random>
 
 #include "re_core/curves/two_jet.hh"
+#include "re_core/testing/random_matrix.hh"
 #include "re_core/transforms/framed_group.hh"
 #include "re_core/transforms/framed_group_concept.hh"
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
-#include "re_core/utils/random_matrix.hh"
 
 namespace resim::curves {
 
