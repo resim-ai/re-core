@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-#include "re_core/utils/move_copy_tracker.hh"
+#include "re_core/testing/move_copy_tracker.hh"
 
 namespace resim {
 

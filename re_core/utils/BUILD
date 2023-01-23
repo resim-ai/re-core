@@ -51,25 +51,6 @@ cc_test(
 )
 
 cc_library(
-    name = "move_copy_tracker",
-    testonly = True,
-    srcs = ["move_copy_tracker.cc"],
-    hdrs = ["move_copy_tracker.hh"],
-    visibility = ["//visibility:public"],
-    deps = [
-    ],
-)
-
-cc_test(
-    name = "move_copy_tracker_test",
-    srcs = ["move_copy_tracker_test.cc"],
-    deps = [
-        ":move_copy_tracker",
-        "@com_google_googletest//:gtest_main",
-    ],
-)
-
-cc_library(
     name = "match",
     hdrs = ["match.hh"],
     deps = [
@@ -81,7 +62,7 @@ cc_test(
     srcs = ["match_test.cc"],
     deps = [
         ":match",
-        ":move_copy_tracker",
+        "//re_core/testing:move_copy_tracker",
         "@com_google_googletest//:gtest_main",
     ],
 )
@@ -136,8 +117,8 @@ cc_test(
     name = "status_value_test",
     srcs = ["status_value_test.cc"],
     deps = [
-        ":move_copy_tracker",
         ":status_value",
+        "//re_core/testing:move_copy_tracker",
         "@com_google_googletest//:gtest_main",
     ],
 )
