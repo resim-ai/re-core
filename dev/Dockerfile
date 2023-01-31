@@ -42,7 +42,7 @@ RUN apt install -y apt-transport-https curl gnupg
 RUN curl -fsSL https://bazel.build/bazel-release.pub.gpg | gpg --dearmor >bazel-archive-keyring.gpg
 RUN mv bazel-archive-keyring.gpg /usr/share/keyrings
 RUN echo "deb [arch=amd64 signed-by=/usr/share/keyrings/bazel-archive-keyring.gpg] https://storage.googleapis.com/bazel-apt stable jdk1.8" | tee /etc/apt/sources.list.d/bazel.list
-RUN apt-get update && apt-get -y install bazel=5.1.1
+RUN apt-get update && apt-get -y install bazel=5.4.0
 # Prevent automatically upgrading bazel version
 RUN apt-mark hold bazel  
 
@@ -75,8 +75,9 @@ RUN pip3 install PyOpenGL
 RUN pip3 install PySide6
 
 # Build USD
-COPY ./build_usd.sh ./build_usd.sh
-RUN ./build_usd.sh
+# TODO(jessie): move this into a separate layer
+# COPY ./build_usd.sh ./build_usd.sh
+# RUN ./build_usd.sh
 
 # Install usdview dependencies
 RUN pip3 install numpy
