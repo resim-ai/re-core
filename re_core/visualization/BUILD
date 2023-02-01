@@ -9,3 +9,12 @@ cc_library(
         "//re_core/utils:uuid",
     ],
 )
+
+cc_library(
+    name = "view_update",
+    hdrs = ["view_update.hh"],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":view_primitive",
+    ],
+)
