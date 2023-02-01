@@ -12,6 +12,7 @@ cc_library(
         "//re_core/transforms:liegroup_concepts",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
+        "//re_core/utils:inout",
     ],
 )
 
