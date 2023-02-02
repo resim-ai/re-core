@@ -63,25 +63,24 @@ RUN apt install -y python3-pip
 COPY requirements.txt /tmp/
 RUN pip install --requirement /tmp/requirements.txt
 
+# Install Go
+RUN wget https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
+RUN rm -rf /usr/local/go && tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz
+ENV PATH "${PATH}:/usr/local/go/bin:/root/go/bin"
+
+# Install go tools
+RUN go install -v golang.org/x/tools/gopls@v0.10.1
+RUN go install -v github.com/go-delve/delve/cmd/dlv@v1.9.1
+RUN go install -v github.com/haya14busa/goplay/cmd/goplay@v1.0.0
+RUN go install -v github.com/fatih/gomodifytags@v1.16.0
+RUN go install -v github.com/josharian/impl@v1.1.0
+RUN go install -v github.com/cweill/gotests/gotests@v1.6.0
+RUN go install -v honnef.co/go/tools/cmd/staticcheck@v0.3.3
+
 # Install Terraform
 RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
 RUN apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
 RUN apt-get update && apt-get -y install terraform
-
-# Install USD
-# Install dependencies.
-RUN apt -y install build-essential cmake python3-dev libglu1-mesa-dev freeglut3-dev mesa-common-dev
-RUN pip3 install PyOpenGL
-RUN pip3 install PySide6
-
-# Build USD
-# TODO(jessie): move this into a separate layer
-# COPY ./build_usd.sh ./build_usd.sh
-# RUN ./build_usd.sh
-
-# Install usdview dependencies
-RUN pip3 install numpy
-RUN apt -y install '^libxcb.*-dev' libx11-xcb-dev libglu1-mesa-dev libxrender-dev libxi-dev libxkbcommon-dev libxkbcommon-x11-dev
 
 # Add live-server (https://github.com/tapio/live-server)
 RUN apt -y install npm
