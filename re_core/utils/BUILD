@@ -89,6 +89,7 @@ cc_library(
     name = "status",
     srcs = ["status.cc"],
     hdrs = ["status.hh"],
+    visibility = ["//visibility:public"],
     deps = [
         ":match",
         "@fmt",
