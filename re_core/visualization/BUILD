@@ -22,6 +22,7 @@ cc_library(
 cc_library(
     name = "view_client",
     hdrs = ["view_client.hh"],
+    visibility = ["//visibility:public"],
     deps = [
         ":view_update",
         "//re_core/utils:status",
@@ -39,6 +40,7 @@ cc_library(
         ":view_update",
         "//re_core/utils:status",
         "//re_core/utils:uuid",
+        "//re_core/visualization/client:view_client_libcurl",
         "@com_google_googletest//:gtest_prod",
     ],
 )
@@ -53,6 +55,8 @@ cc_test(
         "//re_core/transforms:liegroup_test_helpers",
         "//re_core/transforms:se3",
         "//re_core/utils:status",
+        "//re_core/visualization/client:view_client_libcurl",
+        "//re_core/visualization/testing:mock_server",
         "@com_google_googletest//:gtest_main",
     ],
 )
