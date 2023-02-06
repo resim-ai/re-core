@@ -25,3 +25,35 @@ cc_test(
         "@com_google_googletest//:gtest_main",
     ],
 )
+
+cc_library(
+    name = "mock_server",
+    testonly = True,
+    srcs = ["mock_server.cc"],
+    hdrs = ["mock_server.hh"],
+    visibility = ["//re_core/visualization:__subpackages__"],
+    deps = [
+        "//re_core/utils:uuid",
+        "//re_core/visualization:view_update",
+        "//re_core/visualization/proto:view_update_proto_cc",
+        "//re_core/visualization/proto:view_update_to_proto",
+        "@fmt",
+        "@httplib",
+        "@libeigen//:eigen",
+    ],
+)
+
+cc_test(
+    name = "mock_server_test",
+    srcs = ["mock_server_test.cc"],
+    deps = [
+        ":mock_server",
+        ":test_helpers",
+        "//re_core/transforms:se3",
+        "//re_core/utils:uuid",
+        "//re_core/visualization:view_primitive",
+        "//re_core/visualization:view_update",
+        "@com_google_googletest//:gtest_main",
+        "@fmt",
+    ],
+)
