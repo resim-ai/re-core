@@ -32,6 +32,7 @@ cc_library(
     name = "view",
     srcs = ["view.cc"],
     hdrs = ["view.hh"],
+    visibility = ["//visibility:public"],
     deps = [
         ":view_client",
         ":view_primitive",
