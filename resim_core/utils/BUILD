@@ -5,6 +5,9 @@ cc_library(
     srcs = ["uuid.cc"],
     hdrs = ["uuid.hh"],
     visibility = ["//visibility:public"],
+    deps = [
+        "@com_github_google_glog//:glog",
+    ],
 )
 
 cc_test(
@@ -73,6 +76,7 @@ cc_library(
     hdrs = ["nullable_reference.hh"],
     visibility = ["//visibility:public"],
     deps = [
+        "@com_github_google_glog//:glog",
     ],
 )
 
@@ -92,6 +96,7 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         ":match",
+        "@com_github_google_glog//:glog",
         "@fmt",
     ],
 )
@@ -113,6 +118,7 @@ cc_library(
     deps = [
         ":match",
         ":status",
+        "@com_github_google_glog//:glog",
     ],
 )
 

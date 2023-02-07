@@ -21,6 +21,7 @@ cc_library(
     deps = [
         ":uuid_proto_cc",
         "//resim_core/utils:uuid",
+        "@com_github_google_glog//:glog",
     ],
 )
 

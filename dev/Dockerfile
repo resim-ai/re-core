@@ -9,7 +9,6 @@ RUN apt-get install -y g++ clang lcov clang-format clang-tidy clangd
 RUN apt-get install -y openssh-server unzip groff man
 RUN apt-get install -y emacs vim zsh tmux
 RUN apt-get install -y uuid-dev
-RUN apt-get install -y libgoogle-glog-dev
 RUN apt-get install -y cgdb
 
 # Install Docker
