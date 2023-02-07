@@ -53,6 +53,7 @@ cc_test(
         ":view",
         ":view_client",
         "//re_core/testing:random_matrix",
+        "//re_core/testing:test_directory",
         "//re_core/transforms:liegroup_test_helpers",
         "//re_core/transforms:se3",
         "//re_core/utils:status",
