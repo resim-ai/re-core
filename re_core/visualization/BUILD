@@ -41,6 +41,7 @@ cc_library(
         "//re_core/utils:status",
         "//re_core/utils:uuid",
         "//re_core/visualization/client:view_client_libcurl",
+        "@com_github_google_glog//:glog",
         "@com_google_googletest//:gtest_prod",
     ],
 )

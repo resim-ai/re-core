@@ -8,6 +8,7 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         "//re_core/utils:uuid",
+        "@com_github_google_glog//:glog",
     ],
 )
 

@@ -5,6 +5,7 @@ cc_library(
     hdrs = ["multivariate_gaussian.hh"],
     visibility = ["//visibility:public"],
     deps = [
+        "@com_github_google_glog//:glog",
         "@libeigen//:eigen",
     ],
 )
@@ -24,6 +25,7 @@ cc_library(
     hdrs = ["sample_statistics.hh"],
     visibility = ["//visibility:public"],
     deps = [
+        "@com_github_google_glog//:glog",
         "@libeigen//:eigen",
     ],
 )
@@ -43,6 +45,7 @@ cc_library(
     hdrs = ["safe_integer_utils.hh"],
     visibility = ["//visibility:public"],
     deps = [
+        "@com_github_google_glog//:glog",
     ],
 )
 

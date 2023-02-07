@@ -32,6 +32,7 @@ cc_library(
         "//re_core/utils:status_value",
         "//re_core/utils/proto:uuid_to_proto",
         "//re_core/visualization:view_primitive",
+        "@com_github_google_glog//:glog",
     ],
 )
 
@@ -81,6 +82,7 @@ cc_library(
         ":view_primitive_to_proto",
         "//re_core/visualization:view_update",
         "//re_core/visualization/proto:view_update_proto_cc",
+        "@com_github_google_glog//:glog",
     ],
 )
 

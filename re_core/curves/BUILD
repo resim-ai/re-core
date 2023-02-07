@@ -8,6 +8,7 @@ cc_library(
     deps = [
         "//re_core/transforms:framed_group",
         "//re_core/transforms:se3",
+        "@com_github_google_glog//:glog",
     ],
 )
 
@@ -50,6 +51,7 @@ cc_library(
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
         "//re_core/utils:inout",
+        "@com_github_google_glog//:glog",
     ],
 )
 
@@ -82,6 +84,7 @@ cc_library(
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
         "//re_core/utils:inout",
+        "@com_github_google_glog//:glog",
     ],
 )
 

@@ -40,6 +40,7 @@ cc_library(
         "//re_core/transforms:frame",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:se3",
+        "@com_github_google_glog//:glog",
         "@libeigen//:eigen",
     ],
 )
