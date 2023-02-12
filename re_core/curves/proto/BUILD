@@ -96,6 +96,7 @@ cc_test(
         ":two_jetl_fso3_to_proto",
         ":two_jetl_se3_to_proto",
         ":two_jetl_so3_to_proto",
+        "//re_core/curves:two_jet_test_helpers",
         "//re_core/math/proto:matrix_to_proto",
         "//re_core/testing:random_matrix",
         "//re_core/transforms:framed_group",
