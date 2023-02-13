@@ -5,13 +5,13 @@ Core simulation code
 Development in this repository takes place in a Docker container.  To build the container, run:
 
 ```bash
-dev/build.sh
+.devcontainer/build.sh
 ```
 
 To run the container:
 
 ```bash
-dev/run.sh
+.devcontainer/run.sh
 ```
 
 You can still modify the files outside of the container and the changes you make will show up in the container.  However, any build/run/etc will have to be done in the container.  The expected workflow is that you modify code in your own environment and build/test in the container.  However, you can do everything from within the container if you prefer.
