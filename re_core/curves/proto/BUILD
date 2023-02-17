@@ -118,6 +118,7 @@ cc_library(
     name = "two_jetl_se3_to_proto",
     srcs = ["two_jetl_se3_to_proto.cc"],
     hdrs = ["two_jetl_se3_to_proto.hh"],
+    visibility = ["//visibility:public"],
     deps = [
         ":two_jet_proto_cc",
         ":two_jet_to_proto",
@@ -130,6 +131,7 @@ cc_library(
     name = "two_jetl_so3_to_proto",
     srcs = ["two_jetl_so3_to_proto.cc"],
     hdrs = ["two_jetl_so3_to_proto.hh"],
+    visibility = ["//visibility:public"],
     deps = [
         ":two_jet_proto_cc",
         ":two_jet_to_proto",
@@ -142,6 +144,7 @@ cc_library(
     name = "two_jetl_fso3_to_proto",
     srcs = ["two_jetl_fso3_to_proto.cc"],
     hdrs = ["two_jetl_fso3_to_proto.hh"],
+    visibility = ["//visibility:public"],
     deps = [
         ":two_jet_proto_cc",
         ":two_jet_to_proto",
@@ -154,6 +157,7 @@ cc_library(
     name = "two_jetl_fse3_to_proto",
     srcs = ["two_jetl_fse3_to_proto.cc"],
     hdrs = ["two_jetl_fse3_to_proto.hh"],
+    visibility = ["//visibility:public"],
     deps = [
         ":two_jet_proto_cc",
         ":two_jet_to_proto",
@@ -228,12 +232,119 @@ cc_test(
         "//re_core/math/proto:matrix_to_proto",
         "//re_core/testing:random_matrix",
         "//re_core/transforms:framed_group",
+        "//re_core/transforms:framed_group_concept",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
         "//re_core/transforms/proto:fse3_to_proto",
         "//re_core/transforms/proto:fso3_to_proto",
         "//re_core/transforms/proto:se3_to_proto",
         "//re_core/transforms/proto:so3_to_proto",
+        "@com_google_googletest//:gtest_main",
+    ],
+)
+
+proto_library(
+    name = "t_curve_proto",
+    srcs = ["t_curve.proto"],
+    deps = [":two_jet_proto"],
+)
+
+cc_proto_library(
+    name = "t_curve_proto_cc",
+    visibility = ["//visibility:public"],
+    deps = [":t_curve_proto"],
+)
+
+cc_library(
+    name = "t_curve_to_proto",
+    srcs = ["t_curve_to_proto.cc"],
+    hdrs = ["t_curve_to_proto.hh"],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":t_curve_proto_cc",
+        ":two_jet_to_proto",
+        ":two_jetl_fse3_to_proto",
+        ":two_jetl_fso3_to_proto",
+        ":two_jetl_se3_to_proto",
+        ":two_jetl_so3_to_proto",
+        "//re_core/curves:t_curve",
+        "//re_core/transforms:framed_group",
+        "//re_core/transforms:se3",
+        "//re_core/transforms:so3",
+        "//re_core/utils:inout",
+    ],
+)
+
+cc_library(
+    name = "t_curve_fse3_to_proto",
+    srcs = ["t_curve_fse3_to_proto.cc"],
+    hdrs = ["t_curve_fse3_to_proto.hh"],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":t_curve_proto_cc",
+        ":t_curve_to_proto",
+        "//re_core/curves:t_curve",
+        "//re_core/transforms:framed_group",
+    ],
+)
+
+cc_library(
+    name = "t_curve_fso3_to_proto",
+    srcs = ["t_curve_fso3_to_proto.cc"],
+    hdrs = ["t_curve_fso3_to_proto.hh"],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":t_curve_proto_cc",
+        ":t_curve_to_proto",
+        "//re_core/curves:t_curve",
+        "//re_core/transforms:framed_group",
+    ],
+)
+
+cc_library(
+    name = "t_curve_se3_to_proto",
+    srcs = ["t_curve_se3_to_proto.cc"],
+    hdrs = ["t_curve_se3_to_proto.hh"],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":t_curve_proto_cc",
+        ":t_curve_to_proto",
+        "//re_core/curves:t_curve",
+        "//re_core/transforms:se3",
+    ],
+)
+
+cc_library(
+    name = "t_curve_so3_to_proto",
+    srcs = ["t_curve_so3_to_proto.cc"],
+    hdrs = ["t_curve_so3_to_proto.hh"],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":t_curve_proto_cc",
+        ":t_curve_to_proto",
+        "//re_core/curves:t_curve",
+        "//re_core/transforms:so3",
+    ],
+)
+
+cc_test(
+    name = "t_curve_to_proto_test",
+    srcs = ["t_curve_to_proto_test.cc"],
+    deps = [
+        ":t_curve_fse3_to_proto",
+        ":t_curve_fso3_to_proto",
+        ":t_curve_proto_cc",
+        ":t_curve_se3_to_proto",
+        ":t_curve_so3_to_proto",
+        ":t_curve_to_proto",
+        ":two_jetl_fse3_to_proto",
+        ":two_jetl_fso3_to_proto",
+        ":two_jetl_se3_to_proto",
+        ":two_jetl_so3_to_proto",
+        "//re_core/curves:t_curve",
+        "//re_core/curves:two_jet_test_helpers",
+        "//re_core/transforms:framed_group",
+        "//re_core/transforms:framed_group_concept",
         "@com_google_googletest//:gtest_main",
     ],
 )
