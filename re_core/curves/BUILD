@@ -60,8 +60,8 @@ cc_test(
     srcs = ["t_curve_test.cc"],
     deps = [
         ":t_curve",
+        ":t_curve_test_helpers",
         ":two_jet",
-        ":two_jet_test_helpers",
         "//re_core/testing:random_matrix",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:framed_group_concept",
@@ -177,6 +177,41 @@ cc_test(
     srcs = ["two_jet_test_helpers_test.cc"],
     deps = [
         ":two_jet_test_helpers",
+        "@com_google_googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "t_curve_test_helpers",
+    testonly = 1,
+    srcs = ["t_curve_test_helpers.cc"],
+    hdrs = ["t_curve_test_helpers.hh"],
+    visibility = ["//visibility:public"],
+    deps = [
+        ":t_curve",
+        ":two_jet",
+        ":two_jet_test_helpers",
+        "//re_core/transforms:frame",
+        "//re_core/transforms:framed_group",
+        "//re_core/transforms:framed_group_concept",
+        "//re_core/transforms:liegroup_concepts",
+        "//re_core/transforms:se3",
+        "//re_core/transforms:so3",
+        "@com_github_google_glog//:glog",
+    ],
+)
+
+cc_test(
+    name = "t_curve_test_helpers_test",
+    srcs = ["t_curve_test_helpers_test.cc"],
+    deps = [
+        ":t_curve",
+        ":t_curve_test_helpers",
+        ":two_jet",
+        ":two_jet_test_helpers",
+        "//re_core/transforms:framed_group",
+        "//re_core/transforms:se3",
+        "//re_core/transforms:so3",
         "@com_google_googletest//:gtest_main",
     ],
 )

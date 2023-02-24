@@ -246,6 +246,7 @@ cc_test(
 proto_library(
     name = "t_curve_proto",
     srcs = ["t_curve.proto"],
+    visibility = ["//visibility:public"],
     deps = [":two_jet_proto"],
 )
 
@@ -342,7 +343,7 @@ cc_test(
         ":two_jetl_se3_to_proto",
         ":two_jetl_so3_to_proto",
         "//re_core/curves:t_curve",
-        "//re_core/curves:two_jet_test_helpers",
+        "//re_core/curves:t_curve_test_helpers",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:framed_group_concept",
         "@com_google_googletest//:gtest_main",
