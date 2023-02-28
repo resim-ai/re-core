@@ -1,7 +1,6 @@
 #include "re_core/utils/uuid.hh"
 
 #include <gtest/gtest.h>
-
 namespace resim {
 
 namespace {

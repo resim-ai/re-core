@@ -1,7 +1,6 @@
 #include "re_core/transforms/proto/liegroup_to_proto.hh"
 
-#include <glog/logging.h>
-
+#include "re_core/assert/assert.hh"
 #include "re_core/math/proto/matrix_to_proto.hh"
 #include "re_core/transforms/framed_group.hh"
 #include "re_core/transforms/proto/se3.pb.h"
@@ -14,7 +13,7 @@ namespace resim::transforms::proto {
 
 template <transforms::LieGroupType Group, typename Msg>
 void pack_liegroup(const Group &in, Msg *out) {
-  CHECK(out != nullptr) << "Can't pack into invalid proto!";
+  REASSERT(out != nullptr, "Can't pack into invalid proto!");
   out->Clear();
   math::proto::pack_matrix(in.log(), out->mutable_algebra());
 }

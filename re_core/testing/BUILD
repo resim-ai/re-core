@@ -7,6 +7,7 @@ cc_library(
     hdrs = ["test_directory.hh"],
     visibility = ["//visibility:public"],
     deps = [
+        "//re_core/assert",
         "//re_core/utils:uuid",
         "@com_github_google_glog//:glog",
     ],

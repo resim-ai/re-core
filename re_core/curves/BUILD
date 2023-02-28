@@ -6,9 +6,9 @@ cc_library(
     hdrs = ["d_curve.hh"],
     visibility = ["//visibility:public"],
     deps = [
+        "//re_core/assert",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:se3",
-        "@com_github_google_glog//:glog",
     ],
 )
 
@@ -17,6 +17,7 @@ cc_test(
     srcs = ["d_curve_test.cc"],
     deps = [
         ":d_curve",
+        "//re_core/assert",
         "@com_google_googletest//:gtest_main",
     ],
 )
@@ -44,6 +45,7 @@ cc_library(
     deps = [
         ":t_curve_segment",
         ":two_jet",
+        "//re_core/assert",
         "//re_core/transforms:frame",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:framed_group_concept",
@@ -51,7 +53,6 @@ cc_library(
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
         "//re_core/utils:inout",
-        "@com_github_google_glog//:glog",
     ],
 )
 
@@ -62,6 +63,7 @@ cc_test(
         ":t_curve",
         ":t_curve_test_helpers",
         ":two_jet",
+        "//re_core/assert",
         "//re_core/testing:random_matrix",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:framed_group_concept",
@@ -78,6 +80,7 @@ cc_library(
     deps = [
         ":quintic_poly_coeffs",
         ":two_jet",
+        "//re_core/assert",
         "//re_core/transforms:frame",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:framed_group_concept",
@@ -85,7 +88,6 @@ cc_library(
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
         "//re_core/utils:inout",
-        "@com_github_google_glog//:glog",
     ],
 )
 
@@ -95,6 +97,7 @@ cc_test(
     deps = [
         ":t_curve_segment",
         ":two_jet",
+        "//re_core/assert",
         "//re_core/testing:random_matrix",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:framed_group_concept",
@@ -163,12 +166,12 @@ cc_library(
     deps = [
         ":two_jet",
         ":two_jet_concepts",
+        "//re_core/assert",
         "//re_core/testing:random_matrix",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:liegroup_test_helpers",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
-        "@com_github_google_glog//:glog",
     ],
 )
 
@@ -177,6 +180,7 @@ cc_test(
     srcs = ["two_jet_test_helpers_test.cc"],
     deps = [
         ":two_jet_test_helpers",
+        "//re_core/assert",
         "@com_google_googletest//:gtest_main",
     ],
 )

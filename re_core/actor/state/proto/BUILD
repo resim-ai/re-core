@@ -24,10 +24,10 @@ cc_library(
     deps = [
         ":trajectory_proto_cc",
         "//re_core/actor/state:trajectory",
+        "//re_core/assert",
         "//re_core/curves/proto:t_curve_fse3_to_proto",
         "//re_core/time:timestamp",
         "//re_core/utils:inout",
-        "@com_github_google_glog//:glog",
     ],
 )
 
@@ -37,6 +37,7 @@ cc_test(
     deps = [
         ":trajectory_to_proto",
         "//re_core/actor/state:trajectory",
+        "//re_core/assert",
         "//re_core/curves:t_curve",
         "//re_core/curves:t_curve_test_helpers",
         "//re_core/curves/proto:t_curve_fse3_to_proto",

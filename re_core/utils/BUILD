@@ -6,7 +6,7 @@ cc_library(
     hdrs = ["uuid.hh"],
     visibility = ["//visibility:public"],
     deps = [
-        "@com_github_google_glog//:glog",
+        "//re_core/assert",
     ],
 )
 
@@ -76,7 +76,7 @@ cc_library(
     hdrs = ["nullable_reference.hh"],
     visibility = ["//visibility:public"],
     deps = [
-        "@com_github_google_glog//:glog",
+        "//re_core/assert",
     ],
 )
 
@@ -85,6 +85,7 @@ cc_test(
     srcs = ["nullable_reference_test.cc"],
     deps = [
         ":nullable_reference",
+        "//re_core/assert",
         "@com_google_googletest//:gtest_main",
     ],
 )
@@ -96,7 +97,7 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         ":match",
-        "@com_github_google_glog//:glog",
+        "//re_core/assert",
         "@fmt",
     ],
 )
@@ -106,6 +107,7 @@ cc_test(
     srcs = ["status_test.cc"],
     deps = [
         ":status",
+        "//re_core/assert",
         "@com_google_googletest//:gtest_main",
         "@fmt",
     ],
@@ -118,7 +120,7 @@ cc_library(
     deps = [
         ":match",
         ":status",
-        "@com_github_google_glog//:glog",
+        "//re_core/assert",
     ],
 )
 
@@ -127,6 +129,7 @@ cc_test(
     srcs = ["status_value_test.cc"],
     deps = [
         ":status_value",
+        "//re_core/assert",
         "//re_core/testing:move_copy_tracker",
         "@com_google_googletest//:gtest_main",
     ],

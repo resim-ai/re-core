@@ -27,6 +27,7 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         ":view_primitive_proto_cc",
+        "//re_core/assert",
         "//re_core/curves:d_curve",
         "//re_core/curves/proto:d_curve_se3_to_proto",
         "//re_core/transforms:se3",
@@ -35,7 +36,6 @@ cc_library(
         "//re_core/utils:status_value",
         "//re_core/utils/proto:uuid_to_proto",
         "//re_core/visualization:view_primitive",
-        "@com_github_google_glog//:glog",
     ],
 )
 
@@ -44,6 +44,7 @@ cc_test(
     srcs = ["view_primitive_to_proto_test.cc"],
     visibility = ["//visibility:public"],
     deps = [
+        "//re_core/assert",
         "//re_core/curves:d_curve",
         "//re_core/curves/proto:d_curve_se3_to_proto",
         "//re_core/testing:random_matrix",
@@ -86,9 +87,9 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         ":view_primitive_to_proto",
+        "//re_core/assert",
         "//re_core/visualization:view_update",
         "//re_core/visualization/proto:view_update_proto_cc",
-        "@com_github_google_glog//:glog",
     ],
 )
 
@@ -98,6 +99,7 @@ cc_test(
     deps = [
         ":view_primitive_to_proto",
         ":view_update_to_proto",
+        "//re_core/assert",
         "//re_core/transforms:se3",
         "//re_core/utils:match",
         "//re_core/utils:uuid",

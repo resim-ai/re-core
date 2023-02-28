@@ -39,10 +39,10 @@ cc_library(
         ":view_client",
         ":view_primitive",
         ":view_update",
+        "//re_core/assert",
         "//re_core/utils:status",
         "//re_core/utils:uuid",
         "//re_core/visualization/client:view_client_libcurl",
-        "@com_github_google_glog//:glog",
         "@com_google_googletest//:gtest_prod",
     ],
 )
@@ -53,6 +53,7 @@ cc_test(
     deps = [
         ":view",
         ":view_client",
+        "//re_core/assert",
         "//re_core/testing:random_matrix",
         "//re_core/testing:test_directory",
         "//re_core/transforms:liegroup_test_helpers",
@@ -60,6 +61,7 @@ cc_test(
         "//re_core/utils:status",
         "//re_core/visualization/client:view_client_libcurl",
         "//re_core/visualization/testing:mock_server",
+        "@com_github_google_glog//:glog",
         "@com_google_googletest//:gtest_main",
     ],
 )

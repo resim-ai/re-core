@@ -1,7 +1,6 @@
 #include "re_core/curves/proto/two_jetl_so3_to_proto.hh"
 
-#include <glog/logging.h>
-
+#include "re_core/assert/assert.hh"
 #include "re_core/curves/proto/two_jet.pb.h"
 #include "re_core/curves/proto/two_jet_to_proto.hh"
 #include "re_core/curves/two_jet.hh"

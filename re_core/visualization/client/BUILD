@@ -10,6 +10,7 @@ cc_library(
         "//re_core/visualization:view_client",
         "//re_core/visualization/proto:view_update_proto_cc",
         "//re_core/visualization/proto:view_update_to_proto",
+        "@com_github_google_glog//:glog",
         "@curl",
         "@fmt",
     ],

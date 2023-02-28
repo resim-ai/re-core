@@ -1,7 +1,5 @@
 #include "re_core/curves/proto/d_curve_se3_to_proto.hh"
 
-#include <glog/logging.h>
-
 #include "re_core/curves/proto/d_curve.pb.h"
 #include "re_core/curves/proto/d_curve_to_proto.hh"
 #include "re_core/transforms/se3.hh"

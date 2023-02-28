@@ -34,13 +34,13 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         ":rigid_body_state",
+        "//re_core/assert",
         "//re_core/curves:t_curve",
         "//re_core/curves:two_jet",
         "//re_core/time:timestamp",
         "//re_core/transforms:frame",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:se3",
-        "@com_github_google_glog//:glog",
         "@libeigen//:eigen",
     ],
 )
@@ -51,6 +51,7 @@ cc_test(
     deps = [
         ":rigid_body_state",
         ":trajectory",
+        "//re_core/assert",
         "//re_core/curves:t_curve",
         "//re_core/curves:two_jet",
         "//re_core/testing:random_matrix",

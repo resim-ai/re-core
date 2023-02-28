@@ -37,6 +37,7 @@ cc_library(
         "//re_core/visualization:view_update",
         "//re_core/visualization/proto:view_update_proto_cc",
         "//re_core/visualization/proto:view_update_to_proto",
+        "@com_github_google_glog//:glog",
         "@fmt",
         "@httplib",
         "@libeigen//:eigen",

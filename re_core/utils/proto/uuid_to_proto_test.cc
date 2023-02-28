@@ -3,6 +3,7 @@
 
 #include <gtest/gtest.h>
 
+#include "re_core/assert/assert.hh"
 #include "re_core/utils/proto/uuid.pb.h"
 #include "re_core/utils/uuid.hh"
 
@@ -35,9 +36,7 @@ TEST(UUIDToProtoTest, TestRoundTrip) {
 
 TEST(UUIDToProtoDeathTest, TestPackInvalid) {
   // ACTION / VERIFICATION
-  EXPECT_DEATH(
-      proto::pack(UUID::new_uuid(), nullptr),
-      "Can't pack into invalid proto!");
+  EXPECT_THROW(proto::pack(UUID::new_uuid(), nullptr), AssertException);
 }
 
 }  // namespace resim

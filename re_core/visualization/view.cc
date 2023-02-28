@@ -1,8 +1,7 @@
 
 #include "re_core/visualization/view.hh"
 
-#include <glog/logging.h>
-
+#include "re_core/assert/assert.hh"
 #include "re_core/utils/status.hh"
 #include "re_core/visualization/client/view_client_libcurl.hh"
 #include "re_core/visualization/view_update.hh"
@@ -21,7 +20,7 @@ View &View::get_instance() {
 
 void View::flush() {
   std::lock_guard<std::mutex> guard{primitives_mutex_};
-  CHECK(client_ != nullptr) << "No client interface set!";
+  REASSERT(client_ != nullptr, "No client interface set!");
   Status send_status = client_->send_view_update(ViewUpdate{
       .primitives = std::move(primitives_),
   });
