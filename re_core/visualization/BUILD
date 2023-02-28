@@ -5,6 +5,7 @@ cc_library(
     hdrs = ["view_primitive.hh"],
     visibility = ["//visibility:public"],
     deps = [
+        "//re_core/curves:d_curve",
         "//re_core/transforms:se3",
         "//re_core/utils:uuid",
     ],

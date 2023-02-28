@@ -6,6 +6,7 @@ proto_library(
     srcs = ["view_primitive.proto"],
     visibility = ["//visibility:public"],
     deps = [
+        "//re_core/curves/proto:d_curve_proto",
         "//re_core/transforms/proto:se3_proto",
         "//re_core/utils/proto:uuid_proto",
     ],
@@ -26,6 +27,8 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         ":view_primitive_proto_cc",
+        "//re_core/curves:d_curve",
+        "//re_core/curves/proto:d_curve_se3_to_proto",
         "//re_core/transforms:se3",
         "//re_core/transforms/proto:se3_to_proto",
         "//re_core/utils:match",
@@ -41,7 +44,10 @@ cc_test(
     srcs = ["view_primitive_to_proto_test.cc"],
     visibility = ["//visibility:public"],
     deps = [
+        "//re_core/curves:d_curve",
+        "//re_core/curves/proto:d_curve_se3_to_proto",
         "//re_core/testing:random_matrix",
+        "//re_core/transforms:liegroup_test_helpers",
         "//re_core/transforms:se3",
         "//re_core/transforms/proto:se3_to_proto",
         "//re_core/utils:match",
