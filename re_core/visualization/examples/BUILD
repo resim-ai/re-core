@@ -1,4 +1,6 @@
 load("@rules_cc//cc:defs.bzl", "cc_binary")
+load("@rules_pkg//pkg:mappings.bzl", "pkg_filegroup", "pkg_files", "strip_prefix")
+load("@rules_pkg//pkg:zip.bzl", "pkg_zip")
 
 cc_binary(
     name = "example_00_rigid_transform",
@@ -20,3 +22,6 @@ cc_binary(
         "//re_core/visualization:view",
     ],
 )
+
+# Package Rules to Create Demo Binary Package:
+

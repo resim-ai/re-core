@@ -1,5 +1,13 @@
 load("@rules_cc//cc:defs.bzl", "cc_library", "cc_test")
 
+exports_files(
+    [
+        "view.hh",
+        "view_primitive.hh",
+        "view.cc",
+    ],
+)
+
 cc_library(
     name = "view_primitive",
     hdrs = ["view_primitive.hh"],
@@ -40,6 +48,8 @@ cc_library(
         ":view_primitive",
         ":view_update",
         "//re_core/assert",
+        "//re_core/transforms:framed_group",
+        "//re_core/transforms:se3",
         "//re_core/utils:status",
         "//re_core/utils:uuid",
         "//re_core/visualization/client:view_client_libcurl",
