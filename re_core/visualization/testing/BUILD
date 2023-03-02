@@ -33,6 +33,8 @@ cc_library(
     hdrs = ["mock_server.hh"],
     visibility = ["//re_core/visualization:__subpackages__"],
     deps = [
+        "//re_core/testing:mock_server",
+        "//re_core/utils:http_response",
         "//re_core/utils:uuid",
         "//re_core/visualization:view_update",
         "//re_core/visualization/client/proto:view_client_proto_cc",
@@ -40,7 +42,6 @@ cc_library(
         "//re_core/visualization/proto:view_update_to_proto",
         "@com_github_google_glog//:glog",
         "@fmt",
-        "@httplib",
         "@libeigen//:eigen",
     ],
 )
@@ -52,6 +53,7 @@ cc_test(
         ":mock_server",
         ":test_helpers",
         "//re_core/transforms:se3",
+        "//re_core/utils:http_response",
         "//re_core/utils:uuid",
         "//re_core/visualization:view_primitive",
         "//re_core/visualization:view_update",

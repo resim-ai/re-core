@@ -19,6 +19,7 @@
 #include "re_core/testing/test_directory.hh"
 #include "re_core/transforms/liegroup_test_helpers.hh"
 #include "re_core/transforms/se3.hh"
+#include "re_core/utils/http_response.hh"
 #include "re_core/utils/status.hh"
 #include "re_core/visualization/client/view_client_libcurl.hh"
 #include "re_core/visualization/testing/mock_server.hh"
@@ -108,8 +109,7 @@ TEST(LibcurlClientTest, TestClientBasicFunctionFail) {
       "localhost",
       UUID::new_uuid(),
       [](auto &&...) { return ViewSessionUpdateResponse{}; },
-      testing::MockServer::ResponseCode::NOT_FOUND};
-
+      HttpResponse::NOT_FOUND};
   auto mock_client = std::make_unique<LibcurlClient>(
       fmt::format("localhost:{}", server.port()));
 

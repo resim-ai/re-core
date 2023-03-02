@@ -68,6 +68,7 @@ cc_test(
         "//re_core/testing:test_directory",
         "//re_core/transforms:liegroup_test_helpers",
         "//re_core/transforms:se3",
+        "//re_core/utils:http_response",
         "//re_core/utils:status",
         "//re_core/visualization/client:view_client_libcurl",
         "//re_core/visualization/testing:mock_server",
