@@ -29,6 +29,7 @@ cc_library(
         ":view_primitive_proto_cc",
         "//re_core/assert",
         "//re_core/curves:d_curve",
+        "//re_core/curves/proto:d_curve_fse3_to_proto",
         "//re_core/curves/proto:d_curve_se3_to_proto",
         "//re_core/transforms:se3",
         "//re_core/transforms/proto:se3_to_proto",
@@ -46,8 +47,10 @@ cc_test(
     deps = [
         "//re_core/assert",
         "//re_core/curves:d_curve",
+        "//re_core/curves/proto:d_curve_fse3_to_proto",
         "//re_core/curves/proto:d_curve_se3_to_proto",
         "//re_core/testing:random_matrix",
+        "//re_core/transforms:framed_group",
         "//re_core/transforms:liegroup_test_helpers",
         "//re_core/transforms:se3",
         "//re_core/transforms/proto:se3_to_proto",
