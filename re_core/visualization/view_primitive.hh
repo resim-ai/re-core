@@ -5,6 +5,7 @@
 #include <variant>
 
 #include "re_core/curves/d_curve.hh"
+#include "re_core/curves/t_curve.hh"
 #include "re_core/transforms/framed_group.hh"
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
@@ -20,7 +21,8 @@ struct ViewPrimitive {
       transforms::SE3,
       transforms::SO3,
       curves::DCurve<transforms::SE3>,
-      curves::DCurve<transforms::FSE3>>
+      curves::DCurve<transforms::FSE3>,
+      curves::TCurve<transforms::FSE3>>
       payload;
 };
 
