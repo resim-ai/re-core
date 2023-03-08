@@ -16,6 +16,7 @@ cc_library(
         "//re_core/curves:d_curve",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:se3",
+        "//re_core/transforms:so3",
         "//re_core/utils:uuid",
     ],
 )
