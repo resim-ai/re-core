@@ -8,6 +8,7 @@ proto_library(
     deps = [
         "//re_core/curves/proto:d_curve_proto",
         "//re_core/curves/proto:t_curve_proto",
+        "//re_core/transforms/proto:fse3_proto",
         "//re_core/transforms/proto:se3_proto",
         "//re_core/transforms/proto:so3_proto",
         "//re_core/utils/proto:uuid_proto",
@@ -38,6 +39,7 @@ cc_library(
         "//re_core/transforms:framed_group",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
+        "//re_core/transforms/proto:fse3_to_proto",
         "//re_core/transforms/proto:se3_to_proto",
         "//re_core/transforms/proto:so3_to_proto",
         "//re_core/utils:match",
@@ -63,6 +65,7 @@ cc_test(
         "//re_core/transforms:liegroup_test_helpers",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
+        "//re_core/transforms/proto:fse3_to_proto",
         "//re_core/transforms/proto:se3_to_proto",
         "//re_core/transforms/proto:so3_to_proto",
         "//re_core/utils:match",
