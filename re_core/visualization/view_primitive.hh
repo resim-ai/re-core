@@ -4,6 +4,7 @@
 #include <string>
 #include <variant>
 
+#include "re_core/actor/state/trajectory.hh"
 #include "re_core/curves/d_curve.hh"
 #include "re_core/curves/t_curve.hh"
 #include "re_core/transforms/framed_group.hh"
@@ -23,7 +24,8 @@ struct ViewPrimitive {
       transforms::FSE3,
       curves::DCurve<transforms::SE3>,
       curves::DCurve<transforms::FSE3>,
-      curves::TCurve<transforms::FSE3>>
+      curves::TCurve<transforms::FSE3>,
+      actor::state::Trajectory>
       payload;
 };
 

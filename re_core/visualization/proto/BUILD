@@ -6,6 +6,7 @@ proto_library(
     srcs = ["view_primitive.proto"],
     visibility = ["//visibility:public"],
     deps = [
+        "//re_core/actor/state/proto:trajectory_proto",
         "//re_core/curves/proto:d_curve_proto",
         "//re_core/curves/proto:t_curve_proto",
         "//re_core/transforms/proto:fse3_proto",
@@ -30,6 +31,8 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         ":view_primitive_proto_cc",
+        "//re_core/actor/state:trajectory",
+        "//re_core/actor/state/proto:trajectory_to_proto",
         "//re_core/assert",
         "//re_core/curves:d_curve",
         "//re_core/curves:t_curve",
@@ -54,6 +57,8 @@ cc_test(
     srcs = ["view_primitive_to_proto_test.cc"],
     visibility = ["//visibility:public"],
     deps = [
+        "//re_core/actor/state:trajectory",
+        "//re_core/actor/state/proto:trajectory_to_proto",
         "//re_core/assert",
         "//re_core/curves:d_curve",
         "//re_core/curves:t_curve",
