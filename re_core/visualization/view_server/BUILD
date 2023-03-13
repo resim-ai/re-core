@@ -8,6 +8,7 @@ cc_library(
     hdrs = ["view_server_test_helper.hh"],
     visibility = ["//visibility:public"],
     deps = [
+        "//re_core/actor/state:trajectory",
         "//re_core/curves:d_curve",
         "//re_core/curves:d_curve_test_helpers",
         "//re_core/curves:t_curve",
@@ -26,6 +27,7 @@ cc_test(
     visibility = ["//visibility:public"],
     deps = [
         ":view_server_test_helper",
+        "//re_core/actor/state:trajectory",
         "//re_core/assert",
         "//re_core/curves:d_curve",
         "//re_core/curves:d_curve_test_helpers",
