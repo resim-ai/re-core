@@ -1,12 +1,10 @@
 load("@rules_cc//cc:defs.bzl", "cc_library", "cc_test")
 
-exports_files(
-    [
-        "view.hh",
-        "view_primitive.hh",
-        "view.cc",
-    ],
-)
+exports_files([
+    "view.hh",
+    "view_primitive.hh",
+    "view.cc",
+])
 
 cc_library(
     name = "view_primitive",
@@ -72,6 +70,7 @@ cc_test(
         ":view_client",
         "//re_core/actor/state:trajectory",
         "//re_core/assert",
+        "//re_core/auth/testing:mock_auth_client",
         "//re_core/curves:d_curve",
         "//re_core/curves:t_curve",
         "//re_core/testing:test_directory",

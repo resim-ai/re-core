@@ -3,6 +3,8 @@
 
 #include <glog/logging.h>
 
+#include <memory>
+
 #include "re_core/actor/state/trajectory.hh"
 #include "re_core/assert/assert.hh"
 #include "re_core/curves/d_curve.hh"

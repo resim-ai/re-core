@@ -6,6 +6,7 @@ cc_library(
     hdrs = ["view_client_libcurl.hh"],
     visibility = ["//visibility:public"],
     deps = [
+        "//re_core/auth:auth_client",
         "//re_core/utils:status",
         "//re_core/visualization:view_client",
         "//re_core/visualization/client/proto:view_client_proto_cc",
