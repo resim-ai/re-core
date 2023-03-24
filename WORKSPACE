@@ -135,5 +135,6 @@ http_archive(
     urls = ["https://github.com/google/glog/archive/v0.6.0.zip"],
 )
 
+# Polygon Mesh Processing (pmp) library. Used for loading, manipulating, and saving meshes.
 # libccd - Used by fcl (below) for narrow-phase collision detection.
 # Flexible Collision Library (fcl). Used for efficient broad-phase collision detection.
