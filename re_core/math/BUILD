@@ -2,6 +2,7 @@ load("@rules_cc//cc:defs.bzl", "cc_library", "cc_test")
 
 cc_library(
     name = "multivariate_gaussian",
+    srcs = ["multivariate_gaussian.cc"],
     hdrs = ["multivariate_gaussian.hh"],
     visibility = ["//visibility:public"],
     deps = [
