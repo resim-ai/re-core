@@ -25,6 +25,7 @@ cc_library(
     deps = [
         "//re_core/assert",
         "//re_core/transforms:framed_group",
+        "//re_core/transforms:framed_group_concept",
         "//re_core/transforms:se3",
     ],
 )
