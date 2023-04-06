@@ -4,6 +4,7 @@ cc_library(
     name = "rigid_body_state",
     srcs = ["rigid_body_state.cc"],
     hdrs = ["rigid_body_state.hh"],
+    visibility = ["//visibility:public"],
     deps = [
         "//re_core/curves:two_jet",
         "//re_core/transforms:framed_group",
