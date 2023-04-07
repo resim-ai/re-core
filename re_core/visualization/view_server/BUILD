@@ -43,16 +43,3 @@ cc_test(
     ],
 )
 
-cc_binary(
-    name = "resim_view_write_log",
-    srcs = [
-        "view_write_log.cc",
-        "view_write_log_testing.cc",
-    ],
-    linkshared = True,
-    deps = [
-        ":view_write_log",
-        ":view_write_log_testing",
-    ],
-)
-
