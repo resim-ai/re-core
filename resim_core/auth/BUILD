@@ -18,7 +18,7 @@ cc_library(
         "//resim_core/utils:http_response",
         "//resim_core/utils:inout",
         "@com_google_protobuf//:protobuf",
-        "@curl",
+        "@cpr",
     ],
 )
 
