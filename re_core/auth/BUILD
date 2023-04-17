@@ -18,7 +18,7 @@ cc_library(
         "//re_core/utils:http_response",
         "//re_core/utils:inout",
         "@com_google_protobuf//:protobuf",
-        "@curl",
+        "@cpr",
     ],
 )
 

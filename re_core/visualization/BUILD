@@ -32,8 +32,8 @@ cc_library(
 )
 
 cc_library(
-    name = "view_client",
-    hdrs = ["view_client.hh"],
+    name = "view_client_interface",
+    hdrs = ["view_client_interface.hh"],
     visibility = ["//visibility:public"],
     deps = [
         ":view_update",
@@ -47,7 +47,7 @@ cc_library(
     hdrs = ["view.hh"],
     visibility = ["//visibility:public"],
     deps = [
-        ":view_client",
+        ":view_client_interface",
         ":view_primitive",
         ":view_update",
         "//re_core/assert",
@@ -59,7 +59,7 @@ cc_library(
         "//re_core/transforms:so3",
         "//re_core/utils:status",
         "//re_core/utils:uuid",
-        "//re_core/visualization/client:view_client_libcurl",
+        "//re_core/visualization/client:view_client",
         "@com_google_googletest//:gtest_prod",
     ],
 )
@@ -69,7 +69,7 @@ cc_test(
     srcs = ["view_test.cc"],
     deps = [
         ":view",
-        ":view_client",
+        ":view_client_interface",
         "//re_core/actor/state:trajectory",
         "//re_core/assert",
         "//re_core/auth/testing:mock_auth_client",
@@ -83,7 +83,7 @@ cc_test(
         "//re_core/utils:http_response",
         "//re_core/utils:match",
         "//re_core/utils:status",
-        "//re_core/visualization/client:view_client_libcurl",
+        "//re_core/visualization/client:view_client",
         "//re_core/visualization/curve:test_helpers",
         "//re_core/visualization/testing:mock_server",
         "//re_core/visualization/view_server:view_server_test_helper",
