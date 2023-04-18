@@ -165,6 +165,7 @@ cc_test(
         ":two_jet_test_helpers",
         "//re_core/testing:random_matrix",
         "//re_core/transforms:framed_group",
+        "//re_core/transforms:framed_group_concept",
         "//re_core/transforms:liegroup_concepts",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
