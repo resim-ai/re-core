@@ -58,6 +58,7 @@ cc_test(
         "//re_core/visualization:view_primitive",
         "//re_core/visualization:view_update",
         "@com_google_googletest//:gtest_main",
+        "@cpr",
         "@fmt",
     ],
 )
