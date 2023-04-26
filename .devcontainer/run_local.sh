@@ -4,4 +4,5 @@ docker run -it \
        --volume $(pwd):/workspaces/core \
        --volume root-home:/root \
        --volume /var/run/docker.sock:/var/run/docker.sock \
+       --cap-add CAP_PERFMON \
        core-local:latest bash
