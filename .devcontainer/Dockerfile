@@ -92,6 +92,10 @@ RUN pip install pymdown-extensions
 # Install Valgrind
 RUN apt -y install valgrind
 
+# Install perf 
+COPY install_perf.sh /tmp/
+RUN /tmp/install_perf.sh
+
 # Unminimize to get docs
 RUN yes | unminimize
 
