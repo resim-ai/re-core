@@ -5,7 +5,7 @@
 apt update
 
 # Try to install perf from apt source
-apt -y install linux-tools-common linux-tools-generic linux-tools-`uname -r`
+apt -y install linux-tools-aws linux-tools-common linux-tools-generic linux-tools-`uname -r`
 
 # Otherwise, download from scratch.
 if [[ $? > 0 ]]
