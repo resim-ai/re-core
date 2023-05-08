@@ -7,6 +7,7 @@
 #include "re_core/actor/state/trajectory.hh"
 #include "re_core/curves/d_curve.hh"
 #include "re_core/curves/t_curve.hh"
+#include "re_core/curves/test_helpers.hh"
 #include "re_core/testing/random_matrix.hh"
 #include "re_core/time/timestamp.hh"
 #include "re_core/transforms/frame.hh"
@@ -15,7 +16,6 @@
 #include "re_core/transforms/liegroup_test_helpers.hh"
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
-#include "re_core/visualization/curve/test_helpers.hh"
 #include "re_core/visualization/view_primitive.hh"
 
 namespace resim::visualization {

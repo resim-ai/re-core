@@ -151,6 +151,7 @@ cc_library(
         "//re_core/actor/state:trajectory",
         "//re_core/curves:d_curve",
         "//re_core/curves:t_curve",
+        "//re_core/curves:test_helpers",
         "//re_core/testing:random_matrix",
         "//re_core/time:timestamp",
         "//re_core/transforms:frame",
@@ -160,7 +161,6 @@ cc_library(
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
         "//re_core/visualization:view_primitive",
-        "//re_core/visualization/curve:test_helpers",
     ],
 )
 

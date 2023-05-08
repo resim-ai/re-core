@@ -12,6 +12,7 @@ cc_library(
         "//re_core/curves:d_curve",
         "//re_core/curves:d_curve_test_helpers",
         "//re_core/curves:t_curve",
+        "//re_core/curves:test_helpers",
         "//re_core/testing:random_matrix",
         "//re_core/transforms:frame",
         "//re_core/transforms:framed_group",
@@ -19,7 +20,6 @@ cc_library(
         "//re_core/transforms:liegroup_test_helpers",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
-        "//re_core/visualization/curve:test_helpers",
     ],
 )
 
@@ -35,12 +35,12 @@ cc_test(
         "//re_core/curves:d_curve",
         "//re_core/curves:d_curve_test_helpers",
         "//re_core/curves:t_curve",
+        "//re_core/curves:test_helpers",
         "//re_core/transforms:frame",
         "//re_core/transforms:framed_group",
         "//re_core/transforms:liegroup_test_helpers",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
-        "//re_core/visualization/curve:test_helpers",
         "@com_google_googletest//:gtest_main",
     ],
 )
