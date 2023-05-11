@@ -96,6 +96,9 @@ RUN apt -y install valgrind
 COPY install_perf.sh /tmp/
 RUN /tmp/install_perf.sh
 
+# Install jq
+RUN apt install -y jq
+
 # Unminimize to get docs
 RUN yes | unminimize
 
