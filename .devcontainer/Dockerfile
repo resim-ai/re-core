@@ -50,8 +50,8 @@ RUN apt-mark hold bazel
 RUN wget -O /usr/local/bin/buildifier https://github.com/bazelbuild/buildtools/releases/download/5.1.0/buildifier-linux-amd64 && chmod a+x /usr/local/bin/buildifier
 
 # Install AWS CLI v2.6.1
-# TODO: Verify signature of zip file.  This requires having a local gpg key and signing
-# the AWS CLI key.
+# TODO(https://app.asana.com/0/1202178773526279/1204566380811503/f): Verify signature of zip file.  This requires 
+# having a local gpg key and signing the AWS CLI key.
 RUN wget -O awscliv2.zip https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.6.1.zip
 RUN unzip awscliv2.zip && aws/install && rm -rf aws awscliv2.zip
 
