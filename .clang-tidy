@@ -14,7 +14,7 @@ Checks: >
   readability-*,
   -readability-identifier-length
 WarningsAsErrors: "*"
-HeaderFilterRegex: ".*\\.hh"
+HeaderFilterRegex: "re_core/.*\\.hh"
 AnalyzeTemporaryDtors: false
 FormatStyle: "file"
 CheckOptions:
