@@ -190,7 +190,6 @@ cc_library(
         ":two_jet_concepts",
         "//resim_core/assert",
         "//resim_core/testing:random_matrix",
-        "//resim_core/transforms:framed_group",
         "//resim_core/transforms:liegroup_test_helpers",
         "//resim_core/transforms:se3",
         "//resim_core/transforms:so3",
@@ -248,7 +247,6 @@ cc_library(
     deps = [
         ":t_curve",
         "//resim_core/transforms:frame",
-        "//resim_core/transforms:framed_group",
         "//resim_core/transforms:se3",
         "//resim_core/transforms:so3",
         "@libeigen//:eigen",
@@ -262,7 +260,6 @@ cc_test(
         ":test_helpers",
         "//resim_core/curves:t_curve",
         "//resim_core/transforms:frame",
-        "//resim_core/transforms:framed_group",
         "@com_google_googletest//:gtest_main",
         "@libeigen//:eigen",
     ],
