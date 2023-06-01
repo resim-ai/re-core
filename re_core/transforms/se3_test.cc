@@ -5,7 +5,6 @@
 #include <Eigen/Dense>
 
 #include "re_core/transforms/liegroup_test_helpers.hh"
-
 #include "re_core/transforms/so3.hh"
 
 
