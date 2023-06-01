@@ -24,8 +24,6 @@ cc_library(
     visibility = ["//visibility:public"],
     deps = [
         "//re_core/assert",
-        "//re_core/transforms:framed_group",
-        "//re_core/transforms:framed_group_concept",
         "//re_core/transforms:se3",
     ],
 )
@@ -40,7 +38,6 @@ cc_library(
         ":d_curve",
         "//re_core/assert",
         "//re_core/transforms:frame",
-        "//re_core/transforms:framed_group",
         "//re_core/transforms:liegroup_concepts",
         "//re_core/transforms:se3",
         "@com_google_googletest//:gtest_main",
