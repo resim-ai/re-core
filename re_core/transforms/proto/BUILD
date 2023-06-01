@@ -12,7 +12,6 @@ cc_library(
         ":so3_proto_cc",
         "//re_core/assert",
         "//re_core/math/proto:matrix_to_proto",
-        "//re_core/transforms:framed_group",
         "//re_core/transforms:liegroup_concepts",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",

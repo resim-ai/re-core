@@ -2,7 +2,6 @@
 
 #include "re_core/assert/assert.hh"
 #include "re_core/math/proto/matrix_to_proto.hh"
-#include "re_core/transforms/framed_group.hh"
 #include "re_core/transforms/proto/frame_3_to_proto.hh"
 #include "re_core/transforms/proto/se3.pb.h"
 #include "re_core/transforms/proto/so3.pb.h"
