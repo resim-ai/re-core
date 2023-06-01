@@ -190,7 +190,6 @@ cc_library(
         ":two_jet_concepts",
         "//re_core/assert",
         "//re_core/testing:random_matrix",
-        "//re_core/transforms:framed_group",
         "//re_core/transforms:liegroup_test_helpers",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
@@ -248,7 +247,6 @@ cc_library(
     deps = [
         ":t_curve",
         "//re_core/transforms:frame",
-        "//re_core/transforms:framed_group",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
         "@libeigen//:eigen",
@@ -262,7 +260,6 @@ cc_test(
         ":test_helpers",
         "//re_core/curves:t_curve",
         "//re_core/transforms:frame",
-        "//re_core/transforms:framed_group",
         "@com_google_googletest//:gtest_main",
         "@libeigen//:eigen",
     ],
