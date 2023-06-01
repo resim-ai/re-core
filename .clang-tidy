@@ -12,7 +12,8 @@ Checks: >
   -modernize-use-nodiscard,
   performance-*,
   readability-*,
-  -readability-identifier-length
+  -readability-identifier-length,
+  -readability-function-cognitive-complexity,
 WarningsAsErrors: "*"
 HeaderFilterRegex: "resim_core/.*\\.hh"
 AnalyzeTemporaryDtors: false
