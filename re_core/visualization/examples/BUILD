@@ -16,7 +16,6 @@ cc_binary(
     name = "example_01_framed_transform_composition",
     srcs = ["example_01_framed_transform_composition.cc"],
     deps = [
-        "//re_core/transforms:framed_group",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
         "//re_core/visualization:view",
@@ -28,7 +27,6 @@ cc_binary(
     srcs = ["example_02_distance_parameterized_unit_circle.cc"],
     deps = [
         "//re_core/curves:d_curve",
-        "//re_core/transforms:framed_group",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
         "//re_core/visualization:view",
@@ -41,7 +39,6 @@ cc_binary(
     deps = [
         "//re_core/curves:t_curve",
         "//re_core/testing:random_matrix",
-        "//re_core/transforms:framed_group",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
         "//re_core/visualization:view",
@@ -56,7 +53,6 @@ cc_binary(
         "//re_core/actor/state:trajectory",
         "//re_core/time:timestamp",
         "//re_core/transforms:frame",
-        "//re_core/transforms:framed_group",
         "//re_core/transforms:se3",
         "//re_core/transforms:so3",
         "//re_core/utils:uuid",
