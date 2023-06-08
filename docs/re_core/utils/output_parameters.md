@@ -33,13 +33,13 @@ of our `InOut` wrapper when passing in arguments that may be modified by a
 function. Using it works like so:
 
 ```
-void set_to_three(resim::InOut<int> x) { 
+void set_to_three(re::InOut<int> x) { 
   *x = 3; 
 }
 
 int main(int argc, char **argv) {
   int val;
-  set_to_three(resim::InOut{val});
+  set_to_three(re::InOut{val});
   std::cout << val << std::endl;
   return 0;
 }
@@ -57,13 +57,13 @@ struct Foo {
   int x = 0;
 };
 
-void set_to_three(resim::InOut<Foo> f) { 
+void set_to_three(re::InOut<Foo> f) { 
   f->x = 3; 
 }
 
 int main(int argc, char **argv) {
   Foo f;
-  set_to_three(resim::InOut{f});
+  set_to_three(re::InOut{f});
   std::cout << f.x << std::endl;
   return 0;
 }
@@ -110,7 +110,7 @@ To do this, we use the `NullableReference` template:
 
 #include "re_core/utils/nullable_reference.hh"
 
-void maybe_set_to_three(resim::NullableReference<int> x) {
+void maybe_set_to_three(re::NullableReference<int> x) {
   std::cout << "Ran maybe_set_to_three()!" << std::endl;
   if (x.has_value()) {
     *x = 3;
@@ -119,9 +119,9 @@ void maybe_set_to_three(resim::NullableReference<int> x) {
 
 int main(int argc, char **argv) {
   int val;
-  maybe_set_to_three(resim::NullableReference{val});
+  maybe_set_to_three(re::NullableReference{val});
   std::cout << val << std::endl;
-  maybe_set_to_three(resim::null_reference<int>);
+  maybe_set_to_three(re::null_reference<int>);
   return 0;
 }
 ```

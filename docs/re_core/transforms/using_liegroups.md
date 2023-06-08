@@ -41,7 +41,7 @@ frame expressed in scene coordinates. Since rotation matrices are a
 ```
 #include "re_core/transforms/so3.hh"
 
-using namespace resim::transforms;
+using namespace re::transforms;
 const SO3 scene_from_robot_rotation = SO3(phi, {1., 0., 0.}) *
                                       SO3(theta, {0., 1., 0.}) *
                                       SO3(psi, {0., 0., 1.});

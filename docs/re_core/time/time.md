@@ -3,9 +3,9 @@
 ## Basic Types
 
 Within the ReSim libraries, we generally represent durations using
-`resim::time::Duration`, which is an alias for `std::chrono::nanoseconds` and
-timestamps as `resim::time::Timestamp` which is an alias for
-`std::chrono::sys_time<resim::time::Duration>`. 
+`re::time::Duration`, which is an alias for `std::chrono::nanoseconds` and
+timestamps as `re::time::Timestamp` which is an alias for
+`std::chrono::sys_time<re::time::Duration>`. 
 
 
 ## Converters
@@ -26,7 +26,7 @@ convenience converters:
 
 // ...
 
-using namespace resim::time;
+using namespace re::time;
 Duration my_duration{std::chrono::nanoseconds(10000U)};
 
 double my_duration_s = as_seconds(my_duration);
@@ -120,8 +120,8 @@ compute a robot's average deviation from its desired pose over the course of a
 simulation. If a user wants to compute this average with Reimann rectangles,
 they could pick a maximum rectangle width (dt) that they are willing to accept
 (depending on what accuracy they desire) and then compute the integral using
-`resim::time::sample_interval()` and the associated
-`resim::time::num_samples()` function like so:
+`re::time::sample_interval()` and the associated
+`re::time::num_samples()` function like so:
 
 ```
 #include <cmath>

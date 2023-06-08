@@ -40,7 +40,7 @@ runs with no problem. If `some_condition` is false, the program will exit
 immediately with:
 
 ```bash
-terminate called after throwing an instance of 'resim::AssertException'
+terminate called after throwing an instance of 're::AssertException'
   what():  <path/to/source.cc:NN> - ReAssertion failed: (some_condition). Message: 
 Aborted
 ```
@@ -48,7 +48,7 @@ Aborted
 If `some_other_condition` is false, then we'll get the Message field populated:
 
 ```bash
-terminate called after throwing an instance of 'resim::AssertException'
+terminate called after throwing an instance of 're::AssertException'
   what():  <path/to/source.cc:NN> - ReAssertion failed: (some_other_condition). Message: Some failure message.
 Aborted
 ```
@@ -59,12 +59,12 @@ REASSERT(2 + 2 == 5);
 ```
 Outputs:
 ```bash
-terminate called after throwing an instance of 'resim::AssertException'
+terminate called after throwing an instance of 're::AssertException'
   what():  <path/to/source.cc:NN> - ReAssertion failed: (2 + 2 == 5). Message: 
 Aborted
 ```
 
-Under the hood, `REASSERT()` throws a `resim::AssertException` if the condition
+Under the hood, `REASSERT()` throws a `re::AssertException` if the condition
 is false. As noted below, we never catch this exception in production code, so
 it always terminates the program. The reason we use an exception at all is so
 that we can verify in unit tests that the assertion would terminate the program
@@ -101,13 +101,13 @@ Instead, we use function return values to pass error information up to the
 caller. This is a well-trodden path with languages like
 [Rust](https://doc.rust-lang.org/reference/expressions/operator-expr.html#the-question-mark-operator)
 even adding language features to make this sort of error handling syntactically
-nice. At ReSim we use `resim::Status` for this. For example:
+nice. At ReSim we use `re::Status` for this. For example:
 
 ```
 #include "re_core/assert/assert.hh"
 #include "re_core/utils/status.hh"
 
-using namespace resim;
+using namespace re;
 
 enum class Arg {
   GOOD_ARGUMENT = 0,
@@ -141,7 +141,7 @@ CHECK_STATUS_OK(bad_status);
 When run, this code outputs the following:
 
 ```bash
-terminate called after throwing an instance of 'resim::AssertException'
+terminate called after throwing an instance of 're::AssertException'
   what():  <path/to/source.cc:NN> - ReAssertion failed: ((bad_status).ok()). Message: {bad_status.what() == <path/to/source.cc:MM> Oh no! We failed!}
 Aborted
 ``` 
@@ -227,7 +227,7 @@ CHECK_STATUS_OK(bad_status);
 This code first prints `6` (for the `GOOD_ARGUMENT` case) and then outputs:
 
 ```bash
-terminate called after throwing an instance of 'resim::AssertException'
+terminate called after throwing an instance of 're::AssertException'
   what():  <path/to/source.cc:NN> - ReAssertion failed: ((bad_status).ok()). Message: {bad_status.what() == <path/to/source.cc:MM> Oh no! We failed!}
 Aborted
 ```
