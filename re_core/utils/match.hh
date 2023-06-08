@@ -5,7 +5,7 @@
 #include <utility>
 #include <variant>
 
-namespace resim {
+namespace re {
 namespace detail {
 
 // A typename template to collect all of our overloads into a single object
@@ -94,4 +94,4 @@ constexpr auto match(T &&variant, BranchTypes &&...branch) -> decltype(auto) {
       std::forward<T>(variant));
 }
 
-}  // namespace resim
+}  // namespace re

@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-namespace resim {
+namespace re {
 
 TEST(CheckTest, TestCheck) {
   EXPECT_THROW(REASSERT(false), AssertException);
@@ -24,4 +24,4 @@ TEST(CheckTest, TestAssertException) {
       "flux capacitor broke!");
 }
 
-}  // namespace resim
+}  // namespace re

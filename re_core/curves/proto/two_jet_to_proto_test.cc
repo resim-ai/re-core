@@ -20,7 +20,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 namespace {
 using TwoJetLSE3 = curves::TwoJetL<transforms::SE3>;
@@ -161,4 +161,4 @@ TYPED_TEST(TwoJetRToProtoTests, TestPack) {
 }
 // NOLINTEND(readability-function-cognitive-complexity)
 
-}  // namespace resim::curves
+}  // namespace re::curves

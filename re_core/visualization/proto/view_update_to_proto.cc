@@ -4,7 +4,7 @@
 #include "re_core/assert/assert.hh"
 #include "re_core/visualization/proto/view_primitive_to_proto.hh"
 
-namespace resim::visualization::proto {
+namespace re::visualization::proto {
 
 void pack(const visualization::ViewUpdate &in, ViewUpdate *const out) {
   REASSERT(out != nullptr, "Can't pack into invalid proto!");
@@ -23,4 +23,4 @@ visualization::ViewUpdate unpack(const ViewUpdate &in) {
   return result;
 }
 
-};  // namespace resim::visualization::proto
+};  // namespace re::visualization::proto

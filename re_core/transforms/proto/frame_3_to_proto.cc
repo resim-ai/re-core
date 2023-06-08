@@ -5,7 +5,7 @@
 #include "re_core/transforms/proto/frame_3.pb.h"
 #include "re_core/utils/proto/uuid_to_proto.hh"
 
-namespace resim::transforms::proto {
+namespace re::transforms::proto {
 
 void pack(const transforms::Frame<3> &in, Frame_3 *const out) {
   REASSERT(out != nullptr, "Can't pack into invalid proto!");
@@ -17,4 +17,4 @@ transforms::Frame<3> unpack(const Frame_3 &in) {
   return Frame<3>{unpack(in.id())};
 }
 
-};  // namespace resim::transforms::proto
+};  // namespace re::transforms::proto

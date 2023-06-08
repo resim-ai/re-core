@@ -6,7 +6,7 @@
 
 #include "re_core/transforms/liegroup_test_helpers.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 TEST(CrossMatrixTest, CrossEquivalence) {
   const auto test_vectors = make_test_vectors<Eigen::Vector3d>();
@@ -19,4 +19,4 @@ TEST(CrossMatrixTest, CrossEquivalence) {
   }
 }
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

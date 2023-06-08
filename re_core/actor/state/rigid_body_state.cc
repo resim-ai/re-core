@@ -5,7 +5,7 @@
 
 #include "re_core/transforms/se3.hh"
 
-namespace resim::actor::state {
+namespace re::actor::state {
 
 template <transforms::LieGroupType Group>
 using LinearDelta = typename RigidBodyState<Group>::LinearDelta;
@@ -165,4 +165,4 @@ RigidBodyState<transforms::SE3>::identity(
     const transforms::Frame<transforms::SE3::DIMS> &,
     const transforms::Frame<transforms::SE3::DIMS> &);
 
-}  // namespace resim::actor::state
+}  // namespace re::actor::state

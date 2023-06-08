@@ -11,7 +11,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 namespace {
 constexpr auto LOW_COUNT =
@@ -71,4 +71,4 @@ template class TwoJetTestHelper<TwoJetL<transforms::SO3>>;
 template class TwoJetTestHelper<TwoJetR<transforms::SE3>>;
 template class TwoJetTestHelper<TwoJetR<transforms::SO3>>;
 
-}  // namespace resim::curves
+}  // namespace re::curves

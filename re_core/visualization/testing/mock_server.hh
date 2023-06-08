@@ -9,7 +9,7 @@
 #include "re_core/visualization/proto/view_update_to_proto.hh"
 #include "re_core/visualization/view_update.hh"
 
-namespace resim::visualization::testing {
+namespace re::visualization::testing {
 
 // Runs a mock server that acts like the view API. This server picks an
 // arbitrary port on the given host.
@@ -64,7 +64,7 @@ class MockServer {
   HttpResponse view_update_response_code_{HttpResponse::CREATED};
   UUID session_id_;
 
-  ::resim::testing::MockServer server_;
+  ::re::testing::MockServer server_;
 };
 
-}  // namespace resim::visualization::testing
+}  // namespace re::visualization::testing

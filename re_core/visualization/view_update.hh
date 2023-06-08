@@ -5,12 +5,12 @@
 
 #include "re_core/visualization/view_primitive.hh"
 
-namespace resim::visualization {
+namespace re::visualization {
 
 // A collection of view primitives to update the current state of the
-// resim::view visualization.
+// re::view visualization.
 struct ViewUpdate {
   std::vector<ViewPrimitive> primitives;
 };
 
-}  // namespace resim::visualization
+}  // namespace re::visualization

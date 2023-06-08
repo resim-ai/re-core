@@ -10,7 +10,7 @@
 #include "re_core/transforms/liegroup_concepts.hh"
 #include "re_core/transforms/se3.hh"
 
-namespace resim::actor::state {
+namespace re::actor::state {
 
 namespace {
 
@@ -227,4 +227,4 @@ TYPED_TEST(RigidBodyStateTests, InverseTimes) {
   EXPECT_NE(state_c.ref_from_body().from(), FRAME_A);
 }
 
-}  // namespace resim::actor::state
+}  // namespace re::actor::state

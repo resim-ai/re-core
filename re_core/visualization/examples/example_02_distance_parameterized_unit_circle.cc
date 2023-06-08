@@ -7,10 +7,10 @@
 #include "re_core/transforms/so3.hh"
 #include "re_core/visualization/view.hh"
 
-using resim::transforms::SE3;  // ReSim's 6 d.o.f. rigid xform.
-using resim::transforms::SO3;  // ReSim's 3 d.o.f. rotation.
+using re::transforms::SE3;  // ReSim's 6 d.o.f. rigid xform.
+using re::transforms::SO3;  // ReSim's 3 d.o.f. rotation.
 
-using Frame = resim::transforms::Frame<3>;  // ReSim's frame identifier.
+using Frame = re::transforms::Frame<3>;  // ReSim's frame identifier.
 
 std::vector<SE3> unit_circle(
     double translation_x = 0.0,
@@ -75,8 +75,8 @@ std::vector<SE3> framed_unit_circle(
 }
 
 int main(int argc, char* argv[]) {
-  using resim::transforms::SE3;  // ReSim's 6 d.o.f. rigid xform.
-  using resim::transforms::SO3;  // ReSim's 3 d.o.f. rotation.
+  using re::transforms::SE3;  // ReSim's 6 d.o.f. rigid xform.
+  using re::transforms::SO3;  // ReSim's 3 d.o.f. rotation.
 
   // In this example, we will explore creating distance parameterized unit
   // circles using framed transforms.
@@ -90,7 +90,7 @@ int main(int argc, char* argv[]) {
   VIEW(robot) << "robot";
 
   auto world_from_robot_points = framed_unit_circle(world, robot);
-  const resim::curves::DCurve world_from_robot_circle(world_from_robot_points);
+  const re::curves::DCurve world_from_robot_circle(world_from_robot_points);
 
   // Visualize a control point
   VIEW(*world_from_robot_circle.control_pts().at(0).ref_from_control)
@@ -122,7 +122,7 @@ int main(int argc, char* argv[]) {
   }
 
   // Plot the resulting circle (sensor to world).
-  const resim::curves::DCurve world_from_sensor_circle(
+  const re::curves::DCurve world_from_sensor_circle(
       world_from_sensor_points);
   // Visualize a control point
   VIEW(*world_from_sensor_circle.control_pts().at(0).ref_from_control)

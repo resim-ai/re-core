@@ -6,7 +6,7 @@
 
 #include "re_core/time/timestamp.hh"
 
-namespace resim::time {
+namespace re::time {
 
 // This function finds the minimum number of samples (including both endpoints)
 // needed to partition [start_time, end_time] evenly with a step size smaller
@@ -60,4 +60,4 @@ void sample_interval(
     Duration max_abs_dt,
     const std::function<void(Timestamp)> &func);
 
-}  // namespace resim::time
+}  // namespace re::time

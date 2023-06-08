@@ -6,7 +6,7 @@
 #include "re_core/curves/d_curve.hh"
 #include "re_core/transforms/se3.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 namespace {
 using SE3 = transforms::SE3;
@@ -41,4 +41,4 @@ std::vector<SE3> DCurveCircle<SE3>::points(
   return points;
 }
 
-}  // namespace resim::curves
+}  // namespace re::curves

@@ -6,7 +6,7 @@
 
 #include "re_core/transforms/frame.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 // An arc length parameterized curve that is built up from segments of LieGroup
 // transforms. Segments are geodesic curves with the same number of degrees of
@@ -78,4 +78,4 @@ class DCurve {
   std::vector<Segment> segments_;
 };
 
-}  // namespace resim::curves
+}  // namespace re::curves

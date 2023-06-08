@@ -10,7 +10,7 @@
 #include <cstdint>
 #include <ratio>
 
-namespace resim::time {
+namespace re::time {
 
 using Duration = std::chrono::nanoseconds;
 using Timestamp = std::chrono::sys_time<Duration>;
@@ -48,4 +48,4 @@ constexpr Duration from_seconds_and_nanos(const SecsAndNanos &secs_and_nanos) {
   return Duration{secs_and_nanos.secs * std::nano::den + secs_and_nanos.nanos};
 }
 
-}  // namespace resim::time
+}  // namespace re::time

@@ -8,7 +8,7 @@
 
 #include "re_core/assert/assert.hh"
 
-namespace resim::math {
+namespace re::math {
 
 Gaussian::Gaussian(Vec mu, Mat cov)
     : dims_(mu.rows()),
@@ -65,4 +65,4 @@ void Gaussian::sanitize_eigenvalues() {
       [&](double eigenval) { return std::max(eigenval, 0.); });
 }
 
-}  // namespace resim::math
+}  // namespace re::math

@@ -11,7 +11,7 @@
 #include "re_core/assert/assert.hh"
 #include "re_core/utils/http_response.hh"
 
-namespace resim::visualization::testing {
+namespace re::visualization::testing {
 
 const std::string MockServer::VALID_TOKEN_ = "valid token";
 const std::string MockServer::UNAUTHORIZED_TOKEN_ = "unauthorized token";
@@ -25,7 +25,7 @@ namespace {
 
 bool validate_headers(
     const std::multimap<std::string, std::string> &headers,
-    InOut<::resim::testing::MockServer::Response> response) {
+    InOut<::re::testing::MockServer::Response> response) {
   if (not headers.contains("Authorization")) {
     response->status = HttpResponse::UNAUTHORIZED;
     return false;
@@ -74,7 +74,7 @@ MockServer::MockServer(
           const std::multimap<std::string, std::string> &headers,
           const std::string &body,
           const std::smatch &,
-          InOut<::resim::testing::MockServer::Response> response) {
+          InOut<::re::testing::MockServer::Response> response) {
         if (!validate_headers(headers, response)) {
           return;
         }
@@ -92,7 +92,7 @@ MockServer::MockServer(
           const std::multimap<std::string, std::string> &headers,
           const std::string &body,
           const std::smatch &matches,
-          InOut<::resim::testing::MockServer::Response> response) {
+          InOut<::re::testing::MockServer::Response> response) {
         if (!validate_headers(headers, response)) {
           return;
         }
@@ -133,4 +133,4 @@ std::string MockServer::host() const { return server_.host(); }
 
 int MockServer::port() const { return server_.port(); }
 
-}  // namespace resim::visualization::testing
+}  // namespace re::visualization::testing

@@ -3,7 +3,7 @@
 
 #include <gtest/gtest.h>
 
-namespace resim::testing {
+namespace re::testing {
 
 TEST(MoveCopyTrackerTest, TestDefaultConstructor) {
   const MoveCopyTracker tracker;
@@ -40,4 +40,4 @@ TEST(MoveCopyTrackerTest, TestCopy) {
   EXPECT_EQ(tracker_c.num_copies(), 2U);
 }
 
-}  // namespace resim::testing
+}  // namespace re::testing

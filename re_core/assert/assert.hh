@@ -5,7 +5,7 @@
 #include <string>
 #include <string_view>
 
-namespace resim {
+namespace re {
 
 // An exception type to throw when an assertion fails to be
 // true. Users should not throw this directly, but should use the
@@ -51,7 +51,7 @@ constexpr void assert_impl(
 }
 
 }  // namespace detail
-}  // namespace resim
+}  // namespace re
 
 // NOLINTBEGIN(cppcoreguidelines-macro-usage)
 
@@ -61,11 +61,11 @@ constexpr void assert_impl(
 
 // "Overload" for the case where no message is provided.
 #define REASSERT_1(cond) \
-  resim::detail::assert_impl(cond, #cond, __FILE__, __LINE__)
+  re::detail::assert_impl(cond, #cond, __FILE__, __LINE__)
 
 // "Overload" for the case where a message is provided.
 #define REASSERT_2(cond, message) \
-  resim::detail::assert_impl(cond, #cond, __FILE__, __LINE__, message)
+  re::detail::assert_impl(cond, #cond, __FILE__, __LINE__, message)
 
 // The main assertion macro that users should use.
 #define REASSERT(...) \

@@ -2,7 +2,7 @@
 
 #include "re_core/assert/assert.hh"
 
-namespace resim {
+namespace re {
 
 namespace {
 
@@ -43,4 +43,4 @@ bool UUID::is_null() const { return id_ == NULL_ID; }
 
 const std::array<unsigned char, ARRAY_SIZE> &UUID::id() const { return id_; }
 
-}  // namespace resim
+}  // namespace re

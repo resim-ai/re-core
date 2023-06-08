@@ -15,7 +15,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::curves::proto {
+namespace re::curves::proto {
 using TCurveSE3 = curves::TCurve<transforms::SE3>;
 using TCurveSO3 = curves::TCurve<transforms::SO3>;
 
@@ -115,4 +115,4 @@ TYPED_TEST(TCurveToProtoDeathTests, TestPackNull) {
   EXPECT_THROW({ proto::pack(test_t_curve, nullptr); }, AssertException);
 }
 
-}  // namespace resim::curves::proto
+}  // namespace re::curves::proto

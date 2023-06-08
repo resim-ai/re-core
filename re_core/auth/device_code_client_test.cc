@@ -8,7 +8,7 @@
 #include "re_core/auth/testing/mock_device_code_server.hh"
 #include "re_core/testing/test_directory.hh"
 
-namespace resim::auth {
+namespace re::auth {
 
 class AuthClientTest : public ::testing::Test {
  protected:
@@ -77,7 +77,7 @@ class AuthClientTest : public ::testing::Test {
   }
 
  private:
-  resim::testing::TestDirectoryRAII test_directory_;
+  re::testing::TestDirectoryRAII test_directory_;
   int device_code_count_ = 0;
   int polling_count_ = 0;
 
@@ -140,4 +140,4 @@ TEST_F(AuthClientDeathTest, TestTimeout) {
   EXPECT_THROW(client.get_jwt(), AssertException);
 }
 
-}  // namespace resim::auth
+}  // namespace re::auth

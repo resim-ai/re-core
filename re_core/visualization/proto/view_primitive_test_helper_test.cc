@@ -16,7 +16,7 @@
 #include "re_core/utils/match.hh"
 #include "re_core/visualization/view_primitive.hh"
 
-namespace resim::visualization {
+namespace re::visualization {
 
 namespace {
 using transforms::SE3;
@@ -143,4 +143,4 @@ TYPED_TEST(ViewPrimitiveTestHelperTest, TestGenerateTestPrimitive) {
       [&](const FramedVector &test_framed_vector) {});
 }
 // NOLINTEND(readability-function-cognitive-complexity)
-}  // namespace resim::visualization
+}  // namespace re::visualization

@@ -6,7 +6,7 @@
 #include "re_core/assert/assert.hh"
 #include "re_core/math/safe_integer_utils.hh"
 
-namespace resim::time {
+namespace re::time {
 
 int64_t num_samples(double start_time, double end_time, double max_abs_dt) {
   REASSERT(max_abs_dt > 0., "max_abs_dt must be positive!");
@@ -119,4 +119,4 @@ void sample_interval(
   }
 }
 
-}  // namespace resim::time
+}  // namespace re::time

@@ -5,7 +5,7 @@
 #include "re_core/transforms/proto/se3_to_proto.hh"
 #include "re_core/transforms/se3.hh"
 
-namespace resim::curves::proto {
+namespace re::curves::proto {
 
 template <typename Group, typename Msg>
 void pack_d_curve(const DCurve<Group> &in, Msg *const out) {
@@ -36,4 +36,4 @@ template void unpack_d_curve(
     const DCurve_SE3 &,
     InOut<DCurve<transforms::SE3>>);
 
-}  // namespace resim::curves::proto
+}  // namespace re::curves::proto

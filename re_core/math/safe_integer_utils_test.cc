@@ -7,7 +7,7 @@
 
 #include "re_core/assert/assert.hh"
 
-namespace resim::math {
+namespace re::math {
 
 namespace {
 constexpr int64_t NUM_POINTS = 100;
@@ -78,4 +78,4 @@ TEST(SafeIntegerUtilsDeathTest, TestSafeAbsFails) {
   EXPECT_THROW(safe_abs(MIN), AssertException);
 }
 
-}  // namespace resim::math
+}  // namespace re::math

@@ -11,13 +11,13 @@
 #include "re_core/utils/uuid.hh"
 #include "re_core/visualization/view.hh"
 
-using resim::transforms::SE3;  // ReSim's 6 d.o.f. rigid xform.
-using resim::transforms::SO3;
+using re::transforms::SE3;  // ReSim's 6 d.o.f. rigid xform.
+using re::transforms::SO3;
 using TangentVector = SE3::TangentVector;
-using TCurve = resim::curves::TCurve<SE3>;  // ReSim's time parameterised curve
-using Frame = resim::transforms::Frame<SE3::DIMS>;
+using TCurve = re::curves::TCurve<SE3>;  // ReSim's time parameterised curve
+using Frame = re::transforms::Frame<SE3::DIMS>;
 using Vec3 = Eigen::Vector3d;
-using TwoJetL = resim::curves::TwoJetL<SE3>;
+using TwoJetL = re::curves::TwoJetL<SE3>;
 
 TCurve make_circle_curve(const Frame& into, const Frame& from) {
   constexpr double VELOCITY = 1.0;
@@ -52,8 +52,8 @@ TCurve translate_t_curve(
   for (const TCurve::Control& control : curve_from_world.control_pts()) {
     SE3 curve_from_world = control.point.frame_from_ref();
     SE3 sensor_from_world = sensor_from_curve * curve_from_world;
-    resim::view << curve_from_world;
-    resim::view << sensor_from_world;
+    re::view << curve_from_world;
+    re::view << sensor_from_world;
     TCurve::Control new_control{
         control.time,
         TwoJetL{
@@ -70,8 +70,8 @@ int main(int argc, char* argv[]) {
   // In this example, we will explore creating time parameterized unit
   // circles using the ReSim TCurve type.
 
-  const Frame world{resim::UUID{"aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"}};
-  const Frame curve{resim::UUID{"bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"}};
+  const Frame world{re::UUID{"aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa"}};
+  const Frame curve{re::UUID{"bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb"}};
 
   VIEW(world) << "world";
   VIEW(curve) << "curve";
@@ -86,7 +86,7 @@ int main(int argc, char* argv[]) {
 
   // Now, suppose we have a robot from sensor transform, which places the sensor
   // w.r.t. the robot, with the same orientation (omitting the rotation):
-  const Frame sensor{resim::UUID{"cccccccc-cccc-cccc-cccc-cccccccccccc"}};
+  const Frame sensor{re::UUID{"cccccccc-cccc-cccc-cccc-cccccccccccc"}};
   VIEW(sensor) << "sensor";
 
   const double SENSOR_X = 0.;

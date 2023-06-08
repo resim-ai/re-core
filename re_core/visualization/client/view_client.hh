@@ -8,7 +8,7 @@
 #include "re_core/visualization/proto/view_update.pb.h"
 #include "re_core/visualization/view_client_interface.hh"
 
-namespace resim::visualization {
+namespace re::visualization {
 
 // A simple client that packs SE3 and sends to server.
 class ViewClient : public ViewClientInterface {
@@ -43,4 +43,4 @@ class ViewClient : public ViewClientInterface {
   uint64_t update_id_ = 0;  // view update counter
 };
 
-}  // namespace resim::visualization
+}  // namespace re::visualization

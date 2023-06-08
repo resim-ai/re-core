@@ -15,7 +15,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 // Test that we can correctly identify objects with the correct composition
 // operator.
@@ -238,4 +238,4 @@ TEST(LieGroupTraitsTest, TestIsLieGroup) {
   static_assert(!LieGroupType<std::string>);
 }
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

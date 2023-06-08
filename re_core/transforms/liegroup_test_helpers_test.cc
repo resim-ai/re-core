@@ -9,7 +9,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 template <typename t>
 class LieGroupHelperTests : public ::testing::Test {};
@@ -101,4 +101,4 @@ TYPED_TEST(LieGroupHelperDeathTests, TooFewElementsRequested) {
       AssertException);
 }
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

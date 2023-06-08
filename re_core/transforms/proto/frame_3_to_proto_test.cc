@@ -6,7 +6,7 @@
 #include "re_core/transforms/frame.hh"
 #include "re_core/transforms/proto/frame_3.pb.h"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 TEST(Frame3ToProtoTest, Pack) {
   // SETUP
@@ -39,4 +39,4 @@ TEST(Frame3ToProtoDeathTest, TestPackInvalid) {
   EXPECT_THROW(proto::pack(Frame<3>::new_frame(), nullptr), AssertException);
 }
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

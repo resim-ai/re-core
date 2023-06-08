@@ -6,7 +6,7 @@
 
 #include "re_core/transforms/so3.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 TEST(ExpDiffTest, DerivativeOfExpSo3) {
   SO3::TangentVector all_zero = SO3::TangentVector::Zero();
@@ -29,4 +29,4 @@ TEST(ExpDiffTest, DerivativeOfExpSo3) {
   EXPECT_GT(coeffs_ones.c, ZERO);
 }
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

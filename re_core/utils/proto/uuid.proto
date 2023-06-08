@@ -1,7 +1,7 @@
 
 syntax = "proto3";
 
-package resim.proto;
+package re.proto;
 
 message UUID {
     string data = 1;

@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-namespace resim::transforms {
+namespace re::transforms {
 
 TEST(FramedTest, ConstructionAndEquality) {
   const Frame<3> A = Frame<3>::new_frame();
@@ -34,4 +34,4 @@ TEST(FramedTest, NullFrames) {
   EXPECT_FALSE(C.is_null());
 }
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

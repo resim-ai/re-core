@@ -3,7 +3,7 @@
 #include <array>
 #include <vector>
 
-namespace resim::curves {
+namespace re::curves {
 
 // Holds the polynomial coefficients for a TwoJet object.
 // The coefficients should by applied by pre-multiplication in tangent
@@ -77,4 +77,4 @@ class QuinticPolyCoeffs {
   static constexpr std::array<double, QUINTIC> D2A{0, 2, 6, 12, 20};
 };
 
-}  // namespace resim::curves
+}  // namespace re::curves

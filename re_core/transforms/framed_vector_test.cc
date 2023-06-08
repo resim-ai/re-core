@@ -7,7 +7,7 @@
 
 #include "re_core/testing/random_matrix.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 namespace {
 constexpr unsigned THREE_D = 3;
@@ -170,4 +170,4 @@ TYPED_TEST(FramedVectorAssertionTest, VectorAddition) {
       AssertException);
 }
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

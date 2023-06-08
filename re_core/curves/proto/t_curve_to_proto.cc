@@ -9,7 +9,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::curves::proto {
+namespace re::curves::proto {
 
 template <typename Group, typename Msg>
 void pack_t_curve(const TCurve<Group> &in, Msg *out) {
@@ -43,4 +43,4 @@ template void unpack_t_curve(
     const TCurve_SO3 &,
     InOut<TCurve<transforms::SO3>>);
 
-}  // namespace resim::curves::proto
+}  // namespace re::curves::proto

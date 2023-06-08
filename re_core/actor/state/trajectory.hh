@@ -9,7 +9,7 @@
 #include "re_core/transforms/frame.hh"
 #include "re_core/transforms/se3.hh"
 
-namespace resim::actor::state {
+namespace re::actor::state {
 
 // Trajectory.
 // Describes the state of a six-degrees-of-freedom rigid-body through over time,
@@ -92,4 +92,4 @@ class Trajectory {
   time::Timestamp start_time_;
 };
 
-}  // namespace resim::actor::state
+}  // namespace re::actor::state

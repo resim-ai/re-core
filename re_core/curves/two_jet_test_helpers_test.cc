@@ -7,7 +7,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 // An explicit seed for deterministic generation of test objects.
 constexpr unsigned int SEED = 104;
@@ -78,4 +78,4 @@ TYPED_TEST(TwoJetTestHelperDeathTests, TooFewElementsRequested) {
       AssertException);
 }
 
-}  // namespace resim::curves
+}  // namespace re::curves

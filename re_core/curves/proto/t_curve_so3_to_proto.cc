@@ -7,7 +7,7 @@
 #include "re_core/curves/t_curve.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::curves::proto {
+namespace re::curves::proto {
 
 void pack(const TCurve<transforms::SO3> &in, TCurve_SO3 *const out) {
   pack_t_curve(in, out);
@@ -19,4 +19,4 @@ TCurve<transforms::SO3> unpack(const TCurve_SO3 &in) {
   return t_curve;
 }
 
-}  // namespace resim::curves::proto
+}  // namespace re::curves::proto

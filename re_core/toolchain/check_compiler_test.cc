@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-namespace resim::toolchain {
+namespace re::toolchain {
 
 TEST(CheckCompiler, QueryDataReturns) {
   const auto compiler_data = query_compiler_data();
@@ -20,4 +20,4 @@ TEST(CheckCompiler, VerifyExpectedCompiler) {
   EXPECT_NE(compiler_data.compiler_version.find("14"), std::string::npos);
 }
 
-}  // namespace resim::toolchain
+}  // namespace re::toolchain

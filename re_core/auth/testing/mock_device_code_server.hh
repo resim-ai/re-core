@@ -3,7 +3,7 @@
 #include "re_core/auth/proto/auth_messages.pb.h"
 #include "re_core/testing/mock_server.hh"
 
-namespace resim::auth::testing {
+namespace re::auth::testing {
 
 // Run a mock server for testing authentication. This mock is meant to support
 // testing the auth0 device authorization flow in unit tests:
@@ -53,7 +53,7 @@ class MockDeviceCodeServer {
   void set_timeout_s(int timeout_s);
 
  private:
-  using Response = ::resim::testing::MockServer::Response;
+  using Response = ::re::testing::MockServer::Response;
 
   std::string device_code_;
   int interval_ = -1;
@@ -63,6 +63,6 @@ class MockDeviceCodeServer {
   static constexpr int DEFAULT_TIMEOUT_S = 600;
   int timeout_s_ = DEFAULT_TIMEOUT_S;
 
-  ::resim::testing::MockServer server_;
+  ::re::testing::MockServer server_;
 };
-}  // namespace resim::auth::testing
+}  // namespace re::auth::testing

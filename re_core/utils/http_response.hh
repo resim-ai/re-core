@@ -1,6 +1,6 @@
 #pragma once
 
-namespace resim {
+namespace re {
 
 enum class HttpResponse {
   INVALID = -1,
@@ -11,4 +11,4 @@ enum class HttpResponse {
   NOT_FOUND = 404,
 };
 
-}  // namespace resim
+}  // namespace re

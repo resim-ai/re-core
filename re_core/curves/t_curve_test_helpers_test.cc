@@ -8,7 +8,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 namespace {
 // An explicit seed for deterministic generation of test objects.
@@ -75,4 +75,4 @@ TYPED_TEST(FramedTCurveHelperTests, CheckFrames) {
   }
 }
 
-}  // namespace resim::curves
+}  // namespace re::curves

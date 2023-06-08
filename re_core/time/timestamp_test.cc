@@ -11,7 +11,7 @@
 
 #include "re_core/time/random_duration.hh"
 
-namespace resim::time {
+namespace re::time {
 
 using std::literals::chrono_literals::operator""ns;
 
@@ -109,4 +109,4 @@ TEST(TimestampTest, TestAsDuration) {
   }
 }
 
-}  // namespace resim::time
+}  // namespace re::time

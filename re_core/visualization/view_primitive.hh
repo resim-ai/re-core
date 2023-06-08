@@ -14,7 +14,7 @@
 #include "re_core/transforms/so3.hh"
 #include "re_core/utils/uuid.hh"
 
-namespace resim::visualization {
+namespace re::visualization {
 
 // A struct representing a single visualizable piece of data (e.g. a transform,
 // curve, box, etc.), its optional, user-supplied name and metadata about that
@@ -36,4 +36,4 @@ struct ViewPrimitive {
   int line_number;
 };
 
-}  // namespace resim::visualization
+}  // namespace re::visualization

@@ -17,7 +17,7 @@
 #include "re_core/transforms/so3.hh"
 #include "re_core/visualization/view_primitive.hh"
 
-namespace resim::visualization {
+namespace re::visualization {
 
 namespace {
 using transforms::SE3;
@@ -136,4 +136,4 @@ template ViewPrimitive generate_test_primitive<actor::state::Trajectory>(
     const std::optional<std::string>& name);
 template ViewPrimitive generate_test_primitive<FramedVector>(
     const std::optional<std::string>& name);
-}  // namespace resim::visualization
+}  // namespace re::visualization

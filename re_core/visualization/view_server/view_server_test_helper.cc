@@ -15,7 +15,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::visualization::view_server {
+namespace re::visualization::view_server {
 
 namespace {
 using transforms::SE3;
@@ -168,4 +168,4 @@ std::vector<FramedVector> generate_payload_type(
   return framed_vectors;
 }
 
-}  // namespace resim::visualization::view_server
+}  // namespace re::visualization::view_server

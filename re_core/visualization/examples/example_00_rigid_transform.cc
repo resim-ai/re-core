@@ -6,8 +6,8 @@
 #include "re_core/visualization/view.hh"
 
 int main(int argc, char *argv[]) {
-  using resim::transforms::SE3;  // ReSim's 6 d.o.f. rigid xform.
-  using resim::transforms::SO3;  // ReSim's 3 d.o.f. rotation.
+  using re::transforms::SE3;  // ReSim's 6 d.o.f. rigid xform.
+  using re::transforms::SO3;  // ReSim's 3 d.o.f. rotation.
 
   // Create a simple rotation of pi/2 about the Z-axis.
   const double ANGLE_RAD = M_PI_2;

@@ -7,7 +7,7 @@
 #include <cmath>
 #include <random>
 
-namespace resim::testing {
+namespace re::testing {
 
 template <typename T>
 class RandomVectorTests : public ::testing::Test {};
@@ -101,4 +101,4 @@ TEST(RandomQuaternionTest, TestRandomQuaternion) {
   }
 }
 
-}  // namespace resim::testing
+}  // namespace re::testing

@@ -11,7 +11,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 template <transforms::LieGroupType Group>
 TCurveTestHelper<Group>::TCurveTestHelper(const unsigned int seed)
@@ -44,4 +44,4 @@ TCurve<Group> TCurveTestHelper<Group>::make_t_curve(
 template class TCurveTestHelper<transforms::SE3>;
 template class TCurveTestHelper<transforms::SO3>;
 
-}  // namespace resim::curves
+}  // namespace re::curves

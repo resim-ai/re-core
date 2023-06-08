@@ -2,8 +2,8 @@
 
 #include "re_core/visualization/view_primitive.hh"
 
-namespace resim::visualization::testing {
+namespace re::visualization::testing {
 
 bool primitives_equal(const ViewPrimitive &a, const ViewPrimitive &b);
 
-}  // namespace resim::visualization::testing
+}  // namespace re::visualization::testing

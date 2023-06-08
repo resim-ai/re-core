@@ -11,7 +11,7 @@
 #include "re_core/transforms/so3.hh"
 #include "re_core/utils/type.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 namespace {
 constexpr auto LOW_COUNT =
@@ -104,4 +104,4 @@ template std::vector<SE3::TangentVector> make_test_algebra_elements<SE3>(
     unsigned);
 template std::vector<SE3> make_test_group_elements<SE3>(unsigned);
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

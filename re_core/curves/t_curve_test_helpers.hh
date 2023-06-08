@@ -8,7 +8,7 @@
 #include "re_core/transforms/frame.hh"
 #include "re_core/transforms/liegroup_concepts.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 template <transforms::LieGroupType Group>
 class TCurveTestHelper {
@@ -34,4 +34,4 @@ class TCurveTestHelper {
   TwoJetTestHelper<TwoJetL<Group>> two_jet_helper_;
 };
 
-}  // namespace resim::curves
+}  // namespace re::curves

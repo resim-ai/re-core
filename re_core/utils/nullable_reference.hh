@@ -2,7 +2,7 @@
 
 #include "re_core/assert/assert.hh"
 
-namespace resim {
+namespace re {
 
 // This class represents a nullable reference to an object of type T.
 template <class T>
@@ -60,4 +60,4 @@ T *NullableReference<T>::operator->() const {
   return x_;
 }
 
-}  // namespace resim
+}  // namespace re

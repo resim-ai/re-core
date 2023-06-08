@@ -7,7 +7,7 @@
 #include "re_core/curves/proto/t_curve_se3_to_proto.hh"
 #include "re_core/time/timestamp.hh"
 
-namespace resim::actor::state::proto {
+namespace re::actor::state::proto {
 
 void pack(const state::Trajectory &in, Trajectory *const out) {
   REASSERT(out != nullptr, "Can't pack into invalid proto!");
@@ -27,4 +27,4 @@ state::Trajectory unpack(const Trajectory &in) {
   return state::Trajectory(unpack(in.curve()), start_time);
 }
 
-}  // namespace resim::actor::state::proto
+}  // namespace re::actor::state::proto

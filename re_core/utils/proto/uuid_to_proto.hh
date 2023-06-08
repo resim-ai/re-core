@@ -4,10 +4,10 @@
 #include "re_core/utils/proto/uuid.pb.h"
 #include "re_core/utils/uuid.hh"
 
-namespace resim::proto {
+namespace re::proto {
 
-void pack(const resim::UUID &in, UUID *out);
+void pack(const re::UUID &in, UUID *out);
 
-resim::UUID unpack(const UUID &in);
+re::UUID unpack(const UUID &in);
 
-};  // namespace resim::proto
+};  // namespace re::proto

@@ -32,9 +32,9 @@
 #include "re_core/visualization/view_client_interface.hh"
 #include "re_core/visualization/view_server/view_server_test_helper.hh"
 
-using ::resim::visualization::client::proto::ViewSessionUpdateResponse;
+using ::re::visualization::client::proto::ViewSessionUpdateResponse;
 
-namespace resim::visualization {
+namespace re::visualization {
 namespace {
 
 using transforms::SE3;
@@ -576,7 +576,7 @@ TYPED_TEST(ViewClientTest, TestViewClientLogging) {
   //  Create a separate test instance of glog.
   google::InitGoogleLogging("test_logging");
   // Ask glog to write logs to a temporary file.
-  const resim::testing::TestDirectoryRAII tmp_log_dir;
+  const re::testing::TestDirectoryRAII tmp_log_dir;
   const auto logfile = tmp_log_dir.test_file_path();
   google::SetLogDestination(google::GLOG_INFO, logfile.string().data());
   // Setup a minimal mock server.
@@ -1000,4 +1000,4 @@ TEST(ViewClientTest, TestTokenInvalidatedBetweenCalls) {
   EXPECT_FALSE(status.ok());
 }
 
-}  // namespace resim::visualization
+}  // namespace re::visualization

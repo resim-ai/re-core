@@ -1,6 +1,6 @@
 #include "re_core/curves/quintic_poly_coeffs.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 TwoJetPolyCoeffs QuinticPolyCoeffs::dest_from_orig(const double time_nrm) {
   return two_jet_coeffs(DEST_ORIG, time_nrm);
@@ -41,4 +41,4 @@ TwoJetPolyCoeffs QuinticPolyCoeffs::two_jet_coeffs(
   return {a0, a1, a2};
 }
 
-}  // namespace resim::curves
+}  // namespace re::curves

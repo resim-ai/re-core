@@ -5,7 +5,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/utils/inout.hh"
 
-namespace resim::curves::proto {
+namespace re::curves::proto {
 
 void pack(const DCurve<transforms::SE3> &in, DCurve_SE3 *const out) {
   pack_d_curve(in, out);
@@ -17,4 +17,4 @@ DCurve<transforms::SE3> unpack(const DCurve_SE3 &in) {
   return d_curve_se3;
 }
 
-}  // namespace resim::curves::proto
+}  // namespace re::curves::proto

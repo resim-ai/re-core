@@ -2,7 +2,7 @@
 
 #include <string>
 
-namespace resim::auth {
+namespace re::auth {
 // Abstract interface for an AuthClient.
 class AuthClientInterface {
  public:
@@ -23,4 +23,4 @@ class AuthClientInterface {
   virtual void refresh() = 0;
 };
 
-}  // namespace resim::auth
+}  // namespace re::auth

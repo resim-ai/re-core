@@ -10,7 +10,7 @@
 
 #include "re_core/assert/assert.hh"
 
-namespace resim::time {
+namespace re::time {
 
 namespace {
 using std::literals::chrono_literals::operator""s;
@@ -121,4 +121,4 @@ TEST(EventScheduleTest, TestDeathOnTooManyEvents) {
 }
 // NOLINTEND(readability-function-cognitive-complexity)
 
-}  // namespace resim::time
+}  // namespace re::time

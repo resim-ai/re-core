@@ -17,7 +17,7 @@
 #include "re_core/visualization/client/proto/view_client.pb.h"
 #include "re_core/visualization/proto/view_update_to_proto.hh"
 
-namespace resim::visualization {
+namespace re::visualization {
 
 ViewClient::ViewClient(std::string base_url) : base_url_{std::move(base_url)} {
   auth::DeviceCodeClient::Config auth_client_config = {
@@ -129,4 +129,4 @@ void ViewClient::log_app_url(const std::string &url) {
       fmt::format("View your data visualization in the ReSim App: {}", url);
   LOG(INFO) << url_message;
 }
-}  // namespace resim::visualization
+}  // namespace re::visualization

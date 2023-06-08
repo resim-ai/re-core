@@ -5,7 +5,7 @@
 
 #include <string>
 
-namespace resim {
+namespace re {
 
 namespace {
 
@@ -83,4 +83,4 @@ TEST(InOutTest, TestArrowOperator) {
   EXPECT_EQ(target.x, value);
 }
 
-}  // namespace resim
+}  // namespace re

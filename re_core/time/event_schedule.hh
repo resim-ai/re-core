@@ -9,7 +9,7 @@
 #include "re_core/assert/assert.hh"
 #include "re_core/time/timestamp.hh"
 
-namespace resim::time {
+namespace re::time {
 
 //
 // This class stores a time-ordered queue of events with arbitrary payloads. It
@@ -120,4 +120,4 @@ bool EventSchedule<Payload, Count_t>::CompareEvents::operator()(
   return lhs.time == rhs.time and lhs.insertion_count > rhs.insertion_count;
 }
 
-}  // namespace resim::time
+}  // namespace re::time

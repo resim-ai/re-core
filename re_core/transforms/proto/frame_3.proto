@@ -2,8 +2,8 @@ syntax = "proto3";
 
 import "re_core/utils/proto/uuid.proto";
 
-package resim.transforms.proto;
+package re.transforms.proto;
 
 message Frame_3 {
-    resim.proto.UUID id = 1;
+    re.proto.UUID id = 1;
 }

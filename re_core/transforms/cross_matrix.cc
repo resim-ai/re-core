@@ -1,7 +1,7 @@
 
 #include "re_core/transforms/cross_matrix.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 Eigen::Matrix3d cross_matrix(const Eigen::Vector3d &vec) {
   constexpr double ZERO = 0;
@@ -14,4 +14,4 @@ Eigen::Matrix3d cross_matrix(const Eigen::Vector3d &vec) {
   return crm;
 }
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

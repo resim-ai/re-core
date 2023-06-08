@@ -11,7 +11,7 @@
 
 #include "re_core/visualization/view_primitive.hh"
 
-namespace resim {
+namespace re {
 namespace visualization {
 
 // Forward declaration of the ViewClient interface.
@@ -22,7 +22,7 @@ class ViewClientInterface;
 //
 // VIEW(type) << "the_name" // Visualize the type with name "the_name".
 // VIEW(type,"name")        // Visualize the type with name "the_name".
-// resim::view << type      // Visualize without a custom name.
+// re::view << type      // Visualize without a custom name.
 //
 // It does this by implementing a streaming operator on the ViewObject class
 // which constructs and flushes a view primitive. The class is declared within
@@ -163,7 +163,7 @@ ViewObject<T> view_impl(
 // NOLINTNEXTLINE(cppcoreguidelines-avoid-non-const-global-variables)
 static visualization::View &view{visualization::View::get_instance()};
 
-}  // namespace resim
+}  // namespace re
 
 // NOLINTBEGIN(cppcoreguidelines-macro-usage)
 // Helper macro to help us select the right "overload" of the macro for cases
@@ -174,11 +174,11 @@ static visualization::View &view{visualization::View::get_instance()};
 // "Overload" for standard case when no message is provided and must be streamed
 // in:
 #define VIEW_1(object) \
-  resim::visualization::view_impl(object, __FILE__, __LINE__)
+  re::visualization::view_impl(object, __FILE__, __LINE__)
 
 // "Overload" for the case where a message is provided in macro.
 #define VIEW_2(object, message) \
-  resim::visualization::view_impl(object, message, __FILE__, __LINE__)
+  re::visualization::view_impl(object, message, __FILE__, __LINE__)
 
 // The main VIEW macro that users should use.
 #define VIEW(...) SELECT_VIEWER(__VA_ARGS__, VIEW_2, VIEW_1)(__VA_ARGS__)

@@ -4,14 +4,14 @@
 
 #include "re_core/assert/assert.hh"
 
-namespace resim::proto {
+namespace re::proto {
 
-void pack(const resim::UUID &in, UUID *const out) {
+void pack(const re::UUID &in, UUID *const out) {
   REASSERT(out != nullptr, "Can't pack into invalid proto!");
   out->Clear();
   out->set_data(in.to_string());
 }
 
-resim::UUID unpack(const UUID &in) { return resim::UUID{in.data()}; }
+re::UUID unpack(const UUID &in) { return re::UUID{in.data()}; }
 
-};  // namespace resim::proto
+};  // namespace re::proto

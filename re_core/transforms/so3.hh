@@ -7,7 +7,7 @@
 #include "re_core/transforms/liegroup.hh"
 #include "re_core/transforms/liegroup_concepts.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 // Special Orthogonal Group in 3-Dimensional space.
 //
@@ -143,4 +143,4 @@ static_assert(
     LieGroupType<SO3>,
     "SO3 doesn't meet the requirements of a Lie Group.");
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

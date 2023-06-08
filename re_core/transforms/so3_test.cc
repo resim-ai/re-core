@@ -9,7 +9,7 @@
 #include "re_core/testing/random_matrix.hh"
 #include "re_core/transforms/liegroup_test_helpers.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 // Please Note: Here are the specialized tests for the SO3 class. The SO3 class
 // is also covered by a number of general Lie group tests that can be found in
@@ -273,4 +273,4 @@ TEST(SO3Test, TestExpDiff) {
   }
 }
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

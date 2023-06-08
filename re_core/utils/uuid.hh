@@ -5,7 +5,7 @@
 #include <array>
 #include <string>
 
-namespace resim {
+namespace re {
 
 // Simple UUID wrapper class that uses Linux lib uuid.h under the hood, but has
 // an API that is more 'modern' c++ complaint and does not rely so much on raw
@@ -43,13 +43,13 @@ class UUID {
   std::array<unsigned char, ARRAY_SIZE> id_;
 };
 
-}  // namespace resim
+}  // namespace re
 
 namespace std {
 
 template <>
-struct hash<resim::UUID> {
-  std::size_t operator()(const resim::UUID &k) const {
+struct hash<re::UUID> {
+  std::size_t operator()(const re::UUID &k) const {
     return std::hash<std::string>()(k.to_string());
   }
 };

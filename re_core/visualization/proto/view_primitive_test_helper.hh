@@ -5,7 +5,7 @@
 
 #include "re_core/visualization/view_primitive.hh"
 
-namespace resim::visualization {
+namespace re::visualization {
 
 namespace detail {
 constexpr auto TEST_FILE_NAME = "test_file_name";
@@ -20,4 +20,4 @@ T generate_test_object();
 template <typename T>
 ViewPrimitive generate_test_primitive(const std::optional<std::string>& name);
 
-}  // namespace resim::visualization
+}  // namespace re::visualization

@@ -24,7 +24,7 @@
 //    seek to avoid any overload resolution issues.
 // 3. Change 'B' is specifically to support dynamic Matrices, who's dimensions
 //    are unknown until they are initialized with size.
-namespace resim::math::proto {
+namespace re::math::proto {
 
 // Pack an Eigen Matrix into a repeated field double.
 // @param[in]  in  - The Eigen Matrix to be packed.
@@ -60,4 +60,4 @@ void unpack_matrix(
   std::copy(in.cbegin(), in.cend(), out->reshaped().begin());
 }
 
-}  // namespace resim::math::proto
+}  // namespace re::math::proto

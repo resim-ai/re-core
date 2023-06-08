@@ -4,7 +4,7 @@
 
 #include "re_core/transforms/liegroup_concepts.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 // There are two TwoJet classes, TwoJetL and TwoJetR and we desire to enforce
 // a partially common interface, whereby both twojets implement the methods
@@ -21,4 +21,4 @@ concept TwoJetType =
     transforms::LieGroupType<typename T::GroupType>;
 // clang-format on  
 
-}  // namespace resim::curves
+}  // namespace re::curves

@@ -12,7 +12,7 @@
 
 #include "re_core/assert/assert.hh"
 
-namespace resim {
+namespace re {
 
 namespace {
 
@@ -53,18 +53,18 @@ Status return_if_not_ok_function(const Status &s) {
 
 TEST(StatusTest, TestOk) {
   // SETUP / ACTION / VERIFICATION
-  EXPECT_TRUE(test_function(resim::Argument::GOOD).ok());
-  EXPECT_TRUE(not test_function(resim::Argument::BAD).ok());
+  EXPECT_TRUE(test_function(re::Argument::GOOD).ok());
+  EXPECT_TRUE(not test_function(re::Argument::BAD).ok());
 }
 
 TEST(StatusTest, TestWhat) {
   // Okay case:
-  const Status good_status{test_function(resim::Argument::GOOD)};
+  const Status good_status{test_function(re::Argument::GOOD)};
   ASSERT_TRUE(good_status.ok());
   EXPECT_EQ(good_status.what(), "OKAY");
 
   // Non-okay case:
-  const Status bad_status{test_function(resim::Argument::BAD)};
+  const Status bad_status{test_function(re::Argument::BAD)};
   ASSERT_TRUE(not bad_status.ok());
   EXPECT_EQ(bad_status.what(), expected_bad_status_what);
 }
@@ -72,11 +72,11 @@ TEST(StatusTest, TestWhat) {
 // NOLINTBEGIN(readability-function-cognitive-complexity)
 TEST(StatusDeathTest, TestCheckStatus) {
   // Okay case:
-  const Status ok_status{test_function(resim::Argument::GOOD)};
+  const Status ok_status{test_function(re::Argument::GOOD)};
   CHECK_STATUS_OK(ok_status);
 
   // Non-okay case:
-  const Status bad_status{test_function(resim::Argument::BAD)};
+  const Status bad_status{test_function(re::Argument::BAD)};
   const std::string expected_death_output{fmt::format(
       fg(fmt::color::red),
       "{{bad_status.what() == {}}}",
@@ -129,4 +129,4 @@ TEST(StatusValueTest, TestReturnIfNotOKCallsOnce) {
   }
 }
 
-}  // namespace resim
+}  // namespace re

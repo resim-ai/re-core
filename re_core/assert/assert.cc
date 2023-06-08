@@ -6,7 +6,7 @@
 
 #include <utility>
 
-namespace resim {
+namespace re {
 
 AssertException::AssertException(
     std::string_view cond_str,
@@ -22,4 +22,4 @@ AssertException::AssertException(
 
 const char *AssertException::what() const noexcept { return what_.c_str(); }
 
-}  // namespace resim
+}  // namespace re

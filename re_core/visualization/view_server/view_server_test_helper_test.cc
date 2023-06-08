@@ -11,7 +11,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::visualization::view_server {
+namespace re::visualization::view_server {
 
 namespace {
 using transforms::SE3;
@@ -138,4 +138,4 @@ void test_framed<curves::TCurve<SE3>>() {
 
 TYPED_TEST(ViewServerHelperTests, TestFramed) { test_framed<TypeParam>(); }
 
-}  // namespace resim::visualization::view_server
+}  // namespace re::visualization::view_server

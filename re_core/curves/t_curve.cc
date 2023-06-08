@@ -10,7 +10,7 @@
 #include "re_core/transforms/so3.hh"
 #include "re_core/utils/inout.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 namespace {
 using SE3 = transforms::SE3;
@@ -172,4 +172,4 @@ double TCurve<Group>::start_time() const {
 template class TCurve<SE3>;
 template class TCurve<SO3>;
 
-}  // namespace resim::curves
+}  // namespace re::curves

@@ -15,9 +15,9 @@
 #include "re_core/visualization/view_primitive.hh"
 #include "re_core/visualization/view_update.hh"
 
-namespace resim::visualization::testing {
+namespace re::visualization::testing {
 
-using ::resim::visualization::client::proto::ViewSessionUpdateResponse;
+using ::re::visualization::client::proto::ViewSessionUpdateResponse;
 using transforms::SE3;
 using TangentVector = SE3::TangentVector;
 
@@ -224,4 +224,4 @@ TEST_P(MockServerHeadersTest, TestChecksAuthorization) {
       cpr::Post(cpr::Url{address + endpoint}, headers);
   EXPECT_EQ(response.status_code, static_cast<int>(return_code));
 }
-}  // namespace resim::visualization::testing
+}  // namespace re::visualization::testing

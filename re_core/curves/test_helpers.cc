@@ -7,7 +7,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::curves::testing {
+namespace re::curves::testing {
 using transforms::SE3;
 using transforms::SO3;
 using TangentVector = SE3::TangentVector;
@@ -42,4 +42,4 @@ curves::TCurve<transforms::SE3> make_circle_curve(
   return curves::TCurve<transforms::SE3>{control_points};
 }
 
-}  // namespace resim::curves::testing
+}  // namespace re::curves::testing

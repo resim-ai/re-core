@@ -10,7 +10,7 @@
 
 #include "re_core/assert/assert.hh"
 
-namespace resim::testing {
+namespace re::testing {
 
 struct ServerHandle {
   httplib::Server server;
@@ -92,4 +92,4 @@ void MockServer::listen() {
   }
 }
 
-}  // namespace resim::testing
+}  // namespace re::testing

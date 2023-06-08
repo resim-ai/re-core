@@ -3,7 +3,7 @@
 
 #include <filesystem>
 
-namespace resim::testing {
+namespace re::testing {
 
 // A simple class wrapping a test directory path which creates a unique test
 // directory whenever it is constructed, and deletes it when destroyed.
@@ -36,4 +36,4 @@ class TestDirectoryRAII {
   std::filesystem::path path_;
 };
 
-}  // namespace resim::testing
+}  // namespace re::testing

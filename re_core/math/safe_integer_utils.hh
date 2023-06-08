@@ -3,7 +3,7 @@
 
 #include <cstdint>
 
-namespace resim::math {
+namespace re::math {
 
 // Take the difference of two signed integers while checking for overflow or
 // underflow.
@@ -34,4 +34,4 @@ constexpr auto INT_UNDERFLOW_MSG = "Integer Underflow!";
 // The message for an overflow.
 constexpr auto INT_OVERFLOW_MSG = "Integer Overflow!";
 
-}  // namespace resim::math
+}  // namespace re::math

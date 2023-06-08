@@ -6,7 +6,7 @@
 #include <filesystem>
 #include <fstream>
 
-namespace resim::testing {
+namespace re::testing {
 
 namespace {
 namespace fs = std::filesystem;
@@ -89,4 +89,4 @@ TEST(TestDirectoryTest, TestTestFilePath) {
   }
 }
 
-}  // namespace resim::testing
+}  // namespace re::testing

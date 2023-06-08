@@ -11,7 +11,7 @@
 #include "re_core/transforms/so3.hh"
 #include "re_core/utils/inout.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 namespace {
 using SE3 = transforms::SE3;
@@ -129,4 +129,4 @@ void TCurveSegment<Group>::point_value_accumulator(
 template class TCurveSegment<transforms::SO3>;
 template class TCurveSegment<transforms::SE3>;
 
-}  // namespace resim::curves
+}  // namespace re::curves

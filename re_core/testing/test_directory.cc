@@ -6,7 +6,7 @@
 #include "re_core/assert/assert.hh"
 #include "re_core/utils/uuid.hh"
 
-namespace resim::testing {
+namespace re::testing {
 
 namespace fs = std::filesystem;
 
@@ -33,4 +33,4 @@ fs::path TestDirectoryRAII::test_file_path(
   return path_ / (UUID::new_uuid().to_string() + ".").append(extension);
 }
 
-}  // namespace resim::testing
+}  // namespace re::testing

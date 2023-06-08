@@ -73,7 +73,7 @@
 //
 #pragma once
 
-namespace resim {
+namespace re {
 
 template <typename T>
 struct BasicType {
@@ -95,4 +95,4 @@ using Type = typename detail::TypeADLGuard<T>::Type;
 template <typename T>
 constexpr Type<T> TypeC{};
 
-}  // namespace resim
+}  // namespace re

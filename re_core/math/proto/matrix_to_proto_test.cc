@@ -9,7 +9,7 @@
 #include "re_core/math/proto/testing/test_matrix.pb.h"
 #include "re_core/testing/random_matrix.hh"
 
-namespace resim::math {
+namespace re::math {
 
 namespace {
 // Some candidate matrix dimensionalities
@@ -152,4 +152,4 @@ TEST_F(MatrixToProtoDeathTest, TestPackNull) {
   EXPECT_THROW({ proto::pack_matrix(mat, nullptr); }, AssertException);
 }
 
-}  //  namespace resim::math
+}  //  namespace re::math

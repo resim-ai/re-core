@@ -1,6 +1,6 @@
 #pragma once
 
-namespace resim::transforms {
+namespace re::transforms {
 // Define a very small angle threshold for logic avoiding div 0 issues.
 constexpr double TINY_SQUARE_ANGLE = 4e-6;
 
@@ -25,4 +25,4 @@ struct ExpDiffCoeffs {
 //                        norm of the algebra element.
 ExpDiffCoeffs derivative_of_exp_so3(double square_angle);
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

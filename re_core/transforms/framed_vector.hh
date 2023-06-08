@@ -6,7 +6,7 @@
 #include "re_core/assert/assert.hh"
 #include "re_core/transforms/frame.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 // FramedVector
 // Use this class to associate a D-dimensional vector with a Frame<D> object.
@@ -111,4 +111,4 @@ class FramedVector : public Eigen::Matrix<double, dims, 1> {
   Frame<dims> frame_;
 };
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

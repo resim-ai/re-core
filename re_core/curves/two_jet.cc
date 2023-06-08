@@ -7,7 +7,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 template <transforms::LieGroupType Group>
 TwoJetL<Group>::TwoJetL(
@@ -203,4 +203,4 @@ template TwoJetR<transforms::SO3> TwoJetR<transforms::SO3>::identity(
     const transforms::Frame<transforms::SO3::DIMS> &,
     const transforms::Frame<transforms::SO3::DIMS> &);
 
-}  // namespace resim::curves
+}  // namespace re::curves

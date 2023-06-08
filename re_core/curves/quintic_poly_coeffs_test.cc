@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-namespace resim::curves {
+namespace re::curves {
 
 namespace {
 
@@ -74,4 +74,4 @@ TEST(QuintiPolyTest, TestTOne) { helper_compare_coeffs(COEFFSTONE, ONE); }
 
 TEST(QuintiPolyTest, TestTHalf) { helper_compare_coeffs(COEFFSTHALF, HALF); }
 
-}  // namespace resim::curves
+}  // namespace re::curves

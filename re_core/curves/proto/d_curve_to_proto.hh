@@ -9,7 +9,7 @@
 // be used by the explicit pack unpack overloads. As helpers they do not follow
 // the standard pattern of top-level packers/unpackers and are therefore not
 // called pack/unpack.
-namespace resim::curves::proto {
+namespace re::curves::proto {
 
 // Pack a DCurve object into corresponding proto message.
 // @param[in]  in  - DCurve object to be packed.
@@ -23,4 +23,4 @@ void pack_d_curve(const DCurve<Group> &in, Msg *out);
 template <typename Group, typename Msg>
 void unpack_d_curve(const Msg &in, InOut<DCurve<Group>> out);
 
-}  // namespace resim::curves::proto
+}  // namespace re::curves::proto

@@ -7,7 +7,7 @@
 #include "re_core/transforms/liegroup_test_helpers.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 namespace {
 // Create some test frames.
@@ -260,4 +260,4 @@ TEST(DistanceTest, SE3InverseDistanceWrongFrame) {
   EXPECT_THROW(se3_inverse_distance(c_from_a, b_from_a), AssertException);
 }
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

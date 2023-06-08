@@ -6,7 +6,7 @@
 #include "re_core/curves/two_jet_concepts.hh"
 #include "re_core/transforms/frame.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 namespace detail {
 // The minimum number of TwoJet test elements to request
@@ -42,4 +42,4 @@ class TwoJetTestHelper {
       unsigned count = detail::MIN_TEST_ELEMENTS);
 };
 
-}  // namespace resim::curves
+}  // namespace re::curves

@@ -3,7 +3,7 @@
 #include "re_core/assert/assert.hh"
 #include "re_core/transforms/se3.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 namespace {
 using SE3 = transforms::SE3;
@@ -134,4 +134,4 @@ typename DCurve<Group>::PointAtData DCurve<Group>::point_at_impl(
 
 template class DCurve<SE3>;
 
-}  // namespace resim::curves
+}  // namespace re::curves

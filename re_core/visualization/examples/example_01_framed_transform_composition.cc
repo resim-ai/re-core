@@ -9,13 +9,13 @@ int main(int argc, char *argv[]) {
   // Now let's try composing some transforms. Suppose we have a robot with a
   // sensor on it. And we want to know where they are in the world. We can make
   // this easier by defining frames for the things we care about:
-  using Frame = resim::transforms::Frame<3>;  // ReSim's frame identifier.
+  using Frame = re::transforms::Frame<3>;  // ReSim's frame identifier.
   const Frame world = Frame::new_frame();
   const Frame robot = Frame::new_frame();
   const Frame sensor = Frame::new_frame();
 
   // ReSim VIEW enables you to name the frames, for more convenient
-  // representation in foxglove. The underlying resim::transforms::Frame<DIMS>
+  // representation in foxglove. The underlying re::transforms::Frame<DIMS>
   // C++ type does not store a name on its own to keep the datatype as
   // lightweight as possible. This means that anywhere the frame is used in a
   // transform the meaning will be attached.
@@ -25,8 +25,8 @@ int main(int argc, char *argv[]) {
 
   //  ReSim's SE3 and SO3 transforms can be explicitly framed if they are
   //  constructed with into and from frames.
-  using resim::transforms::SE3;  // ReSim's 6 d.o.f. rigid xform..
-  using resim::transforms::SO3;  // ReSim's 3 d.o.f. rotation.
+  using re::transforms::SE3;  // ReSim's 6 d.o.f. rigid xform..
+  using re::transforms::SO3;  // ReSim's 3 d.o.f. rotation.
 
   // Framed transforms have two big advantages as we will see in the example
   // below.....

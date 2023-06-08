@@ -2,7 +2,7 @@
 
 #include "re_core/auth/auth_client_interface.hh"
 
-namespace resim::auth {
+namespace re::auth {
 
 // MockAuthClient is a very simple mock for the AuthClient that returns a hard
 // coded fake JWT.
@@ -20,4 +20,4 @@ class MockAuthClient : public AuthClientInterface {
   const std::string refresh_;
 };
 
-}  // namespace resim::auth
+}  // namespace re::auth

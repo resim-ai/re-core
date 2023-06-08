@@ -3,7 +3,7 @@
 
 #include <gtest/gtest.h>
 
-namespace resim {
+namespace re {
 namespace test_namespace {
 
 struct TestStruct;
@@ -55,4 +55,4 @@ TEST(TypeTest, TestPassTypeIntoLambda) {
                 test_namespace::TestStruct>);
 }
 
-}  // namespace resim
+}  // namespace re

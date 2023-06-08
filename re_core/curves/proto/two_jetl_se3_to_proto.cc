@@ -6,7 +6,7 @@
 #include "re_core/curves/two_jet.hh"
 #include "re_core/transforms/se3.hh"
 
-namespace resim::curves::proto {
+namespace re::curves::proto {
 
 void pack(const TwoJetL<transforms::SE3> &in, TwoJetL_SE3 *const out) {
   pack_two_jetl(in, out);
@@ -18,4 +18,4 @@ TwoJetL<transforms::SE3> unpack(const TwoJetL_SE3 &in) {
   return two_jet;
 }
 
-}  // namespace resim::curves::proto
+}  // namespace re::curves::proto

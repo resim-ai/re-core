@@ -7,7 +7,7 @@
 #include "re_core/transforms/liegroup.hh"
 #include "re_core/transforms/liegroup_exp_diff.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 namespace {
 using TangentVector = SO3::TangentVector;
@@ -161,4 +161,4 @@ template SO3 SO3::exp(const TangentVector &, Frame3 &&, Frame3 &&);
 template SO3 SO3::exp(const TangentVector &, const Frame3 &, Frame3 &&);
 template SO3 SO3::exp(const TangentVector &, Frame3 &&, const Frame3 &);
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

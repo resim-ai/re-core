@@ -1,6 +1,6 @@
 #pragma once
 
-namespace resim {
+namespace re {
 
 // This class is a simple wrapper around a reference that one can use in
 // function signatures to make it impossible for arguments to be modified
@@ -35,4 +35,4 @@ class InOut {
   T &x_;
 };
 
-}  // namespace resim
+}  // namespace re

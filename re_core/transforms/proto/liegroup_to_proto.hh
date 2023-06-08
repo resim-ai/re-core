@@ -9,7 +9,7 @@
 // the explicit pack unpack overloads. As helpers they do not follow the
 // standard pattern of top-level packers/unpackers and are therefore not called
 // pack/unpack.
-namespace resim::transforms::proto {
+namespace re::transforms::proto {
 
 // Pack a LieGroupType object into a corresponding proto message.
 // @param[in]  in  - The LieGroupType object to be packed.
@@ -23,4 +23,4 @@ void pack_liegroup(const Group &in, Msg *out);
 template <transforms::LieGroupType Group, typename Msg>
 void unpack_liegroup(const Msg &in, InOut<Group> out);
 
-}  // namespace resim::transforms::proto
+}  // namespace re::transforms::proto

@@ -13,7 +13,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 namespace {
 // Create some test frames.
@@ -147,4 +147,4 @@ TYPED_TEST(LiegroupToProtoDeathTests, TestLongMessage) {
 }
 // NOLINTEND(readability-function-cognitive-complexity)
 
-}  //  namespace resim::transforms
+}  //  namespace re::transforms

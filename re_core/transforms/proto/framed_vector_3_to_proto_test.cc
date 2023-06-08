@@ -7,7 +7,7 @@
 #include "re_core/assert/assert.hh"
 #include "re_core/testing/random_matrix.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 namespace {
 constexpr unsigned THREE_D = 3;
@@ -71,4 +71,4 @@ TEST_F(FramedVector3ToProtoTestsDeathTests, TestPackNull) {
   EXPECT_THROW({ proto::pack(test_framed_vector, nullptr); }, AssertException);
 }
 
-}  //  namespace resim::transforms
+}  //  namespace re::transforms

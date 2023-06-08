@@ -14,7 +14,7 @@
 #include "re_core/time/timestamp.hh"
 #include "re_core/utils/inout.hh"
 
-namespace resim::actor::state {
+namespace re::actor::state {
 
 namespace {
 using SE3 = transforms::SE3;
@@ -117,4 +117,4 @@ TEST_F(TrajectoryToProtoDeathTests, InvalidProto) {
       AssertException);
 }
 
-}  // namespace resim::actor::state
+}  // namespace re::actor::state

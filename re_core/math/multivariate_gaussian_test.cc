@@ -11,7 +11,7 @@
 #include "re_core/assert/assert.hh"
 #include "re_core/math/sample_statistics.hh"
 
-namespace resim::math {
+namespace re::math {
 
 namespace {
 // Some useful dimensionalities for testing.
@@ -256,4 +256,4 @@ INSTANTIATE_TEST_SUITE_P(
     GaussianDeathTest,
     ::testing::Values(THREE_D, SIX_D, EIGHTEEN_D));
 
-}  // namespace resim::math
+}  // namespace re::math

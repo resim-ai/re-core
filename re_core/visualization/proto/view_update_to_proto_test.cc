@@ -13,7 +13,7 @@
 #include "re_core/visualization/view_primitive.hh"
 #include "re_core/visualization/view_update.hh"
 
-namespace resim::visualization {
+namespace re::visualization {
 
 using transforms::SE3;
 using TangentVector = SE3::TangentVector;
@@ -80,4 +80,4 @@ TEST(ViewUpdateToProtoDeathTest, TestPackInvalid) {
   EXPECT_THROW(proto::pack(update, nullptr), AssertException);
 }
 
-}  // namespace resim::visualization
+}  // namespace re::visualization

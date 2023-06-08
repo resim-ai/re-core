@@ -8,7 +8,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 namespace {
 // Create some test frames.
@@ -474,4 +474,4 @@ TYPED_TEST(FramedLieGroupTests, VerifyFrames) {
   EXPECT_FALSE(a_from_b.verify_frames(C, C));
 }
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

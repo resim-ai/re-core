@@ -3,7 +3,7 @@
 #include <Eigen/Dense>
 #include <random>
 
-namespace resim::math {
+namespace re::math {
 
 // Gaussian holds the parameters of a multivariate Gaussian distribution and
 // enables the caller to draw samples from the distribution.
@@ -84,4 +84,4 @@ class Gaussian {
   std::mt19937 rng_{SEED};
 };
 
-}  // namespace resim::math
+}  // namespace re::math

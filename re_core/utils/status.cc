@@ -2,7 +2,7 @@
 
 #include "re_core/utils/match.hh"
 
-namespace resim {
+namespace re {
 
 std::string Status::what() const {
   return match(
@@ -19,4 +19,4 @@ std::string Status::what() const {
       });
 }
 
-}  // namespace resim
+}  // namespace re

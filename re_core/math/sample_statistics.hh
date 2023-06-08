@@ -4,7 +4,7 @@
 
 #include "re_core/assert/assert.hh"
 
-namespace resim::math {
+namespace re::math {
 
 // Mean over N (D-dimensional) samples.
 // @param[in] - samples is an N x D matrix representing N samples over a
@@ -32,4 +32,4 @@ Eigen::MatrixXd covariance(const Eigen::MatrixXd &samples) {
   return cov;
 }
 
-}  // namespace resim::math
+}  // namespace re::math

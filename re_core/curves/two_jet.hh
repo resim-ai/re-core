@@ -4,7 +4,7 @@
 #include "re_core/transforms/liegroup_concepts.hh"
 #include "re_core/transforms/se3.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 // TwoJet
 //
@@ -181,4 +181,4 @@ static_assert(
     TwoJetType<TwoJetR<transforms::SE3>>,
     "TwoJetR doesn't meet the requirements for a two jet.");
 
-}  // namespace resim::curves
+}  // namespace re::curves

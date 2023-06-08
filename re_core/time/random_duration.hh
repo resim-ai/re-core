@@ -5,7 +5,7 @@
 #include "re_core/time/timestamp.hh"
 #include "re_core/utils/inout.hh"
 
-namespace resim::time {
+namespace re::time {
 
 // Generate a uniformly random timestamp with the given random number
 // generator.
@@ -19,4 +19,4 @@ Duration random_duration(InOut<RNG> rng) {
   return Duration{dist(*rng)};
 }
 
-}  // namespace resim::time
+}  // namespace re::time

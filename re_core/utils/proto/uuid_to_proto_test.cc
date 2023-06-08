@@ -7,7 +7,7 @@
 #include "re_core/utils/proto/uuid.pb.h"
 #include "re_core/utils/uuid.hh"
 
-namespace resim {
+namespace re {
 
 TEST(UUIDToProtoTest, TestPack) {
   // SETUP
@@ -39,4 +39,4 @@ TEST(UUIDToProtoDeathTest, TestPackInvalid) {
   EXPECT_THROW(proto::pack(UUID::new_uuid(), nullptr), AssertException);
 }
 
-}  // namespace resim
+}  // namespace re

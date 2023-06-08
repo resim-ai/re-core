@@ -12,7 +12,7 @@
 #include "re_core/utils/http_response.hh"
 #include "re_core/utils/inout.hh"
 
-namespace resim::testing {
+namespace re::testing {
 
 // Forward declaration of a handle for the server, which we use the PIMPL idiom
 // fore because httplib.h, which we require, pollutes the global namespace.
@@ -72,4 +72,4 @@ class MockServer {
   std::unique_ptr<std::thread> server_thread_;
 };
 
-}  // namespace resim::testing
+}  // namespace re::testing

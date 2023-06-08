@@ -7,7 +7,7 @@
 #include "re_core/transforms/proto/frame_3_to_proto.hh"
 #include "re_core/transforms/proto/framed_vector_3.pb.h"
 
-namespace resim::transforms::proto {
+namespace re::transforms::proto {
 
 void pack(const transforms::FramedVector<3> &in, FramedVector_3 *out) {
   REASSERT(out != nullptr, "Can't pack into invalid proto!");
@@ -29,4 +29,4 @@ transforms::FramedVector<3> unpack(const FramedVector_3 &in) {
   return framed_vector;
 }
 
-}  // namespace resim::transforms::proto
+}  // namespace re::transforms::proto

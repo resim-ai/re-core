@@ -1,7 +1,7 @@
 
 syntax = "proto3";
 
-package resim.visualization.proto;
+package re.visualization.proto;
 
 import "re_core/actor/state/proto/trajectory.proto";
 import "re_core/curves/proto/d_curve.proto";
@@ -14,16 +14,16 @@ import "re_core/utils/proto/uuid.proto";
 
 // Next Field: 15
 message ViewPrimitive {
-    resim.proto.UUID id = 1;
+    re.proto.UUID id = 1;
 
     oneof payload {
-        resim.transforms.proto.SE3            se3           = 2;
-        resim.transforms.proto.SO3            so3           = 3;
-        resim.curves.proto.DCurve_SE3         d_curve_se3   = 4;
-        resim.curves.proto.TCurve_SE3         t_curve_se3   = 5;
-        resim.actor.state.proto.Trajectory    trajectory    = 6;
-        resim.transforms.proto.Frame_3        frame         = 7;
-        resim.transforms.proto.FramedVector_3 framed_vector = 8;
+        re.transforms.proto.SE3            se3           = 2;
+        re.transforms.proto.SO3            so3           = 3;
+        re.curves.proto.DCurve_SE3         d_curve_se3   = 4;
+        re.curves.proto.TCurve_SE3         t_curve_se3   = 5;
+        re.actor.state.proto.Trajectory    trajectory    = 6;
+        re.transforms.proto.Frame_3        frame         = 7;
+        re.transforms.proto.FramedVector_3 framed_vector = 8;
     }
 
     string user_defined_name = 11;

@@ -4,7 +4,7 @@
 #include "re_core/curves/t_curve.hh"
 #include "re_core/transforms/frame.hh"
 
-namespace resim::curves::testing {
+namespace re::curves::testing {
 
 // This helper creates a circular TCurve that follows the unit circle with
 // control points at (1, 0), (0, 1), (-1, 0), (0, -1), and back at (1.0). The
@@ -20,4 +20,4 @@ curves::TCurve<transforms::SE3> make_circle_curve(
     const transforms::Frame<transforms::SE3::DIMS> &from =
         transforms::Frame<transforms::SE3::DIMS>::new_frame());
 
-}  // namespace resim::curves::testing
+}  // namespace re::curves::testing

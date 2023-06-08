@@ -6,7 +6,7 @@
 #include "re_core/curves/d_curve_test_helpers.hh"
 #include "re_core/transforms/se3.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 namespace {
 using SE3 = transforms::SE3;
@@ -256,4 +256,4 @@ TYPED_TEST(DCurveTests, CheckReferenceFrame) {
   EXPECT_EQ(curve_a.reference_frame(), DCurveTests<TypeParam>::REF_FRAME);
 }
 
-}  // namespace resim::curves
+}  // namespace re::curves

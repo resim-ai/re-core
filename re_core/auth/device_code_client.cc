@@ -14,7 +14,7 @@
 #include "re_core/utils/http_response.hh"
 #include "re_core/utils/inout.hh"
 
-namespace resim::auth {
+namespace re::auth {
 
 namespace {
 
@@ -133,4 +133,4 @@ void DeviceCodeClient::fetch_token() {
   REASSERT(false, "Timed out!");
 }
 
-}  // namespace resim::auth
+}  // namespace re::auth

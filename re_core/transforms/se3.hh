@@ -6,7 +6,7 @@
 #include "re_core/transforms/liegroup_concepts.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 // Special Euclidean Group in 3-Dimensional space.
 //
@@ -190,4 +190,4 @@ double se3_distance(const SE3 &a_from_ref, const SE3 &b_from_ref);
 // not matter to the output here.
 double se3_inverse_distance(const SE3 &ref_from_a, const SE3 &ref_from_b);
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

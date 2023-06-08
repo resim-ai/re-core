@@ -29,7 +29,7 @@
 #include "re_core/visualization/proto/view_primitive_test_helper.hh"
 #include "re_core/visualization/view_primitive.hh"
 
-namespace resim::visualization {
+namespace re::visualization {
 
 namespace {
 using transforms::SE3;
@@ -256,4 +256,4 @@ TYPED_TEST(ViewPrimitiveToProtoTypedTest, TestUnpackUnset) {
   EXPECT_THROW(unpack(primitive_msg), AssertException);
 }
 
-}  // namespace resim::visualization
+}  // namespace re::visualization

@@ -16,7 +16,7 @@
 #include "re_core/visualization/client/view_client.hh"
 #include "re_core/visualization/view_update.hh"
 
-namespace resim::visualization {
+namespace re::visualization {
 
 namespace {
 using transforms::SE3;
@@ -122,14 +122,14 @@ ViewObject<T>::ViewObject(
       file_name(file_name),
       line_number(line_number) {
   // Eagerly view the object, since we have all the required information
-  resim::view.view_object(*this);
+  re::view.view_object(*this);
 }
 
 // Implementation of the ViewObject steaming operator
 template <typename T>
 void ViewObject<T>::operator<<(const std::string &name) {
   user_defined_name = name;
-  resim::view.view_object(*this);
+  re::view.view_object(*this);
 }
 
 template struct ViewObject<transforms::Frame<3>>;
@@ -140,4 +140,4 @@ template struct ViewObject<curves::TCurve<transforms::SE3>>;
 template struct ViewObject<actor::state::Trajectory>;
 template struct ViewObject<transforms::FramedVector<3>>;
 
-}  // namespace resim::visualization
+}  // namespace re::visualization

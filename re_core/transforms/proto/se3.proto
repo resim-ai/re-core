@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import "re_core/transforms/proto/frame_3.proto";
 
-package resim.transforms.proto;
+package re.transforms.proto;
 
 message SE3 {
     repeated double algebra = 1;

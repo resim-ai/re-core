@@ -1,6 +1,6 @@
 #pragma once
 
-namespace resim::testing {
+namespace re::testing {
 
 // This is a very simple class that can be used to track how many copies or
 // moves it undergoes since its inception. This can be useful for testing
@@ -27,4 +27,4 @@ class MoveCopyTracker {
   int num_copies_ = 0;
 };
 
-}  // namespace resim::testing
+}  // namespace re::testing

@@ -7,7 +7,7 @@
 #include "re_core/assert/assert.hh"
 #include "re_core/utils/http_response.hh"
 
-namespace resim::auth::testing {
+namespace re::auth::testing {
 
 namespace {
 
@@ -111,4 +111,4 @@ void MockDeviceCodeServer::set_timeout_s(const int timeout_s) {
   timeout_s_ = timeout_s;
 }
 
-}  // namespace resim::auth::testing
+}  // namespace re::auth::testing

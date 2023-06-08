@@ -2,7 +2,7 @@
 
 #include <vector>
 
-namespace resim::transforms {
+namespace re::transforms {
 
 namespace detail {
 constexpr unsigned MIN_TEST_ELEMENTS = 7;
@@ -38,4 +38,4 @@ std::vector<typename Group::TangentVector> make_test_algebra_elements(
 template <typename Group>
 std::vector<Group> make_test_group_elements(
     unsigned count = detail::MIN_TEST_ELEMENTS);
-}  // namespace resim::transforms
+}  // namespace re::transforms

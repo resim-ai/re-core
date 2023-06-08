@@ -5,7 +5,7 @@
 #include "re_core/transforms/cross_matrix.hh"
 #include "re_core/transforms/liegroup_exp_diff.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 namespace {
 using TangentVector = SE3::TangentVector;
@@ -268,4 +268,4 @@ double se3_inverse_distance(const SE3 &ref_from_a, const SE3 &ref_from_b) {
   return (ref_from_a.translation() - ref_from_b.translation()).norm();
 }
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

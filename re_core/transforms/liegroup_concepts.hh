@@ -80,7 +80,7 @@
 
 #include "re_core/transforms/liegroup.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 // Trait to check whether a type T supports composition.
 template <typename T>
@@ -171,4 +171,4 @@ concept LieGroupType =
     has_is_approx<T>;
 // clang-format on  
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

@@ -4,7 +4,7 @@
 
 #include "re_core/assert/assert.hh"
 
-namespace resim {
+namespace re {
 
 TEST(NullableReferenceTest, TestNullableReference) {
   // SETUP
@@ -62,4 +62,4 @@ TEST(NullableReferenceDeathTest, TestBadDereference) {
 }
 // NOLINTEND(readability-function-cognitive-complexity)
 
-}  // namespace resim
+}  // namespace re

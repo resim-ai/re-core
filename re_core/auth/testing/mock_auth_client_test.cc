@@ -2,7 +2,7 @@
 
 #include <gtest/gtest.h>
 
-namespace resim::auth::testing {
+namespace re::auth::testing {
 
 const std::string TEST_TOKEN = "test token";
 const std::string REFRESH_TOKEN = "refresh token";
@@ -20,4 +20,4 @@ TEST(MockAuthClientTest, TestRefresh) {
   EXPECT_NO_THROW(client.refresh());
   EXPECT_EQ(client.get_jwt(), REFRESH_TOKEN);
 }
-}  // namespace resim::auth::testing
+}  // namespace re::auth::testing

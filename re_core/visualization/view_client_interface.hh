@@ -3,11 +3,11 @@
 #include "re_core/utils/status.hh"
 #include "re_core/visualization/view_update.hh"
 
-namespace resim::visualization {
+namespace re::visualization {
 
 // ViewClient is an abstract interface for objects which communicate with the
 // resim View server. It mainly exists to enable mocking in tests for e.g. the
-// resim::visualization::View object.
+// re::visualization::View object.
 class ViewClientInterface {
  public:
   ViewClientInterface() = default;
@@ -22,4 +22,4 @@ class ViewClientInterface {
   virtual ~ViewClientInterface() = default;
 };
 
-}  // namespace resim::visualization
+}  // namespace re::visualization

@@ -15,18 +15,18 @@
 #include "re_core/visualization/view.hh"
 
 namespace {
-using resim::transforms::SE3;
-using resim::transforms::SO3;
-using Frame = resim::transforms::Frame<SE3::DIMS>;
-using resim::actor::state::Trajectory;
-using RigidBodyState = resim::actor::state::RigidBodyState<SE3>;
+using re::transforms::SE3;
+using re::transforms::SO3;
+using Frame = re::transforms::Frame<SE3::DIMS>;
+using re::actor::state::Trajectory;
+using RigidBodyState = re::actor::state::RigidBodyState<SE3>;
 using Eigen::Vector3d;
 
 // Define some useful constants for use in example
 const Frame REF_FRAME = Frame::new_frame();
 const Frame BOD_FRAME = Frame::new_frame();
 constexpr unsigned int NUM_CTRL = 3;
-const resim::time::Timestamp ZERO_TIME;
+const re::time::Timestamp ZERO_TIME;
 // clang-format off
 constexpr std::array<double, NUM_CTRL> DEFAULT_TIMES{
      0.0,
@@ -38,13 +38,13 @@ const std::array<Vector3d, NUM_CTRL> WAYPOINTS{{
     {  0.,  3., 0.}}};
 // clang-format on
 
-constexpr std::array<resim::time::Timestamp, NUM_CTRL> timestamps() {
-  std::array<resim::time::Timestamp, NUM_CTRL> timestamps;
+constexpr std::array<re::time::Timestamp, NUM_CTRL> timestamps() {
+  std::array<re::time::Timestamp, NUM_CTRL> timestamps;
   std::transform(
       DEFAULT_TIMES.cbegin(),
       DEFAULT_TIMES.cend(),
       timestamps.begin(),
-      [](const double t) { return ZERO_TIME + resim::time::as_duration(t); });
+      [](const double t) { return ZERO_TIME + re::time::as_duration(t); });
   return timestamps;
 }
 

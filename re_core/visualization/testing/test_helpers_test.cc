@@ -9,9 +9,9 @@
 #include "re_core/utils/uuid.hh"
 #include "re_core/visualization/view_primitive.hh"
 
-namespace resim::visualization::testing {
+namespace re::visualization::testing {
 
-using resim::testing::random_vector;
+using re::testing::random_vector;
 using transforms::SE3;
 
 TEST(ViewPrimitivesEqualTest, TestViewPrimitivesEqual) {
@@ -35,4 +35,4 @@ TEST(ViewPrimitivesEqualTest, TestViewPrimitivesEqual) {
   EXPECT_FALSE(primitives_equal(test_primitive, unequal_payload));
 }
 
-}  // namespace resim::visualization::testing
+}  // namespace re::visualization::testing

@@ -3,7 +3,7 @@
 #include <string>
 #include <vector>
 
-namespace resim::visualization::view_server {
+namespace re::visualization::view_server {
 
 namespace detail {
 constexpr unsigned MIN_TEST_ELEMENTS = 7;
@@ -20,4 +20,4 @@ std::vector<Viewable> generate_payload_type(
     unsigned count = detail::MIN_TEST_ELEMENTS,
     bool framed = true);
 
-}  // namespace resim::visualization::view_server
+}  // namespace re::visualization::view_server

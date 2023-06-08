@@ -7,7 +7,7 @@
 #include "re_core/transforms/frame.hh"
 #include "re_core/transforms/se3.hh"
 
-namespace resim::curves::testing {
+namespace re::curves::testing {
 
 using Frame = transforms::Frame<3>;
 using transforms::SE3;
@@ -66,4 +66,4 @@ TEST(TestHelpersTest, TestMakeCircleCurve) {
 }
 // NOLINTEND(readability-function-cognitive-complexity)
 
-}  // namespace resim::curves::testing
+}  // namespace re::curves::testing

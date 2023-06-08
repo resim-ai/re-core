@@ -5,7 +5,7 @@
 
 #include "re_core/assert/assert.hh"
 
-namespace resim::math {
+namespace re::math {
 
 int64_t safe_difference(const int64_t a, const int64_t b) {
   // There's only one case where we can't negate b and that's when it's the
@@ -37,4 +37,4 @@ int64_t safe_abs(int64_t a) {
   return a > 0 ? a : -a;
 }
 
-}  // namespace resim::math
+}  // namespace re::math

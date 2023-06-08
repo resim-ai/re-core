@@ -9,7 +9,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::curves::proto {
+namespace re::curves::proto {
 
 template <typename Group, typename Msg>
 void pack_two_jetl(const TwoJetL<Group> &in, Msg *out) {
@@ -74,4 +74,4 @@ template void unpack_two_jetr(
 template void unpack_two_jetr(
     const TwoJetR_SO3 &,
     InOut<TwoJetR<transforms::SO3>>);
-}  // namespace resim::curves::proto
+}  // namespace re::curves::proto

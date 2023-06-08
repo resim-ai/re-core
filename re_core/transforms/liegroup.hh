@@ -6,7 +6,7 @@
 #include "re_core/assert/assert.hh"
 #include "re_core/transforms/frame.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 // Abstract base class for LieGroups.
 // All LieGroup classes (e.g. SE3, SO3) represent a rigid transformation in
@@ -95,4 +95,4 @@ class LieGroup {
   Frame<DIMS> from_;
 };
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

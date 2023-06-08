@@ -8,7 +8,7 @@
 #include "re_core/transforms/frame.hh"
 #include "re_core/transforms/se3.hh"
 
-namespace resim::actor::state {
+namespace re::actor::state {
 
 namespace {
 using SE3 = transforms::SE3;
@@ -84,4 +84,4 @@ const Frame &Trajectory::body_frame() const {
   return curve_.control_pts().back().point.frame_from_ref().into();
 }
 
-}  // namespace resim::actor::state
+}  // namespace re::actor::state

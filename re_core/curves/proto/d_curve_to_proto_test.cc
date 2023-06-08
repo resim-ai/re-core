@@ -13,7 +13,7 @@ namespace {
 constexpr unsigned int NUM_GROUP_POINTS = 10;
 }  // namespace
 
-namespace resim::curves {
+namespace re::curves {
 
 template <typename T>
 class DCurveToProtoTests : public ::testing::Test {
@@ -91,4 +91,4 @@ TYPED_TEST(DCurveToProtoTests, TestFail) {
   EXPECT_THROW({ proto::pack(test_curve, nullptr); }, AssertException);
 }
 
-}  // namespace resim::curves
+}  // namespace re::curves

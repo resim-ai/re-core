@@ -3,7 +3,7 @@
 #include <gtest/gtest.h>
 
 #include <functional>
-namespace resim {
+namespace re {
 
 namespace {
 
@@ -110,4 +110,4 @@ TEST(UUIDTest, NullId) {
   EXPECT_FALSE(uuid_a.is_null());
 }
 
-}  // namespace resim
+}  // namespace re

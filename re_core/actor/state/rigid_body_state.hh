@@ -5,7 +5,7 @@
 #include "re_core/curves/two_jet.hh"
 #include "re_core/transforms/liegroup_concepts.hh"
 
-namespace resim::actor::state {
+namespace re::actor::state {
 
 template <transforms::LieGroupType Group>
 class RigidBodyState {
@@ -138,4 +138,4 @@ class RigidBodyState {
   curves::TwoJetR<Group> ref_from_body_;
 };
 
-}  // namespace resim::actor::state
+}  // namespace re::actor::state

@@ -9,7 +9,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 namespace {
 using SE3 = transforms::SE3;
@@ -352,4 +352,4 @@ TYPED_TEST(FramedTCurveTests, QueryPointFrame) {
   EXPECT_EQ(TCurveTestHelper<TypeParam>::POINT_FRAME, curve.point_frame());
 }
 
-}  // namespace resim::curves
+}  // namespace re::curves

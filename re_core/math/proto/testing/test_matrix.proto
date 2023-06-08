@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package resim.math.proto.testing;
+package re.math.proto.testing;
 
 message TestMatrix {
     repeated double elements = 1;

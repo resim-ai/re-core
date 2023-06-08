@@ -4,7 +4,7 @@
 #include <random>
 #include <utility>
 
-namespace resim::testing {
+namespace re::testing {
 
 // This function template generates psuedo-random matrices with independent
 // entries for testing purposes.
@@ -61,4 +61,4 @@ Eigen::Quaterniond random_quaternion(Rng &&rng) {
   return Eigen::Quaterniond{random_vector<Eigen::Vector4d>(rng).normalized()};
 }
 
-}  // namespace resim::testing
+}  // namespace re::testing

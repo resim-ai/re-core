@@ -4,7 +4,7 @@
 #include "re_core/transforms/proto/se3.pb.h"
 #include "re_core/transforms/se3.hh"
 
-namespace resim::transforms::proto {
+namespace re::transforms::proto {
 
 void pack(const transforms::SE3 &in, SE3 *const out) { pack_liegroup(in, out); }
 
@@ -14,4 +14,4 @@ transforms::SE3 unpack(const SE3 &in) {
   return transform;
 }
 
-}  // namespace resim::transforms::proto
+}  // namespace re::transforms::proto

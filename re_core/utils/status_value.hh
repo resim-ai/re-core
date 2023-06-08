@@ -7,7 +7,7 @@
 #include "re_core/utils/match.hh"
 #include "re_core/utils/status.hh"
 
-namespace resim {
+namespace re {
 
 template <class T>
 class StatusValue {
@@ -158,4 +158,4 @@ constexpr const Status &StatusValue<T>::status() const {
     };                                                        \
   })()
 
-}  // namespace resim
+}  // namespace re

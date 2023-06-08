@@ -18,7 +18,7 @@
 #include "re_core/utils/match.hh"
 #include "re_core/utils/proto/uuid_to_proto.hh"
 
-namespace resim::visualization::proto {
+namespace re::visualization::proto {
 
 void pack(const visualization::ViewPrimitive &in, ViewPrimitive *const out) {
   REASSERT(out != nullptr, "Can't pack into invalid proto!");
@@ -103,4 +103,4 @@ StatusValue<visualization::ViewPrimitive> unpack(const ViewPrimitive &in) {
 }
 
 }  // namespace detail
-};  // namespace resim::visualization::proto
+};  // namespace re::visualization::proto

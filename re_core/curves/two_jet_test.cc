@@ -11,7 +11,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 namespace {
 using SE3 = transforms::SE3;
@@ -334,4 +334,4 @@ TYPED_TEST(FramedTwoJetRTests, IdentityFrames) {
   EXPECT_EQ(framed_two_jet.ref_from_frame().from(), FROM);
 }
 
-}  // namespace resim::curves
+}  // namespace re::curves

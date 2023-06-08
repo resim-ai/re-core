@@ -9,7 +9,7 @@
 #include "re_core/transforms/liegroup_concepts.hh"
 #include "re_core/utils/inout.hh"
 
-namespace resim::curves {
+namespace re::curves {
 // A time parameterized curve that is built up from segments of quintic Hermite
 // curves between TwoJetL<Group> control points. The degrees-of-freedom of the
 // curve is determined by the underlying LieGroup (e.g. six for SE3). By design
@@ -89,4 +89,4 @@ class TCurve {
   std::vector<Segment> segments_;
 };
 
-}  // namespace resim::curves
+}  // namespace re::curves

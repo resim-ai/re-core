@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package resim.auth.proto;
+package re.auth.proto;
 
 // This file defines protos for communicating with auth0 using the device
 // authorization flow:

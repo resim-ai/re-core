@@ -1,6 +1,6 @@
 #include "re_core/testing/move_copy_tracker.hh"
 
-namespace resim ::testing {
+namespace re ::testing {
 
 MoveCopyTracker::MoveCopyTracker(const MoveCopyTracker &other)
     : num_moves_{other.num_moves_},
@@ -24,4 +24,4 @@ MoveCopyTracker &MoveCopyTracker::operator=(MoveCopyTracker &&other) noexcept {
 int MoveCopyTracker::num_moves() const { return num_moves_; }
 int MoveCopyTracker::num_copies() const { return num_copies_; }
 
-}  // namespace resim::testing
+}  // namespace re::testing

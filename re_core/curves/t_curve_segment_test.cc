@@ -10,7 +10,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 namespace {
 using SO3 = transforms::SO3;
@@ -223,4 +223,4 @@ TYPED_TEST(TCurveSegmentTests, IsFramed) {
   EXPECT_FALSE(unframed_segment.is_framed());
 }
 
-}  // namespace resim::curves
+}  // namespace re::curves

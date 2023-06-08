@@ -15,7 +15,7 @@
 #include "re_core/transforms/frame.hh"
 #include "re_core/transforms/se3.hh"
 
-namespace resim::actor::state {
+namespace re::actor::state {
 
 namespace {
 using SE3 = transforms::SE3;
@@ -259,4 +259,4 @@ TEST_F(TrajectoryDeathTests, InvalidFrames) {
       AssertException);
 }
 
-}  // namespace resim::actor::state
+}  // namespace re::actor::state

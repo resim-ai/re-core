@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package resim.visualization.client.proto;
+package re.visualization.client.proto;
 
 message ViewSessionUpdateResponse {
     // The session ID.

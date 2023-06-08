@@ -6,7 +6,7 @@
 #include <iomanip>
 #include <random>
 
-namespace resim::time {
+namespace re::time {
 
 using std::literals::chrono_literals::operator""ns;
 
@@ -170,4 +170,4 @@ TEST_F(SampleIntervalTest, TestSampleZeroIntervalTimestamp) {
   EXPECT_EQ(jj, NUM_SAMPLES);
 }
 
-}  // namespace resim::time
+}  // namespace re::time

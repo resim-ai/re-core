@@ -5,7 +5,7 @@
 
 #include "re_core/auth/auth_client_interface.hh"
 
-namespace resim::auth {
+namespace re::auth {
 
 class DeviceCodeClient : public AuthClientInterface {
  public:
@@ -44,4 +44,4 @@ class DeviceCodeClient : public AuthClientInterface {
   std::string token_;
 };
 
-}  // namespace resim::auth
+}  // namespace re::auth

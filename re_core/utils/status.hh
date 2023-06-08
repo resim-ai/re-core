@@ -10,7 +10,7 @@
 
 #include "re_core/assert/assert.hh"
 
-namespace resim {
+namespace re {
 //
 // This simple class represents a status that can be returned from a subroutine
 // to indicate the success or failure of that subroutine. This class is designed
@@ -109,4 +109,4 @@ constexpr bool Status::ok() const {
   return std::holds_alternative<OkayType>(status_);
 }
 
-}  // namespace resim
+}  // namespace re

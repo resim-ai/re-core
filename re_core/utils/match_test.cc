@@ -4,7 +4,7 @@
 
 #include "re_core/testing/move_copy_tracker.hh"
 
-namespace resim {
+namespace re {
 
 using testing::MoveCopyTracker;
 
@@ -149,4 +149,4 @@ TEST(MatchTest, DiscardedOnBadArguments) {
           [&](const auto c) { return UNWANTED_RETURN; }));
 }
 
-}  // namespace resim
+}  // namespace re

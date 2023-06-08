@@ -9,7 +9,7 @@
 #include "re_core/testing/move_copy_tracker.hh"
 #include "re_core/utils/status.hh"
 
-namespace resim {
+namespace re {
 
 namespace {
 
@@ -521,4 +521,4 @@ TEST(StatusValueTest, TestReturnOrAssignCallsOnce) {
   }
 }
 
-}  // namespace resim
+}  // namespace re

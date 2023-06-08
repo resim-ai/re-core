@@ -6,7 +6,7 @@
 #include "re_core/transforms/liegroup_concepts.hh"
 #include "re_core/utils/inout.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 // A Single segment of a time parameterised curve.
 // The curve is a quintic Hermite spline in LieGroups based on the documentation
@@ -65,4 +65,4 @@ class TCurveSegment {
   TwoJetL<Group> dest_;
 };
 
-}  // namespace resim::curves
+}  // namespace re::curves

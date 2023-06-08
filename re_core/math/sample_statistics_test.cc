@@ -4,7 +4,7 @@
 
 #include "re_core/assert/assert.hh"
 
-namespace resim::math {
+namespace re::math {
 
 namespace {
 const Eigen::Vector3d TEST_VEC{0., 1., 2.};
@@ -56,4 +56,4 @@ TEST(CovarianceDeathTest, TooFewSamples) {
       AssertException);
 }
 
-}  // namespace resim::math
+}  // namespace re::math

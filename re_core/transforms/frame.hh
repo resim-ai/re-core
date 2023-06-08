@@ -2,7 +2,7 @@
 
 #include "re_core/utils/uuid.hh"
 
-namespace resim::transforms {
+namespace re::transforms {
 
 // Frame class. All transforms are transformations between two frames. Often
 // this is implicit. This class helps make it explicit. A Frame is a unique
@@ -37,4 +37,4 @@ class Frame {
   UUID id_{};
 };
 
-}  // namespace resim::transforms
+}  // namespace re::transforms

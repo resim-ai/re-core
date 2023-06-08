@@ -6,7 +6,7 @@
 #include "re_core/transforms/frame.hh"
 #include "re_core/transforms/liegroup_concepts.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 template <transforms::LieGroupType Group>
 class DCurveCircle {
@@ -21,4 +21,4 @@ class DCurveCircle {
       const Frame &pnt_frame = PNT_FRAME);
 };
 
-}  // namespace resim::curves
+}  // namespace re::curves

@@ -8,7 +8,7 @@
 #include "re_core/transforms/se3.hh"
 #include "re_core/transforms/so3.hh"
 
-namespace resim::curves {
+namespace re::curves {
 
 namespace {
 using SE3 = transforms::SE3;
@@ -27,4 +27,4 @@ TEST(TwoJetTraitsTest, TestIsTwoJet) {
   static_assert(!TwoJetType<SE3>);
 }
 
-}  // namespace resim::curves
+}  // namespace re::curves
