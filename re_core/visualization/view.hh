@@ -173,8 +173,7 @@ static visualization::View &view{visualization::View::get_instance()};
 
 // "Overload" for standard case when no message is provided and must be streamed
 // in:
-#define VIEW_1(object) \
-  re::visualization::view_impl(object, __FILE__, __LINE__)
+#define VIEW_1(object) re::visualization::view_impl(object, __FILE__, __LINE__)
 
 // "Overload" for the case where a message is provided in macro.
 #define VIEW_2(object, message) \

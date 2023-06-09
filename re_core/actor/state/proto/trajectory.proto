@@ -6,6 +6,6 @@ import "re_core/curves/proto/t_curve.proto";
 package re.actor.state.proto;
 
 message Trajectory {
-    google.protobuf.Timestamp     start_time = 1;
+    google.protobuf.Timestamp  start_time = 1;
     re.curves.proto.TCurve_SE3 curve      = 2;
 }

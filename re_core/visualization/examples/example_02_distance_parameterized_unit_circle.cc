@@ -122,8 +122,7 @@ int main(int argc, char* argv[]) {
   }
 
   // Plot the resulting circle (sensor to world).
-  const re::curves::DCurve world_from_sensor_circle(
-      world_from_sensor_points);
+  const re::curves::DCurve world_from_sensor_circle(world_from_sensor_points);
   // Visualize a control point
   VIEW(*world_from_sensor_circle.control_pts().at(0).ref_from_control)
       << "world_from_sensor";
