@@ -1,3 +1,7 @@
+common --enable_bzlmod
+common --registry=file:///workspaces/core/registry
+common --registry=https://bcr.bazel.build/
+
 build --host_crosstool_top=@bazel_tools//tools/cpp:toolchain
 build --crosstool_top=//resim_core/toolchain:clang_suite
 build --cpu=k8
