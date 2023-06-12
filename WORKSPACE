@@ -4,7 +4,7 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 http_archive(
     name = "com_google_googletest",
     patch_args = ["-p1"],
-    patches = ["//resim_core/third_party/googletest:googletest.patch"],
+    patches = ["//re/third_party/googletest:googletest.patch"],
     sha256 = "ffa17fbc5953900994e2deec164bb8949879ea09b411e07f215bfbb1f87f4632",
     strip_prefix = "googletest-1.13.0",
     urls = ["https://github.com/google/googletest/archive/refs/tags/v1.13.0.zip"],
@@ -13,7 +13,7 @@ http_archive(
 # Eigen V 3.4.0
 http_archive(
     name = "libeigen",
-    build_file = "//resim_core/third_party/eigen:eigen.BUILD",
+    build_file = "//re/third_party/eigen:eigen.BUILD",
     sha256 = "1ccaabbfe870f60af3d6a519c53e09f3dcf630207321dffa553564a8e75c4fc8",
     strip_prefix = "eigen-3.4.0",
     urls = ["https://gitlab.com/libeigen/eigen/-/archive/3.4.0/eigen-3.4.0.zip"],
@@ -83,7 +83,7 @@ rules_proto_toolchains()
 # fmt string formatting library
 http_archive(
     name = "fmt",
-    build_file = "//resim_core/third_party/fmt:fmt.BUILD",
+    build_file = "//re/third_party/fmt:fmt.BUILD",
     sha256 = "cdc885473510ae0ea909b5589367f8da784df8b00325c55c7cbbab3058424120",
     strip_prefix = "fmt-9.1.0",
     urls = ["https://github.com/fmtlib/fmt/archive/refs/tags/9.1.0.zip"],
@@ -105,7 +105,7 @@ rules_pkg_dependencies()
 
 http_archive(
     name = "httplib",
-    build_file = "//resim_core/third_party/httplib:httplib.BUILD",
+    build_file = "//re/third_party/httplib:httplib.BUILD",
     sha256 = "9d884bee50ded17de3a51d673bb9c2d7d11f101c595b0891830ba9d02e0cc368",
     strip_prefix = "cpp-httplib-0.11.4",
     urls = ["https://github.com/yhirose/cpp-httplib/archive/refs/tags/v0.11.4.zip"],

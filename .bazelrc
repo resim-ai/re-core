@@ -1,5 +1,5 @@
 build --host_crosstool_top=@bazel_tools//tools/cpp:toolchain
-build --crosstool_top=//resim_core/toolchain:clang_suite
+build --crosstool_top=//re/toolchain:clang_suite
 build --cpu=k8
 build:debug -c dbg
 build:debug --copt="-g"
