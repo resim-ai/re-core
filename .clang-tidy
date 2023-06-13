@@ -2,6 +2,7 @@
 Checks: >
   bugprone-*,
   -bugprone-easily-swappable-parameters,
+  -bugprone-exception-escape,
   clang-analyzer-*,
   cppcoreguidelines-*,
   -cppcoreguidelines-avoid-magic-numbers,
