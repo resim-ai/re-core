@@ -9,7 +9,6 @@ cc_library(
     deps = [
         "//resim/assert",
         "//resim/utils:uuid",
-        "@com_github_google_glog//:glog",
     ],
 )
 
