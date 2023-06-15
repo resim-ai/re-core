@@ -33,11 +33,16 @@ nav:
       - 'transforms/liegroup_derivatives.md'
     - Curves: 
       - 'curves/index.md'
+      - 'curves/rigid_body_state.md'
+    - Math:
+      - 'math/gaussian.md'
     - Time:
       - 'time/time.md'
     - Developer Utilities:
       - 'assert/index.md'
       - 'utils/match.md'
       - 'utils/output_parameters.md'
+    - Visualization:
+      - 'visualization/index.md'
 
 extra_css: [stylesheets/extra.css]
