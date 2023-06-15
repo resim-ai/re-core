@@ -1,4 +1,4 @@
-site_name: ReSim Core Documentation
+site_name: ReSim Open Libraries
 site_url: http://resim-docs-prod.s3-website-us-west-1.amazonaws.com
 copyright: Copyright &copy; 2023, ReSim, Inc. All rights reserved
 
@@ -23,3 +23,18 @@ theme:
     highlightjs: true
     hljs_languages:
       - protobuf
+
+nav:
+    - ReSim: 'index.md'
+    - Transforms:
+      - 'transforms/liegroups.md'
+      - 'transforms/using_liegroups.md'
+      - 'transforms/liegroup_derivatives.md'
+    - Curves: 
+      - 'curves/index.md'
+    - Time:
+      - 'time/time.md'
+    - Developer Utilities:
+      - 'assert/index.md'
+      - 'utils/match.md'
+      - 'utils/output_parameters.md'
