@@ -17,7 +17,7 @@ Checks: >
   -readability-identifier-length,
   -readability-function-cognitive-complexity,
 WarningsAsErrors: "*"
-HeaderFilterRegex: "resim_core/.*\\.hh"
+HeaderFilterRegex: "resim/.*\\.hh"
 AnalyzeTemporaryDtors: false
 FormatStyle: "file"
 CheckOptions:
