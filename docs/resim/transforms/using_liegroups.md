@@ -39,13 +39,25 @@ frame expressed in scene coordinates. Since rotation matrices are a
 `SO3` for our robot pose like so:
 
 ```
+#include <cmath>
+
 #include "resim/transforms/so3.hh"
+#include "resim/visualization/view.hh"
 
 using namespace resim::transforms;
+
+// ...
+
+const double psi = M_PI_4;
+const double theta = 0.5;
+const double phi = 0.1;
+
 const SO3 scene_from_robot_rotation = SO3(phi, {1., 0., 0.}) *
                                       SO3(theta, {0., 1., 0.}) *
                                       SO3(psi, {0., 0., 1.});
 
+// Visualize with ReSim View
+VIEW(scene_from_robot_rotation) << "My rotation";
 ```
 
 Here, we're constructing `SO3`s representing the rotations around each
@@ -361,16 +373,15 @@ assigned, these objects ensure that frame consistency is maintained when
 composing Lie groups. Here's an example:
 
 ```
-#include "re/assert/assert.hh"
-#include "re/transforms/frame.hh"
-#include "re/transforms/se3.hh"
-#include "re/transforms/so3.hh"
+#include "resim/assert/assert.hh"
+#include "resim/transforms/frame.hh"
+#include "resim/transforms/se3.hh"
+#include "resim/transforms/so3.hh"
+#include "resim/visualization/view.hh"
 
-// ...
-
-using re::transforms::SE3;
-using re::transforms::SO3;
-using Frame = re::transforms::Frame<SE3::DIMS>; /* SE3::DIMS == 3 */
+using resim::transforms::SE3;
+using resim::transforms::SO3;
+using Frame = resim::transforms::Frame<SE3::DIMS>; /* SE3::DIMS == 3 */
 
 // ...
 
@@ -381,12 +392,20 @@ const Frame sensor{Frame::new_frame()};
 // The pose of the robot in the world
 const SE3 world_from_robot{SO3::identity(), {5., 5., 0.}, world, robot};
 
+VIEW(world) << "World frame";
+VIEW(robot) << "Robot frame";
+VIEW(world_from_robot) << "World from robot";
+
 // The pose of a sensor mounted on the robot
 const SE3 robot_from_sensor{
     SO3{M_PI_2, {0., 0., 1.}},
     {0., 0., 1.},
     robot,
     sensor};
+
+// Visualize with ReSim View
+VIEW(sensor) << "Sensor frame";
+VIEW(robot_from_sensor) << "Robot from sensor";
 
 const SE3 world_from_sensor{world_from_robot * robot_from_sensor};
 REASSERT(world_from_sensor.is_framed());
@@ -395,11 +414,10 @@ REASSERT(world_from_sensor.from() == sensor);
 
 // Whoops! This fails at run time because we forgot to invert
 // robot_from_sensor!
-const SE3 robot_from_world{world_from_sensor * robot_from_sensor};
+// const SE3 robot_from_world{world_from_sensor * robot_from_sensor};
 
 // We should have done:
-// const SE3 robot_from_world{world_from_sensor *
-// robot_from_sensor.inverse()};
+const SE3 robot_from_world{world_from_sensor * robot_from_sensor.inverse()};
 ```
 
 Using frame checking is generally good practice as it makes it less likely for
