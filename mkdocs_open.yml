@@ -9,6 +9,7 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - admonition
+  - attr_list
   - pymdownx.details
 
 extra_javascript:
@@ -38,3 +39,5 @@ nav:
       - 'assert/index.md'
       - 'utils/match.md'
       - 'utils/output_parameters.md'
+
+extra_css: [stylesheets/extra.css]
