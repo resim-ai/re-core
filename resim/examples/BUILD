@@ -48,3 +48,14 @@ cc_binary(
         "@libeigen//:eigen",
     ],
 )
+
+cc_binary(
+    name = "time",
+    srcs = ["time.cc"],
+    deps = [
+        "//resim/assert",
+        "//resim/time:event_schedule",
+        "//resim/time:sample_interval",
+        "//resim/time:timestamp",
+    ],
+)
