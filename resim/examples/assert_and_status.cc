@@ -139,4 +139,3 @@ Status my_outer_wrapper(const Arg arg) {
   std::cout << val << std::endl;
   return OKAY_STATUS;
 }
-

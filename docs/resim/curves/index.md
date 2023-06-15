@@ -181,4 +181,4 @@ The resulting curve looks like this:
 !!! Note
     Feel free to play around with the [source
     code](https://github.com/resim-ai/re-core/blob/main/resim/examples/curves.cc)
-    for the examples.
+    for the examples above.
