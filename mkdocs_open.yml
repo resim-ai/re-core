@@ -2,7 +2,7 @@ site_name: ReSim Open Libraries
 site_url: http://resim-docs-prod.s3-website-us-west-1.amazonaws.com
 copyright: Copyright &copy; 2023, ReSim, Inc. All rights reserved
 
-docs_dir: docs/resim_core
+docs_dir: docs/resim
 site_dir: site_open
 
 markdown_extensions:
