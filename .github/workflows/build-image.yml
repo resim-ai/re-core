@@ -12,7 +12,6 @@ permissions:
 env:
   IMAGE_NAME: core
   DOCKERFILE_PATH: .devcontainer/Dockerfile
-  DOCKER_CONTEXT: .devcontainer
   ECR_REPOSITORY: public.ecr.aws/m1r4u2a2/core
   HUB_REPOSITORY: resimai/core
 
@@ -23,10 +22,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - run: |
-          ls
-          pwd
-          
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
 
@@ -50,7 +45,7 @@ jobs:
       - name: Build
         uses: docker/build-push-action@v4
         with:
-          context: ${{ env.DOCKER_CONTEXT }}
+          context: .devcontainer
           push: true
           tags: |
             ${{ env.ECR_REPOSITORY }}:latest
