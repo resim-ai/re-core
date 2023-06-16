@@ -59,3 +59,15 @@ cc_binary(
         "//resim/time:timestamp",
     ],
 )
+
+cc_binary(
+    name = "liegroups",
+    srcs = ["liegroups.cc"],
+    deps = [
+        "//resim/assert",
+        "//resim/transforms:frame",
+        "//resim/transforms:so3",
+        "//resim/transforms:se3",
+        "//resim/visualization:view",
+    ],
+)
