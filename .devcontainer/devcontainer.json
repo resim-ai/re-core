@@ -1,6 +1,6 @@
 {
-    "image": "public.ecr.aws/m1r4u2a2/core:latest",
-    "initializeCommand": "docker pull public.ecr.aws/m1r4u2a2/core:latest",
+    "image": "resimai/core:latest",
+    "initializeCommand": "docker pull resimai/core:latest",
     "mounts": [
         "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
         "source=root-home,target=/root,type=volume"
