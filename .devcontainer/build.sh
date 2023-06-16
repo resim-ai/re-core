@@ -4,4 +4,6 @@
 # license that can be found in the LICENSE file or at
 # https://opensource.org/licenses/MIT.
 
-docker build -t core-local .devcontainer
+docker build \
+	--platform linux/amd64 \
+	-t core-local .devcontainer

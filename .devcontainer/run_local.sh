@@ -11,4 +11,4 @@ docker run -it \
        --volume $(pwd):/workspaces/re-core \
        --volume root-home:/root \
        --volume /var/run/docker.sock:/var/run/docker.sock \
-       core-local:latest bash
+       core-local:latest /bin/bash -c "cd /workspaces/re-core; $SHELL"
