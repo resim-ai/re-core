@@ -8,8 +8,8 @@ accelerate robotics development. For detailed documentation, please visit
 
 # Getting Started 
 The expected developer workflow takes place entirely within our Docker
-container. See [Getting Started](docs/resim/index.md) for detailed instructions on getting
-started.
+container. See [docs.resim.ai](https://docs.resim.ai) for detailed instructions
+on getting started.
 
 # Structure
 Currently, the libraries are divided up into:
