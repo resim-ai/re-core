@@ -1,9 +1,8 @@
 name: Build & Push Core Image
-# TODO: make this just on main
 on:
-  pull_request:
+  push:
     branches:
-      - main
+      - 'main'
 
 permissions:
   id-token: write
@@ -42,7 +41,7 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USER }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build
+      - name: Build and Push
         uses: docker/build-push-action@v4
         with:
           context: .devcontainer
