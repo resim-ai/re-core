@@ -1,3 +1,3 @@
-# ReSim Open Libraries
+# Getting Started
 
 Hello World!
