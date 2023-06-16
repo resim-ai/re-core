@@ -91,3 +91,11 @@ cc_binary(
         "//resim/visualization:view",
     ],
 )
+
+cc_binary(
+    name = "match",
+    srcs = ["match.cc"],
+    deps = [
+        "//resim/utils:match",
+    ],
+)
