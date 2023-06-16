@@ -1,4 +1,4 @@
-// This file is a companion for the Curves documentation at
+// This file is a companion for the Time documentation at
 // https://docs.resim.ai/time/time/
 
 #include <cmath>

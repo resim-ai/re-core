@@ -1,4 +1,4 @@
-// This file is a companion for the Curves documentation at
+// This file is a companion for the Lie groups documentation at
 // https://docs.resim.ai/transforms/using_liegroups/
 
 #include <Eigen/Dense>

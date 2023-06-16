@@ -71,3 +71,12 @@ cc_binary(
         "//resim/visualization:view",
     ],
 )
+
+cc_binary(
+    name = "output_parameters",
+    srcs = ["output_parameters.cc"],
+    deps = [
+      "//resim/utils:inout",
+      "//resim/utils:nullable_reference",
+    ],
+)
