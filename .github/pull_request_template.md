@@ -1,7 +1,6 @@
 ## Description of change
 <!-- Please provide a description of your change -->
-## Asana task link
-[Asana task](<!-- Enter task link here -->)
+
 ## Guide to reproduce test results.
 <!-- 
     Please help reviewers by including instructions 
