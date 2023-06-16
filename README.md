@@ -21,6 +21,7 @@ Currently, the libraries are divided up into:
  - [Time](resim/time): Common time libraries.
  - [Transforms](resim/transforms): Libraries for 3D transforms.
  - [Curves](resim/curves): Libraries for curves through 3D space.
+ - [Actor](resim/actor/state): Libraries for rigid body states and trajectories.
  - [Visualization](resim/visualization): Libraries for visualizing 3D objects
    with [ReSim View](https://docs.resim.ai/visualization/).
  - [Testing](resim/testing): Common libraries for testing.
