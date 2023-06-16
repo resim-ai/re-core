@@ -25,9 +25,6 @@ RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/g
 RUN apt-get update
 RUN apt-get install -y gh
 
-# Install trunk
-RUN curl https://get.trunk.io -fsSL | bash -s -- -y
-
 # configure SSH for communication with Visual Studio 
 RUN mkdir -p /var/run/sshd
 RUN echo 'PasswordAuthentication yes' >> /etc/ssh/sshd_config && \ 
@@ -49,15 +46,6 @@ RUN apt-mark hold bazel
 # Install Buildifier
 RUN wget -O /usr/local/bin/buildifier https://github.com/bazelbuild/buildtools/releases/download/5.1.0/buildifier-linux-amd64 && chmod a+x /usr/local/bin/buildifier
 
-# Install AWS CLI v2.6.1
-# TODO(https://app.asana.com/0/1202178773526279/1204566380811503/f): Verify signature of zip file.  This requires 
-# having a local gpg key and signing the AWS CLI key.
-RUN wget -O awscliv2.zip https://awscli.amazonaws.com/awscli-exe-linux-x86_64-2.6.1.zip
-RUN unzip awscliv2.zip && aws/install && rm -rf aws awscliv2.zip
-
-# Install Amazon ECR Credential Helper
-RUN apt install -y amazon-ecr-credential-helper
-
 # Install Pip and Python Dependencies 
 RUN apt install -y python3-pip 
 COPY requirements.txt /tmp/
@@ -77,11 +65,6 @@ RUN go install -v github.com/josharian/impl@v1.1.0
 RUN go install -v github.com/cweill/gotests/gotests@v1.6.0
 RUN go install -v honnef.co/go/tools/cmd/staticcheck@v0.3.3
 
-# Install Terraform
-RUN curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add -
-RUN apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-RUN apt-get update && apt-get -y install terraform
-
 # Add live-server (https://github.com/tapio/live-server)
 RUN apt -y install npm
 RUN npm install -g live-server
@@ -91,13 +74,6 @@ RUN pip install pymdown-extensions
 
 # Install Valgrind
 RUN apt -y install valgrind
-
-# Install perf 
-COPY install_perf.sh /tmp/
-RUN /tmp/install_perf.sh
-
-# Install jq
-RUN apt install -y jq
 
 # Unminimize to get docs
 RUN yes | unminimize
