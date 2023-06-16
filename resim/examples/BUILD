@@ -66,8 +66,8 @@ cc_binary(
     deps = [
         "//resim/assert",
         "//resim/transforms:frame",
-        "//resim/transforms:so3",
         "//resim/transforms:se3",
+        "//resim/transforms:so3",
         "//resim/visualization:view",
     ],
 )
@@ -76,8 +76,8 @@ cc_binary(
     name = "output_parameters",
     srcs = ["output_parameters.cc"],
     deps = [
-      "//resim/utils:inout",
-      "//resim/utils:nullable_reference",
+        "//resim/utils:inout",
+        "//resim/utils:nullable_reference",
     ],
 )
 
@@ -86,9 +86,8 @@ cc_binary(
     srcs = ["view.cc"],
     deps = [
         "//resim/transforms:frame",
-        "//resim/transforms:so3",
         "//resim/transforms:se3",
+        "//resim/transforms:so3",
         "//resim/visualization:view",
     ],
 )
-

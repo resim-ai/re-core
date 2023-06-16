@@ -23,27 +23,27 @@ enum class Arg {
 
 // This function returns a bad status if BAD_ARGUMENT is passed and an okay
 // status if GOOD_ARGUMENT is passed.
-Status my_subroutine(const Arg arg);
+Status my_subroutine(Arg arg);
 
 // This function calls my_subroutine() with the given arg and uses the
 // RETURN_IF_NOT_OK() macro to return a bad status if my_subroutine() does.
-Status my_wrapping_subroutine(const Arg arg);
+Status my_wrapping_subroutine(Arg arg);
 
 // This function returns the value 3 if GOOD_ARGUMENT is passed and a bad
 // status if BAD_ARGUMENT is passed.
-StatusValue<int> my_returning_subroutine(const Arg arg);
+StatusValue<int> my_returning_subroutine(Arg arg);
 
 // This function calls my_returning_subroutine() with the given arg and uses
 // RETURN_OR_ASSIGN() to return a bad status if my_returning_subroutine() does.
 // Otherwise, it returns twice the value that my_returning_subroutine()
 // returns (as a double this time).
-StatusValue<double> my_returning_wrapper(const Arg arg);
+StatusValue<double> my_returning_wrapper(Arg arg);
 
 // This function wraps my_returning_wrapper() (which means it double wraps
 // my_returning_subroutine()) and returns a bad status if it does.
 // Alternatively, it prints the result given by my_returning_wrapper() if it is
 // successful.
-Status my_outer_wrapper(const Arg arg);
+Status my_outer_wrapper(Arg arg);
 
 int main(int argc, char **argv) {
   ////////////////////////////////////////////////////////////////////////////////

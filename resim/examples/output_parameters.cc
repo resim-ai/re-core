@@ -52,4 +52,3 @@ void maybe_set_to_three(resim::NullableReference<int> x) {
     *x = 3;
   }
 }
-
