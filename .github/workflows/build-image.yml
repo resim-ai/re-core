@@ -1,0 +1,44 @@
+name: Build & Push Core Image
+on:
+  pull_request:
+    branches:
+      - main
+
+env:
+  IMAGE_NAME: core
+  DOCKERFILE_PATH: .devcontainer/Dockerfile
+  DOCKER_CONTEXT: .devcontainer
+  ECR_REPOSITORY: public.ecr.aws/m1r4u2a2/core
+  HUB_REPOSITORY: resimai/core
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Build and Tag
+        run: |
+        docker build -t ${{ IMAGE_NAME }}:latest --platform=linux/amd64 -f ${{ DOCKERFILE_PATH }} ${{ DOCKER_CONTEXT }}
+        docker tag ${{ IMAGE_NAME }}:latest ${{ ECR_REPOSITORY }}:latest
+        docker tag ${{ IMAGE_NAME }}:latest ${{ HUB_REPOSITORY }}:latest
+
+      - name: Log in to ECR Public
+        uses: docker/login-action@v2
+        with:
+          registry: public.ecr.aws
+          username: ${{ secrets.ECR_AK }}
+          password: ${{ secrets.ECR_SK }}
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USER }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      
+      - name: Push to ECR Public
+        run: docker push ${{ ECR_REPOSITORY }}:latest
+
+      - name: Push to Docker Hub
+        run: docker push ${{ HUB_REPOSITORY }}:latest
