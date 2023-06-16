@@ -1,4 +1,4 @@
-// This file is a companion for the Error handling documentation at
+// This file is a companion for the Rigid Body State documentation at
 // https://docs.resim.ai/curves/rigid_body_state/
 
 #include "resim/actor/state/trajectory.hh"
@@ -85,9 +85,9 @@ int main(int argc, char **argv) {
   // Construct the trajectory
   Trajectory unit_circle_trajectory{{
       control_a,
-      control_b,
+      // control_b,
       control_c,
-      control_d,
+      // control_d,
       control_e,
   }};
 
@@ -106,6 +106,6 @@ int main(int argc, char **argv) {
   }
 
   // Visualize the trajectory
-  VIEW(unit_circle_trajectory) << "My trajectory";
+  // VIEW(unit_circle_trajectory) << "My trajectory";
   return EXIT_SUCCESS;
 }

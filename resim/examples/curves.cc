@@ -20,14 +20,14 @@ int main(int argc, char **argv) {
   using Frame = resim::transforms::Frame<3>;
 
   const Frame world_frame{Frame::new_frame()};
-  VIEW(world_frame) << "World frame";
+  // VIEW(world_frame) << "World frame";
 
   ////////////////////////////////////////////////////////////////////////////////
   // DCurve
   ////////////////////////////////////////////////////////////////////////////////
 
   const Frame d_curve_frame{Frame::new_frame()};
-  VIEW(d_curve_frame) << "DCurve";
+  // VIEW(d_curve_frame) << "DCurve";
 
   // Make a DCurve that goes straight for one unit, turns left along a unit
   // circle for pi/2 radians, continues straight in the y direction for one
@@ -50,14 +50,14 @@ int main(int argc, char **argv) {
   REASSERT(reference_from_queried.translation().isApprox(
       Eigen::Vector3d{2., 1.5, 0.}));
 
-  VIEW(d_curve) << "My DCurve";
+  // VIEW(d_curve) << "My DCurve";
 
   ////////////////////////////////////////////////////////////////////////////////
   // TCurve
   ////////////////////////////////////////////////////////////////////////////////
 
   const Frame t_curve_frame{Frame::new_frame()};
-  VIEW(t_curve_frame) << "TCurve";
+  // VIEW(t_curve_frame) << "TCurve";
 
   // Define some states that we want to pass through
   // A state at the origin with a small forward velocity
@@ -95,7 +95,7 @@ int main(int argc, char **argv) {
   }};
 
   // Visualize
-  VIEW(t_curve) << "My TCurve";
+  // VIEW(t_curve) << "My TCurve";
 
   return EXIT_SUCCESS;
 }

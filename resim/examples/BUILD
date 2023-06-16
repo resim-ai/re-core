@@ -80,3 +80,15 @@ cc_binary(
       "//resim/utils:nullable_reference",
     ],
 )
+
+cc_binary(
+    name = "view",
+    srcs = ["view.cc"],
+    deps = [
+        "//resim/transforms:frame",
+        "//resim/transforms:so3",
+        "//resim/transforms:se3",
+        "//resim/visualization:view",
+    ],
+)
+

@@ -1,4 +1,4 @@
-// This file is a companion for the Error handling documentation at
+// This file is a companion for the Gaussian documentation at
 // https://docs.resim.ai/math/gaussian/
 
 #include <fmt/core.h>

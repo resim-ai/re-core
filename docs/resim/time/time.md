@@ -161,4 +161,4 @@ REASSERT(std::fabs(integral - analytical_result) < 1e-4);
 !!! Note
     Feel free to play around with the [source
     code](https://github.com/resim-ai/re-core/blob/main/resim/examples/time.cc)
-    for the example above.
+    for the examples above.
