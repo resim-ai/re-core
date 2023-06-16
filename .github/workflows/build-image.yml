@@ -1,8 +1,12 @@
 name: Build & Push Core Image
+# TODO: make this just on main
 on:
   pull_request:
     branches:
       - main
+
+permissions:
+  id-token: write
 
 env:
   IMAGE_NAME: core
@@ -24,12 +28,16 @@ jobs:
           docker tag ${{ env.IMAGE_NAME }}:latest ${{ env.ECR_REPOSITORY }}:latest
           docker tag ${{ env.IMAGE_NAME }}:latest ${{ env.HUB_REPOSITORY }}:latest
 
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: ${{ secrets.ECR_RW_ROLE }}
+          aws-region: us-east-1
+
       - name: Log in to ECR Public
         uses: docker/login-action@v2
         with:
           registry: public.ecr.aws
-          username: ${{ secrets.ECR_AK }}
-          password: ${{ secrets.ECR_SK }}
 
       - name: Log in to Docker Hub
         uses: docker/login-action@v2
