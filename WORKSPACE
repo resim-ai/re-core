@@ -31,9 +31,6 @@ load("@rules_foreign_cc//foreign_cc:repositories.bzl", "rules_foreign_cc_depende
 
 rules_foreign_cc_dependencies()
 
-# lz4, which is a dependency for mcap
-# zstd, which is a dependency for mcap
-# Protobuf schemas for communications with foxglove
 http_archive(
     name = "rules_python",
     sha256 = "cdf6b84084aad8f10bf20b46b77cb48d83c319ebe6458a18e9d2cebf57807cdd",
@@ -126,9 +123,6 @@ http_archive(
     urls = ["https://github.com/google/glog/archive/v0.6.0.zip"],
 )
 
-# Polygon Mesh Processing (pmp) library. Used for loading, manipulating, and saving meshes.
-# libccd - Used by fcl (below) for narrow-phase collision detection.
-# Flexible Collision Library (fcl). Used for efficient broad-phase collision detection.
 # Dependency for cxxopts below
 http_archive(
     name = "rules_fuzzing",
@@ -169,4 +163,3 @@ hedron_make_cc_https_easy()
 load("@hedron_make_cc_https_easy//:transitive_workspace_setup.bzl", "hedron_keep_cc_https_easy")
 
 hedron_keep_cc_https_easy()
-
