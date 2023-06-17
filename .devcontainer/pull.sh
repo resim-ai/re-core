@@ -4,6 +4,4 @@
 # license that can be found in the LICENSE file or at
 # https://opensource.org/licenses/MIT.
 
-docker build \
-	--platform linux/amd64 \
-	-t core-local .devcontainer
+docker pull public.ecr.aws/m1r4u2a2/core:latest --platform linux/amd64
