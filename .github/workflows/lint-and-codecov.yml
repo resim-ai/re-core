@@ -10,7 +10,7 @@ jobs:
     name: Lint & Generate Coverage Report
     runs-on: ubuntu-20.04
     container:
-      image: public.ecr.aws/m1r4u2a2/core:latest 
+      image: public.ecr.aws/resim/core:latest 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -28,6 +28,9 @@ jobs:
         run: bazel run @hedron_compile_commands//:refresh_all
 
       - name: Workaround for Custom Docker Image
+        # Trunk makes use of git and we will get permissions issues (i.e.
+        # detected dubious ownership) if we don't make the repo a safe
+        # directory.
         run: git config --global --add safe.directory /__w/re-core/re-core
 
       - name: Generate Coverage Report
