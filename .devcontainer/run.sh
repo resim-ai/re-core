@@ -11,4 +11,4 @@ docker run -it \
        --volume $(pwd):/workspaces/re-core \
        --volume root-home:/root \
        --volume /var/run/docker.sock:/var/run/docker.sock \
-       public.ecr.aws/resimai/core:latest /bin/bash -c "cd /workspaces/re-core; $SHELL"
+       public.ecr.aws/m1r4u2a2/core:latest /bin/bash -c "cd /workspaces/re-core; $SHELL"

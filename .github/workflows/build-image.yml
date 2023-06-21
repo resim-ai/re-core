@@ -11,7 +11,7 @@ permissions:
 env:
   IMAGE_NAME: core
   DOCKERFILE_PATH: .devcontainer/Dockerfile
-  ECR_REPOSITORY: public.ecr.aws/resimai/core
+  ECR_REPOSITORY: public.ecr.aws/m1r4u2a2/core
   HUB_REPOSITORY: resimai/core
 
 jobs:
