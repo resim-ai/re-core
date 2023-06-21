@@ -1,5 +1,6 @@
 {
     "image": "resimai/core:latest",
+    "initializeCommand": "docker pull --platform linux/amd64 resimai/core:latest",
     "mounts": [
         "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind",
         "source=root-home,target=/root,type=volume"
