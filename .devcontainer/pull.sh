@@ -4,4 +4,4 @@
 # license that can be found in the LICENSE file or at
 # https://opensource.org/licenses/MIT.
 
-docker pull public.ecr.aws/m1r4u2a2/core:latest --platform linux/amd64
+docker pull public.ecr.aws/resimai/core:latest --platform linux/amd64
