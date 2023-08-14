@@ -1,3 +1,7 @@
+> # Deprecation Warning
+> This repository is deprecated. It was intended as a public snapshot of our open source libraries for demonstrative purposes. In order to follow the development of our open source code, please refer to [resim-ai/open-core](https://github.com/resim-ai/open-core/) instead.
+
+
 # ReSim's Open Libraries
 
 [![codecov](https://codecov.io/gh/resim-ai/re-core/branch/main/graph/badge.svg?token=JAGVIGHQ86)](https://codecov.io/gh/resim-ai/re-core)
